@@ -2,7 +2,6 @@ import {
   Component,
   inject,
   OnInit,
-  signal,
   ElementRef,
   viewChild,
   OnDestroy,

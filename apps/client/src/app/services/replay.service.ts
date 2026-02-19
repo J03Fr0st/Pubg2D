@@ -1,5 +1,5 @@
 import { Injectable, signal, computed } from '@angular/core';
-import type { ReplayData, KillEvent } from '@pubg-replay/shared-types';
+import type { ReplayData } from '@pubg-replay/shared-types';
 import { interpolateTick } from '@pubg-replay/replay-engine';
 import { formatElapsedTime } from '@pubg-replay/shared-utils';
 
