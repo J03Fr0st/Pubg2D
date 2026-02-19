@@ -53,6 +53,20 @@ export interface ReplayTick {
   alivePlayers: number;
 }
 
+/** Dense zone snapshot — one per LogGameStatePeriodic event (~1 s cadence) */
+export interface ZoneKeyframe extends ZoneFrame {
+  time: number; // elapsed seconds
+}
+
+/**
+ * Compact per-player position track sampled at LogPlayerPosition cadence (~1 s).
+ * keyframes is interleaved: [time0, x0, y0, time1, x1, y1, ...]
+ */
+export interface PlayerPositionTrack {
+  accountId: string;
+  keyframes: number[];
+}
+
 /** Full processed replay payload sent to the client */
 export interface ReplayData {
   matchId: string;
@@ -63,6 +77,10 @@ export interface ReplayData {
   teamSize: number;
   createdAt: string;
   ticks: ReplayTick[];
+  /** Dense zone snapshots at ~1 s cadence for smooth interpolation */
+  zoneKeyframes: ZoneKeyframe[];
+  /** Compact per-player position tracks at ~1 s cadence for smooth interpolation */
+  playerPositionTracks: PlayerPositionTrack[];
   kills: KillEvent[];
   carePackages: CarePackageEvent[];
   players: MatchPlayer[];

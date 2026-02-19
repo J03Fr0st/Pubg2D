@@ -10,10 +10,12 @@ import type {
   LogPlayerPosition,
   MatchPlayer,
   PlayerFrame,
+  PlayerPositionTrack,
   ReplayData,
   ReplayTick,
   TelemetryData,
   ZoneFrame,
+  ZoneKeyframe,
 } from '@pubg-replay/shared-types';
 import { DamageInfoUtils } from '@pubg-replay/shared-types';
 import { getMapDisplayName, getMapSize, normalizeCoord } from '@pubg-replay/shared-utils';
@@ -36,6 +38,9 @@ export class TelemetryProcessorService {
     // Collect position events grouped by tick (5-second buckets)
     const positionsByTick = new Map<number, LogPlayerPosition[]>();
     const gameStatesByTick = new Map<number, LogGameStatePeriodic>();
+    const zoneKeyframes: ZoneKeyframe[] = [];
+    // Compact per-player position data: accountId → [t, x, y, t, x, y, ...]
+    const playerTrackMap = new Map<string, number[]>();
     const kills: KillEvent[] = [];
     const carePackages: CarePackageEvent[] = [];
     const playerKills = new Map<string, number>();
@@ -65,6 +70,16 @@ export class TelemetryProcessorService {
             positionsByTick.set(tick, tickPositions);
           }
           tickPositions.push(e);
+          // Dense position track (in-game only, skip airplane phase)
+          if (e.common.isGame >= 1) {
+            const id = e.character.accountId;
+            let track = playerTrackMap.get(id);
+            if (!track) {
+              track = [];
+              playerTrackMap.set(id, track);
+            }
+            track.push(e.elapsedTime, norm(e.character.location.x), norm(e.character.location.y));
+          }
           break;
         }
         case 'LogGameStatePeriodic': {
@@ -72,6 +87,22 @@ export class TelemetryProcessorService {
           if (!e.gameState) break; // gameState is optional
           const tick = Math.round(e.gameState.elapsedTime / TICK_INTERVAL) * TICK_INTERVAL;
           gameStatesByTick.set(tick, e);
+          // Also store as a dense keyframe at natural cadence (~1 s)
+          const gs = e.gameState;
+          if (gs.elapsedTime > 0) {
+            zoneKeyframes.push({
+              time: gs.elapsedTime,
+              safeX: norm(gs.safetyZonePosition.x),
+              safeY: norm(gs.safetyZonePosition.y),
+              safeRadius: normalizeCoord(gs.safetyZoneRadius, mapSize),
+              poisonX: norm(gs.poisonGasWarningPosition.x),
+              poisonY: norm(gs.poisonGasWarningPosition.y),
+              poisonRadius: normalizeCoord(gs.poisonGasWarningRadius, mapSize),
+              redX: norm(gs.redZonePosition.x),
+              redY: norm(gs.redZonePosition.y),
+              redRadius: normalizeCoord(gs.redZoneRadius, mapSize),
+            });
+          }
           break;
         }
         case 'LogPlayerKillV2': {
@@ -195,6 +226,10 @@ export class TelemetryProcessorService {
       placement: 0, // set from match data, not telemetry
     }));
 
+    const playerPositionTracks: PlayerPositionTrack[] = [...playerTrackMap.entries()].map(
+      ([accountId, keyframes]) => ({ accountId, keyframes }),
+    );
+
     return {
       matchId,
       mapName,
@@ -204,6 +239,8 @@ export class TelemetryProcessorService {
       teamSize: matchStart?.teamSize ?? 1,
       createdAt: matchStart?._D ?? '',
       ticks,
+      zoneKeyframes,
+      playerPositionTracks,
       kills,
       carePackages,
       players: matchPlayers,

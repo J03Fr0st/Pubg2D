@@ -1,5 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { interpolateTick } from '@pubg-replay/replay-engine';
+import { interpolatePlayerPositionsAt, interpolateTick, interpolateZoneAt } from '@pubg-replay/replay-engine';
 import type { ReplayData } from '@pubg-replay/shared-types';
 import { formatElapsedTime } from '@pubg-replay/shared-utils';
 
@@ -20,7 +20,20 @@ export class ReplayService {
   readonly currentTick = computed(() => {
     const data = this.replayData();
     if (!data) return null;
-    return interpolateTick(data.ticks, this.currentTime());
+    const time = this.currentTime();
+    const tick = interpolateTick(data.ticks, time);
+
+    // Override zone with dense keyframes (~1 s cadence) for smooth shrinking
+    const zone = interpolateZoneAt(data.zoneKeyframes, time) ?? tick.zone;
+
+    // Override player x/y with dense position tracks (~1 s cadence) for smooth movement
+    const positions = interpolatePlayerPositionsAt(data.playerPositionTracks, time);
+    const players = tick.players.map((p) => {
+      const pos = positions.get(p.accountId);
+      return pos ? { ...p, x: pos.x, y: pos.y } : p;
+    });
+
+    return { ...tick, zone, players };
   });
 
   readonly alivePlayers = computed(() => this.currentTick()?.alivePlayers ?? 0);

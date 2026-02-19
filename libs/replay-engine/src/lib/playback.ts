@@ -1,4 +1,10 @@
-import type { PlayerFrame, ReplayTick, ZoneFrame } from '@pubg-replay/shared-types';
+import type {
+  PlayerFrame,
+  PlayerPositionTrack,
+  ReplayTick,
+  ZoneFrame,
+  ZoneKeyframe,
+} from '@pubg-replay/shared-types';
 
 function lerp(a: number, b: number, t: number): number {
   return a + (b - a) * t;
@@ -37,6 +43,96 @@ function interpolateZone(a: ZoneFrame, b: ZoneFrame, t: number): ZoneFrame {
   };
 }
 
+/** Binary search helper — returns lo index such that keyframes[lo].time <= time < keyframes[lo+1].time */
+function bsearch<T extends { time: number }>(arr: T[], time: number): number {
+  let lo = 0;
+  let hi = arr.length - 1;
+  while (lo < hi - 1) {
+    const mid = Math.floor((lo + hi) / 2);
+    if (arr[mid].time <= time) lo = mid;
+    else hi = mid;
+  }
+  return lo;
+}
+
+/** Interpolate zone from dense keyframes (~1 s cadence) */
+export function interpolateZoneAt(keyframes: ZoneKeyframe[], time: number): ZoneFrame | null {
+  if (keyframes.length === 0) return null;
+  if (time <= keyframes[0].time) return keyframes[0];
+  if (time >= keyframes[keyframes.length - 1].time) return keyframes[keyframes.length - 1];
+
+  const lo = bsearch(keyframes, time);
+  const a = keyframes[lo];
+  const b = keyframes[lo + 1];
+  const range = b.time - a.time;
+  const t = range > 0 ? (time - a.time) / range : 0;
+
+  if (a.safeRadius === 0) return b;
+  if (b.safeRadius === 0) return a;
+
+  return {
+    safeX: lerp(a.safeX, b.safeX, t),
+    safeY: lerp(a.safeY, b.safeY, t),
+    safeRadius: lerp(a.safeRadius, b.safeRadius, t),
+    poisonX: lerp(a.poisonX, b.poisonX, t),
+    poisonY: lerp(a.poisonY, b.poisonY, t),
+    poisonRadius: lerp(a.poisonRadius, b.poisonRadius, t),
+    redX: lerp(a.redX, b.redX, t),
+    redY: lerp(a.redY, b.redY, t),
+    redRadius: lerp(a.redRadius, b.redRadius, t),
+  };
+}
+
+/**
+ * Interpolate player x/y positions from dense compact tracks (~1 s cadence).
+ * Returns a map of accountId → { x, y }.
+ */
+export function interpolatePlayerPositionsAt(
+  tracks: PlayerPositionTrack[],
+  time: number,
+): Map<string, { x: number; y: number }> {
+  const result = new Map<string, { x: number; y: number }>();
+
+  for (const track of tracks) {
+    const kf = track.keyframes;
+    const frameCount = kf.length / 3;
+    if (frameCount === 0) continue;
+
+    // Find surrounding frames via binary search on interleaved array
+    let lo = 0;
+    let hi = frameCount - 1;
+
+    if (time <= kf[0]) {
+      result.set(track.accountId, { x: kf[1], y: kf[2] });
+      continue;
+    }
+    if (time >= kf[(frameCount - 1) * 3]) {
+      result.set(track.accountId, { x: kf[(frameCount - 1) * 3 + 1], y: kf[(frameCount - 1) * 3 + 2] });
+      continue;
+    }
+
+    while (lo < hi - 1) {
+      const mid = Math.floor((lo + hi) / 2);
+      if (kf[mid * 3] <= time) lo = mid;
+      else hi = mid;
+    }
+
+    const aTime = kf[lo * 3];
+    const aX = kf[lo * 3 + 1];
+    const aY = kf[lo * 3 + 2];
+    const bTime = kf[hi * 3];
+    const bX = kf[hi * 3 + 1];
+    const bY = kf[hi * 3 + 2];
+
+    const range = bTime - aTime;
+    const t = range > 0 ? (time - aTime) / range : 0;
+
+    result.set(track.accountId, { x: lerp(aX, bX, t), y: lerp(aY, bY, t) });
+  }
+
+  return result;
+}
+
 /** Find the interpolated tick state at a given elapsed time */
 export function interpolateTick(ticks: ReplayTick[], time: number): ReplayTick {
   if (ticks.length === 0) {
@@ -46,10 +142,10 @@ export function interpolateTick(ticks: ReplayTick[], time: number): ReplayTick {
       zone: {
         safeX: 0.5,
         safeY: 0.5,
-        safeRadius: 1,
+        safeRadius: 0,
         poisonX: 0.5,
         poisonY: 0.5,
-        poisonRadius: 1,
+        poisonRadius: 0,
         redX: 0,
         redY: 0,
         redRadius: 0,
@@ -61,7 +157,6 @@ export function interpolateTick(ticks: ReplayTick[], time: number): ReplayTick {
   if (time <= ticks[0].elapsedTime) return ticks[0];
   if (time >= ticks[ticks.length - 1].elapsedTime) return ticks[ticks.length - 1];
 
-  // Binary search for the surrounding ticks
   let lo = 0;
   let hi = ticks.length - 1;
   while (lo < hi - 1) {
