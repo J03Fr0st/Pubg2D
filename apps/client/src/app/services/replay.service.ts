@@ -1,6 +1,6 @@
-import { Injectable, signal, computed } from '@angular/core';
-import type { ReplayData } from '@pubg-replay/shared-types';
+import { computed, Injectable, signal } from '@angular/core';
 import { interpolateTick } from '@pubg-replay/replay-engine';
+import type { ReplayData } from '@pubg-replay/shared-types';
 import { formatElapsedTime } from '@pubg-replay/shared-utils';
 
 @Injectable({ providedIn: 'root' })
@@ -29,7 +29,10 @@ export class ReplayService {
     const data = this.replayData();
     const time = this.currentTime();
     if (!data) return [];
-    return data.kills.filter((k) => k.timestamp <= time).reverse().slice(0, 20);
+    return data.kills
+      .filter((k) => k.timestamp <= time)
+      .reverse()
+      .slice(0, 20);
   });
 
   load(data: ReplayData): void {

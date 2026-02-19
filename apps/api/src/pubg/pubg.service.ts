@@ -16,8 +16,12 @@ export interface PubgApiResource {
 export interface PubgPlayerResource {
   id: string;
   type: string;
-  name: string;
+  attributes: { name: string; shardId?: string; [key: string]: unknown };
   relationships?: { matches?: { data: Array<{ id: string; type: string }> } };
+}
+
+export interface PubgPlayersResponse {
+  data: PubgPlayerResource[];
 }
 
 export interface PubgMatchApiResponse {
@@ -43,10 +47,7 @@ export class PubgService {
     return this.client;
   }
 
-  async getPlayer(
-    name: string,
-    shard = 'steam',
-  ): Promise<PubgPlayerResource[] | PubgPlayerResource> {
+  async getPlayer(name: string, shard = 'steam'): Promise<PubgPlayersResponse> {
     // biome-ignore lint/suspicious/noExplicitAny: pubg-ts library options type workaround
     return this.client.players.getPlayers({ playerNames: [name], shard } as any);
   }

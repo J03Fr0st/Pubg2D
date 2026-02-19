@@ -1,13 +1,11 @@
-import { TelemetryProcessorService } from './telemetry-processor.service';
 import type {
-  LogMatchStart,
-  LogPlayerPosition,
   LogGameStatePeriodic,
+  LogMatchStart,
   LogPlayerKillV2,
-  LogCarePackageLand,
-  LogMatchEnd,
+  LogPlayerPosition,
   TelemetryData,
 } from '@pubg-replay/shared-types';
+import { TelemetryProcessorService } from './telemetry-processor.service';
 
 function makePosition(
   accountId: string,
@@ -16,7 +14,7 @@ function makePosition(
   x: number,
   y: number,
   health: number,
-  elapsed: number
+  elapsed: number,
 ): LogPlayerPosition {
   return {
     _T: 'LogPlayerPosition',
@@ -68,8 +66,24 @@ describe('TelemetryProcessorService', () => {
         mapName: 'Baltic_Main',
         weatherId: 'Clear',
         characters: [
-          { name: 'Player1', teamId: 1, health: 100, location: { x: 100000, y: 100000, z: 0 }, ranking: 0, accountId: 'acc1', zone: [] },
-          { name: 'Player2', teamId: 2, health: 100, location: { x: 200000, y: 200000, z: 0 }, ranking: 0, accountId: 'acc2', zone: [] },
+          {
+            name: 'Player1',
+            teamId: 1,
+            health: 100,
+            location: { x: 100000, y: 100000, z: 0 },
+            ranking: 0,
+            accountId: 'acc1',
+            zone: [],
+          },
+          {
+            name: 'Player2',
+            teamId: 2,
+            health: 100,
+            location: { x: 200000, y: 200000, z: 0 },
+            ranking: 0,
+            accountId: 'acc2',
+            zone: [],
+          },
         ],
         teamSize: 1,
         isCustomGame: false,
@@ -110,10 +124,30 @@ describe('TelemetryProcessorService', () => {
         _T: 'LogPlayerKillV2',
         _D: '2026-01-01T00:01:00Z',
         common: { isGame: 1 },
-        killer: { name: 'Player1', teamId: 1, health: 80, location: { x: 100000, y: 100000, z: 0 }, ranking: 0, accountId: 'acc1', zone: [] },
-        victim: { name: 'Player2', teamId: 2, health: 0, location: { x: 105000, y: 105000, z: 0 }, ranking: 0, accountId: 'acc2', zone: [] },
+        killer: {
+          name: 'Player1',
+          teamId: 1,
+          health: 80,
+          location: { x: 100000, y: 100000, z: 0 },
+          ranking: 0,
+          accountId: 'acc1',
+          zone: [],
+        },
+        victim: {
+          name: 'Player2',
+          teamId: 2,
+          health: 0,
+          location: { x: 105000, y: 105000, z: 0 },
+          ranking: 0,
+          accountId: 'acc2',
+          zone: [],
+        },
         finisher: null,
-        killerDamageInfo: { damageReason: 'ArmShot', damageTypeCategory: 'Damage_Gun', damageCauserName: 'WeapM416_C' },
+        killerDamageInfo: {
+          damageReason: 'ArmShot',
+          damageTypeCategory: 'Damage_Gun',
+          damageCauserName: 'WeapM416_C',
+        },
         finishDamageInfo: null,
         isSuicide: false,
         assists_AccountId: [],

@@ -1,6 +1,6 @@
+import { ConfigService } from '@nestjs/config';
 import { Test } from '@nestjs/testing';
 import { PubgService } from './pubg.service';
-import { ConfigService } from '@nestjs/config';
 
 describe('PubgService', () => {
   let service: PubgService;
@@ -11,7 +11,7 @@ describe('PubgService', () => {
         PubgService,
         {
           provide: ConfigService,
-          useValue: { get: (key: string) => key === 'PUBG_API_KEY' ? 'test-key' : undefined },
+          useValue: { get: (key: string) => (key === 'PUBG_API_KEY' ? 'test-key' : undefined) },
         },
       ],
     }).compile();

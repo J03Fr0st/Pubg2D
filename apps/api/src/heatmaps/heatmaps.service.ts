@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { MatchesService } from '../matches/matches.service';
 import type { HeatmapData, HeatmapRequest } from '@pubg-replay/shared-types';
 import { getMapDisplayName } from '@pubg-replay/shared-utils';
+import { MatchesService } from '../matches/matches.service';
 
 const GRID_SIZE = 128; // 128x128 density grid
 

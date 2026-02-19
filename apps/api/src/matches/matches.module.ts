@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
+import { TelemetryModule } from '../telemetry/telemetry.module';
 import { MatchesController } from './matches.controller';
 import { MatchesService } from './matches.service';
-import { TelemetryModule } from '../telemetry/telemetry.module';
 
 @Module({
   imports: [TelemetryModule],

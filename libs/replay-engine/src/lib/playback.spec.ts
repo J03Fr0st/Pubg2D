@@ -1,11 +1,17 @@
-import { describe, it, expect } from 'vitest';
+import type { ReplayTick, ZoneFrame } from '@pubg-replay/shared-types';
+import { describe, expect, it } from 'vitest';
 import { interpolateTick } from './playback';
-import type { ReplayTick, PlayerFrame, ZoneFrame } from '@pubg-replay/shared-types';
 
 const defaultZone: ZoneFrame = {
-  safeX: 0.5, safeY: 0.5, safeRadius: 0.5,
-  poisonX: 0.5, poisonY: 0.5, poisonRadius: 0.6,
-  redX: 0, redY: 0, redRadius: 0,
+  safeX: 0.5,
+  safeY: 0.5,
+  safeRadius: 0.5,
+  poisonX: 0.5,
+  poisonY: 0.5,
+  poisonRadius: 0.6,
+  redX: 0,
+  redY: 0,
+  redRadius: 0,
 };
 
 function makeTick(time: number, px: number, py: number): ReplayTick {

@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { HeatmapsService } from './heatmaps.service';
 import type { HeatmapRequest } from '@pubg-replay/shared-types';
+import { HeatmapsService } from './heatmaps.service';
 
 @Controller('players')
 export class HeatmapsController {
@@ -18,7 +18,7 @@ export class HeatmapsController {
 
     const request: HeatmapRequest = {
       accountId,
-      matches: parseInt(matches),
+      matches: parseInt(matches, 10),
       mode,
       mapName,
     };

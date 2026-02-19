@@ -17,6 +17,9 @@
     },
     {
       "path": "./libs/replay-engine"
+    },
+    {
+      "path": "./apps/client"
     }
   ]
 }

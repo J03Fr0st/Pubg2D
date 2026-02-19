@@ -51,156 +51,435 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tsconfig.base.json",
-        "hash": "5679180110196049216"
-      },
-      {
-        "file": ".github/skills/nx-run-tasks/SKILL.md",
-        "hash": "6310165843200780094"
-      },
-      {
-        "file": ".github/prompts/monitor-ci.prompt.md",
-        "hash": "14111579483359899130"
-      },
-      {
-        "file": ".github/agents/ci-monitor-subagent.agent.md",
-        "hash": "17271371206473447631"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "7566070839603645918"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "11911801181309274062"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "5445344698340889520"
-      },
-      {
-        "file": "vitest.workspace.ts",
-        "hash": "4665328684042819579"
-      },
-      {
-        "file": ".github/skills/link-workspace-packages/SKILL.md",
-        "hash": "15436383388001770446"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "13591750739247547927"
+        "file": ".playwright-mcp/page-2026-02-19T20-36-56-805Z.png",
+        "hash": "5222633619282240174"
       },
       {
         "file": ".github/workflows/ci.yml",
         "hash": "12598063760286856263"
       },
       {
-        "file": ".vscode/extensions.json",
-        "hash": "16884713733442577066"
+        "file": "biome.json",
+        "hash": "13726533172052215124"
       },
       {
-        "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
-        "hash": "14600255494264850067"
+        "file": ".playwright-mcp/page-2026-02-19T20-22-22-436Z.png",
+        "hash": "11649260843938434902"
       },
       {
-        "file": "package-lock.json",
-        "hash": "5780549712593567812"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "4512172852042077378"
-      },
-      {
-        "file": ".github/skills/nx-workspace/SKILL.md",
-        "hash": "15239321302212089310"
+        "file": "eslint.config.mjs",
+        "hash": "7566070839603645918"
       },
       {
         "file": "package.json",
-        "hash": "11042730521032192278"
-      },
-      {
-        "file": ".github/skills/monitor-ci/SKILL.md",
-        "hash": "9468003408493328484"
+        "hash": "5743373054656944821"
       },
       {
         "file": "nx.json",
         "hash": "16974164741354469435"
       },
       {
-        "file": "README.md",
-        "hash": "15713270296686733381"
+        "file": ".github/skills/nx-generate/SKILL.md",
+        "hash": "9325031674722245942"
       },
       {
-        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "5689225252238354455"
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "15239321302212089310"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4512172852042077378"
       },
       {
         "file": ".prettierrc",
         "hash": "6820402234827505055"
       },
       {
-        "file": ".github/skills/nx-plugins/SKILL.md",
-        "hash": "17761452540263218782"
+        "file": ".playwright-mcp/page-2026-02-19T20-32-51-433Z.png",
+        "hash": "6382304364508918853"
       },
       {
-        "file": ".github/skills/nx-generate/SKILL.md",
-        "hash": "9325031674722245942"
+        "file": ".playwright-mcp/page-2026-02-19T20-22-04-016Z.png",
+        "hash": "15510390982549363410"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-32-07-355Z.png",
+        "hash": "7098591118749307461"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "1539253793410688689"
+      },
+      {
+        "file": "README.md",
+        "hash": "11310407407408995848"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "14594439412287490675"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "17637368926737444469"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "9468003408493328484"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "15264001227920638272"
+      },
+      {
+        "file": ".github/skills/nx-run-tasks/SKILL.md",
+        "hash": "6310165843200780094"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "3246487966739389015"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-25-25-555Z.png",
+        "hash": "17970348815348117523"
+      },
+      {
+        "file": ".github/prompts/monitor-ci.prompt.md",
+        "hash": "14111579483359899130"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-36-00-370Z.png",
+        "hash": "17970348815348117523"
       },
       {
         "file": "docs/plans/2026-02-19-pubg-replay-design.md",
         "hash": "7141623013702546955"
       },
       {
-        "file": "LICENSE",
-        "hash": "1539253793410688689"
+        "file": ".playwright-mcp/page-2026-02-19T20-52-27-890Z.png",
+        "hash": "3854639952148083433"
+      },
+      {
+        "file": ".playwright-mcp/map-zoom.png",
+        "hash": "14060054845515448596"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "9639500179109087342"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-20-37-054Z.png",
+        "hash": "12461076885891917289"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-25-46-515Z.png",
+        "hash": "13286010822764640847"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-29-55-925Z.png",
+        "hash": "7098591118749307461"
+      },
+      {
+        "file": ".env.example",
+        "hash": "18000392523513038374"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "13591750739247547927"
+      },
+      {
+        "file": ".github/skills/nx-plugins/SKILL.md",
+        "hash": "17761452540263218782"
+      },
+      {
+        "file": ".github/agents/ci-monitor-subagent.agent.md",
+        "hash": "17271371206473447631"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "14370049258054741321"
+      },
+      {
+        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "5689225252238354455"
+      },
+      {
+        "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
+        "hash": "14600255494264850067"
+      },
+      {
+        "file": ".playwright-mcp/page-2026-02-19T20-52-55-706Z.png",
+        "hash": "1896744544846480927"
+      },
+      {
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "15436383388001770446"
       }
     ],
     "projectFileMap": {
-      "@pubg-replay/replay-engine": [
+      "@pubg-replay/shared-types": [
         {
-          "file": "libs/replay-engine/README.md",
-          "hash": "7410901065840022058"
+          "file": "libs/shared/types/README.md",
+          "hash": "9100919672007375316"
         },
         {
-          "file": "libs/replay-engine/package.json",
-          "hash": "5020735266573918688"
+          "file": "libs/shared/types/package.json",
+          "hash": "13880101611499852383"
         },
         {
-          "file": "libs/replay-engine/src/index.ts",
-          "hash": "2089018534333885605"
+          "file": "libs/shared/types/src/index.ts",
+          "hash": "12700367831995252733"
         },
         {
-          "file": "libs/replay-engine/src/lib/replay-engine.spec.ts",
-          "hash": "8163475856195818796"
+          "file": "libs/shared/types/src/lib/api.ts",
+          "hash": "2216475967694084723"
         },
         {
-          "file": "libs/replay-engine/src/lib/replay-engine.ts",
-          "hash": "16392959635748229007"
+          "file": "libs/shared/types/src/lib/frames.ts",
+          "hash": "10383961589498180394"
         },
         {
-          "file": "libs/replay-engine/tsconfig.json",
-          "hash": "12834038490315927699"
+          "file": "libs/shared/types/src/lib/telemetry.ts",
+          "hash": "5147372686290521806",
+          "deps": [
+            "npm:@j03fr0st/pubg-ts"
+          ]
         },
         {
-          "file": "libs/replay-engine/tsconfig.lib.json",
-          "hash": "15299785940044794528"
+          "file": "libs/shared/types/src/lib/types.spec.ts",
+          "hash": "9354891611907858840"
         },
         {
-          "file": "libs/replay-engine/tsconfig.spec.json",
-          "hash": "12757693314151657395"
+          "file": "libs/shared/types/src/lib/types.ts",
+          "hash": "5476929482655057349"
         },
         {
-          "file": "libs/replay-engine/vite.config.ts",
-          "hash": "7738933013628119304",
+          "file": "libs/shared/types/tsconfig.json",
+          "hash": "14186287857387999199"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.lib.json",
+          "hash": "16510454407152570898"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.spec.json",
+          "hash": "12233809024625175605"
+        },
+        {
+          "file": "libs/shared/types/vite.config.ts",
+          "hash": "5247685006192271729",
           "deps": [
             "npm:vite"
           ]
         },
         {
-          "file": "libs/replay-engine/vitest.config.mts",
-          "hash": "16179561834097687813",
+          "file": "libs/shared/types/vitest.config.mts",
+          "hash": "14725460237203485694",
           "deps": [
             "npm:vitest"
+          ]
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/jest.config.ts",
+          "hash": "12672647271878469353"
+        },
+        {
+          "file": "apps/api/package.json",
+          "hash": "18327880965217769167",
+          "deps": [
+            "npm:@nestjs/testing",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/platform-express",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/app.controller.ts",
+          "hash": "15276891910009544695",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/app.module.ts",
+          "hash": "15577453381612877709",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/app.service.ts",
+          "hash": "9967902337593410053",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/heatmaps/heatmaps.controller.ts",
+          "hash": "14767686683588542759",
+          "deps": [
+            "npm:@nestjs/common",
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "apps/api/src/heatmaps/heatmaps.module.ts",
+          "hash": "11071553965528661516",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/heatmaps/heatmaps.service.ts",
+          "hash": "4964570091529944991",
+          "deps": [
+            "npm:@nestjs/common",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/api/src/main.ts",
+          "hash": "2001345965177334983",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/api/src/matches/matches.controller.spec.ts",
+          "hash": "15091549320699961406",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/api/src/matches/matches.controller.ts",
+          "hash": "16177568146339637090",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/matches/matches.module.ts",
+          "hash": "3378294575994496441",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/matches/matches.service.ts",
+          "hash": "7361680517092240487",
+          "deps": [
+            "npm:@nestjs/common",
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "apps/api/src/players/players.controller.ts",
+          "hash": "7758204397359473076",
+          "deps": [
+            "npm:@nestjs/common",
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "apps/api/src/players/players.module.ts",
+          "hash": "11048334027620418172",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/players/players.service.ts",
+          "hash": "4326755201362723521",
+          "deps": [
+            "npm:@nestjs/common",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/api/src/pubg/pubg.module.ts",
+          "hash": "8540825811194115196",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/pubg/pubg.service.spec.ts",
+          "hash": "9233814689559766882",
+          "deps": [
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/api/src/pubg/pubg.service.ts",
+          "hash": "17587712396310821944",
+          "deps": [
+            "npm:@j03fr0st/pubg-ts",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/api/src/telemetry/telemetry-processor.service.spec.ts",
+          "hash": "15072852816130550182",
+          "deps": [
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "apps/api/src/telemetry/telemetry-processor.service.ts",
+          "hash": "12363134036690285482",
+          "deps": [
+            "npm:@j03fr0st/pubg-ts",
+            "npm:@nestjs/common",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/api/src/telemetry/telemetry.module.ts",
+          "hash": "14716638991418974369",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/test-setup.ts",
+          "hash": "10762920043107197735",
+          "deps": [
+            "npm:reflect-metadata"
+          ]
+        },
+        {
+          "file": "apps/api/tsconfig.app.json",
+          "hash": "9864853622128133390"
+        },
+        {
+          "file": "apps/api/tsconfig.json",
+          "hash": "6240538891403235665"
+        },
+        {
+          "file": "apps/api/tsconfig.spec.json",
+          "hash": "17869523095539531547"
+        },
+        {
+          "file": "apps/api/webpack.config.js",
+          "hash": "18127266887113894777",
+          "deps": [
+            "npm:@nx/webpack"
           ]
         }
       ],
@@ -215,7 +494,32 @@
         },
         {
           "file": "libs/shared/utils/src/index.ts",
-          "hash": "1424520165591673030"
+          "hash": "16821282176475031365"
+        },
+        {
+          "file": "libs/shared/utils/src/lib/map-helpers.spec.ts",
+          "hash": "4248571989494939771",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "libs/shared/utils/src/lib/map-helpers.ts",
+          "hash": "11138081108031712014",
+          "deps": [
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "libs/shared/utils/src/lib/time-helpers.spec.ts",
+          "hash": "4812053982423452675",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "libs/shared/utils/src/lib/time-helpers.ts",
+          "hash": "6281302857888644739"
         },
         {
           "file": "libs/shared/utils/src/lib/utils.spec.ts",
@@ -231,11 +535,11 @@
         },
         {
           "file": "libs/shared/utils/tsconfig.lib.json",
-          "hash": "16510454407152570898"
+          "hash": "9875048782845300968"
         },
         {
           "file": "libs/shared/utils/tsconfig.spec.json",
-          "hash": "941360896951688704"
+          "hash": "12233809024625175605"
         },
         {
           "file": "libs/shared/utils/vite.config.ts",
@@ -259,7 +563,7 @@
         },
         {
           "file": "apps/api-e2e/jest.config.cts",
-          "hash": "8449775584097811472"
+          "hash": "1223382667478503924"
         },
         {
           "file": "apps/api-e2e/package.json",
@@ -274,21 +578,21 @@
         },
         {
           "file": "apps/api-e2e/src/support/global-setup.ts",
-          "hash": "10817858795115919263",
+          "hash": "6146289554655166360",
           "deps": [
             "npm:@nx/node"
           ]
         },
         {
           "file": "apps/api-e2e/src/support/global-teardown.ts",
-          "hash": "14210317125869451873",
+          "hash": "13944585948107331229",
           "deps": [
             "npm:@nx/node"
           ]
         },
         {
           "file": "apps/api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
+          "hash": "14204450746074348513",
           "deps": [
             "npm:axios"
           ]
@@ -324,19 +628,20 @@
         },
         {
           "file": "apps/client/src/app/app.config.ts",
-          "hash": "4436923392211261843",
+          "hash": "4707613141450098103",
           "deps": [
+            "npm:@angular/common",
             "npm:@angular/core",
             "npm:@angular/router"
           ]
         },
         {
           "file": "apps/client/src/app/app.html",
-          "hash": "16596876657544490338"
+          "hash": "16460337178097590485"
         },
         {
           "file": "apps/client/src/app/app.routes.ts",
-          "hash": "6185150965714414910",
+          "hash": "17522974133324017810",
           "deps": [
             "npm:@angular/router"
           ]
@@ -347,41 +652,143 @@
         },
         {
           "file": "apps/client/src/app/app.spec.ts",
-          "hash": "7935267232882145084",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/app.ts",
-          "hash": "6805483598183865258",
+          "hash": "10369929719456800617",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router"
           ]
         },
         {
-          "file": "apps/client/src/app/nx-welcome.ts",
-          "hash": "5569083704297404496",
+          "file": "apps/client/src/app/app.ts",
+          "hash": "9967383198563757584",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/kill-feed/kill-feed.component.ts",
+          "hash": "3993841967210513188",
+          "deps": [
+            "npm:@angular/core",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/map-canvas/map-canvas.component.ts",
+          "hash": "17406425916206025814",
+          "deps": [
+            "npm:@angular/core",
+            "@pubg-replay/replay-engine"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/match-card/match-card.component.ts",
+          "hash": "6531639975714653547",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/player-panel/player-panel.component.ts",
+          "hash": "2578655287194134804",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/timeline/timeline.component.ts",
+          "hash": "11516396259168465094",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/nx-welcome.ts",
+          "hash": "15112551851584566316",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/heatmap/heatmap.component.ts",
+          "hash": "11158316522520227863",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "@pubg-replay/shared-types",
+            "npm:pixi.js",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/home/home.component.ts",
+          "hash": "17073001482104779061",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/player/player.component.ts",
+          "hash": "2170681776932628309",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/replay/replay.component.ts",
+          "hash": "7299926890359885237",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/services/api.service.ts",
+          "hash": "11291312680620937178",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "@pubg-replay/shared-types",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/services/replay.service.ts",
+          "hash": "1139118122333015210",
+          "deps": [
+            "npm:@angular/core",
+            "@pubg-replay/replay-engine",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
           ]
         },
         {
           "file": "apps/client/src/index.html",
-          "hash": "13081814830831880484"
+          "hash": "17200319539059527561"
         },
         {
           "file": "apps/client/src/main.ts",
-          "hash": "3314327030169821486",
+          "hash": "2468093891557611168",
           "deps": [
             "npm:@angular/platform-browser"
           ]
         },
         {
           "file": "apps/client/src/styles.scss",
-          "hash": "3862753767148971360"
+          "hash": "11265180916429094172"
         },
         {
           "file": "apps/client/src/styles/theme.css",
@@ -389,144 +796,126 @@
         },
         {
           "file": "apps/client/tsconfig.app.json",
-          "hash": "18236407445202082987"
+          "hash": "1246040711918193541"
         },
         {
           "file": "apps/client/tsconfig.json",
-          "hash": "12889091445351011630"
+          "hash": "14904413700065535041"
         },
         {
           "file": "apps/client/tsconfig.spec.json",
           "hash": "13919890687900665478"
         }
       ],
-      "@pubg-replay/shared-types": [
+      "@pubg-replay/replay-engine": [
         {
-          "file": "libs/shared/types/README.md",
-          "hash": "9100919672007375316"
+          "file": "libs/replay-engine/README.md",
+          "hash": "7410901065840022058"
         },
         {
-          "file": "libs/shared/types/package.json",
-          "hash": "13880101611499852383"
+          "file": "libs/replay-engine/package.json",
+          "hash": "5020735266573918688"
         },
         {
-          "file": "libs/shared/types/src/index.ts",
-          "hash": "13677404074782253490"
+          "file": "libs/replay-engine/src/index.ts",
+          "hash": "1840227116081274280"
         },
         {
-          "file": "libs/shared/types/src/lib/api.ts",
-          "hash": "2216475967694084723"
-        },
-        {
-          "file": "libs/shared/types/src/lib/frames.ts",
-          "hash": "8077470592008601630"
-        },
-        {
-          "file": "libs/shared/types/src/lib/telemetry.ts",
-          "hash": "2600648703647428343",
+          "file": "libs/replay-engine/src/lib/engine.spec.ts",
+          "hash": "15418806871789313938",
           "deps": [
-            "npm:@j03fr0st/pubg-ts"
+            "npm:vitest"
           ]
         },
         {
-          "file": "libs/shared/types/src/lib/types.spec.ts",
-          "hash": "9354891611907858840"
+          "file": "libs/replay-engine/src/lib/engine.ts",
+          "hash": "5556775751633093676",
+          "deps": [
+            "npm:pixi.js"
+          ]
         },
         {
-          "file": "libs/shared/types/src/lib/types.ts",
-          "hash": "5476929482655057349"
+          "file": "libs/replay-engine/src/lib/playback.spec.ts",
+          "hash": "5403568424190525419",
+          "deps": [
+            "@pubg-replay/shared-types",
+            "npm:vitest"
+          ]
         },
         {
-          "file": "libs/shared/types/tsconfig.json",
-          "hash": "14186287857387999199"
+          "file": "libs/replay-engine/src/lib/playback.ts",
+          "hash": "7905754432024444004",
+          "deps": [
+            "@pubg-replay/shared-types"
+          ]
         },
         {
-          "file": "libs/shared/types/tsconfig.lib.json",
-          "hash": "16510454407152570898"
+          "file": "libs/replay-engine/src/lib/renderers/event-renderer.ts",
+          "hash": "5480102522956185776",
+          "deps": [
+            "@pubg-replay/shared-types",
+            "npm:pixi.js"
+          ]
         },
         {
-          "file": "libs/shared/types/tsconfig.spec.json",
-          "hash": "941360896951688704"
+          "file": "libs/replay-engine/src/lib/renderers/map-renderer.ts",
+          "hash": "10863552529632741913",
+          "deps": [
+            "npm:pixi.js"
+          ]
         },
         {
-          "file": "libs/shared/types/vite.config.ts",
-          "hash": "5247685006192271729",
+          "file": "libs/replay-engine/src/lib/renderers/player-renderer.ts",
+          "hash": "11835724173152694361",
+          "deps": [
+            "@pubg-replay/shared-types",
+            "npm:pixi.js"
+          ]
+        },
+        {
+          "file": "libs/replay-engine/src/lib/renderers/zone-renderer.ts",
+          "hash": "16467451359535434188",
+          "deps": [
+            "@pubg-replay/shared-types",
+            "npm:pixi.js"
+          ]
+        },
+        {
+          "file": "libs/replay-engine/src/lib/replay-engine.spec.ts",
+          "hash": "8163475856195818796"
+        },
+        {
+          "file": "libs/replay-engine/src/lib/replay-engine.ts",
+          "hash": "16392959635748229007"
+        },
+        {
+          "file": "libs/replay-engine/tsconfig.json",
+          "hash": "12834038490315927699"
+        },
+        {
+          "file": "libs/replay-engine/tsconfig.lib.json",
+          "hash": "6645067435105662501"
+        },
+        {
+          "file": "libs/replay-engine/tsconfig.spec.json",
+          "hash": "10060730206704640043"
+        },
+        {
+          "file": "libs/replay-engine/vite.config.ts",
+          "hash": "16281762332909394339",
           "deps": [
             "npm:vite"
           ]
         },
         {
-          "file": "libs/shared/types/vitest.config.mts",
-          "hash": "14725460237203485694",
+          "file": "libs/replay-engine/vitest.config.mts",
+          "hash": "16179561834097687813",
           "deps": [
             "npm:vitest"
-          ]
-        }
-      ],
-      "api": [
-        {
-          "file": "apps/api/package.json",
-          "hash": "9821842305328026250",
-          "deps": [
-            "npm:@nestjs/testing",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/platform-express",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:tslib"
-          ]
-        },
-        {
-          "file": "apps/api/src/app/app.controller.ts",
-          "hash": "15276891910009544695",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/api/src/app/app.module.ts",
-          "hash": "11673476679848632172",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/api/src/app/app.service.ts",
-          "hash": "9967902337593410053",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/api/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/api/src/main.ts",
-          "hash": "150780270862474464",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@nestjs/core"
-          ]
-        },
-        {
-          "file": "apps/api/tsconfig.app.json",
-          "hash": "1421362308817364721"
-        },
-        {
-          "file": "apps/api/tsconfig.json",
-          "hash": "6240538891403235665"
-        },
-        {
-          "file": "apps/api/webpack.config.js",
-          "hash": "1138914127741561495",
-          "deps": [
-            "npm:@nx/webpack"
           ]
         }
       ]
     }
   },
-  "externalNodesHash": "12524982972014527200"
+  "externalNodesHash": "16343862663119032202"
 }

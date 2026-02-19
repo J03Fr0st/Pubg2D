@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { describe, it, expect, vi } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { ReplayEngine } from './engine';
 
 // Mock pixi.js since it requires WebGL context

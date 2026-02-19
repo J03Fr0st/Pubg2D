@@ -1,4 +1,4 @@
-import type { ReplayTick, PlayerFrame, ZoneFrame } from '@pubg-replay/shared-types';
+import type { PlayerFrame, ReplayTick, ZoneFrame } from '@pubg-replay/shared-types';
 
 function lerp(a: number, b: number, t: number): number {
   return a + (b - a) * t;
@@ -36,7 +36,22 @@ function interpolateZone(a: ZoneFrame, b: ZoneFrame, t: number): ZoneFrame {
 /** Find the interpolated tick state at a given elapsed time */
 export function interpolateTick(ticks: ReplayTick[], time: number): ReplayTick {
   if (ticks.length === 0) {
-    return { elapsedTime: time, players: [], zone: { safeX: 0.5, safeY: 0.5, safeRadius: 1, poisonX: 0.5, poisonY: 0.5, poisonRadius: 1, redX: 0, redY: 0, redRadius: 0 }, alivePlayers: 0 };
+    return {
+      elapsedTime: time,
+      players: [],
+      zone: {
+        safeX: 0.5,
+        safeY: 0.5,
+        safeRadius: 1,
+        poisonX: 0.5,
+        poisonY: 0.5,
+        poisonRadius: 1,
+        redX: 0,
+        redY: 0,
+        redRadius: 0,
+      },
+      alivePlayers: 0,
+    };
   }
 
   if (time <= ticks[0].elapsedTime) return ticks[0];

@@ -356,6 +356,26 @@
       "apps/api/package.json",
       "nx/core/package-json"
     ],
+    "targets.test": [
+      "apps/api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "apps/api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.outputs": [
+      "apps/api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "apps/api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "apps/api/package.json",
+      "nx/core/package-json"
+    ],
     "targets.serve": [
       "apps/api/package.json",
       "nx/core/package-json"
@@ -407,6 +427,14 @@
     "targets.serve.configurations.production.buildTarget": [
       "apps/api/package.json",
       "nx/core/package-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
     ]
   },
   "apps/api-e2e": {
@@ -947,79 +975,79 @@
       "@nx/js/typescript"
     ],
     "projectType": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "metadata.targetGroups": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "metadata.targetGroups.TEST (CI)": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.options": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.cache": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.inputs": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.outputs": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.executor": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.options.cwd": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.options.command": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.0": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.description": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.command": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.example": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.1": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "name": [
@@ -1145,79 +1173,79 @@
       "@nx/js/typescript"
     ],
     "projectType": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "metadata.targetGroups": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "metadata.targetGroups.TEST (CI)": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.options": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.cache": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.inputs": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.outputs": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.executor": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.options.cwd": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.options.command": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.0": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.description": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.command": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.example": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.1": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "name": [

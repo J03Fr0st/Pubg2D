@@ -14,40 +14,35 @@
  */
 
 // Re-export telemetry types from pubg-ts
-export type {
-  TelemetryEvent,
-  TelemetryData,
-  Character,
-  Location,
-  GameState,
-  ItemPackage,
-  Item,
-  Vehicle,
-  DamageInfo,
-  FlexibleDamageInfo,
-  Common,
-  LogPlayerPosition,
-  LogPlayerKillV2,
-  LogGameStatePeriodic,
-  LogCarePackageLand,
-  LogMatchStart,
-  LogMatchEnd,
-} from '@j03fr0st/pubg-ts';
-
-// Re-export utilities
-export { DamageInfoUtils } from '@j03fr0st/pubg-ts';
-
 // Alias for telemetry coordinate type
-export type { Location as TelemetryLocation } from '@j03fr0st/pubg-ts';
-
 // Re-export match/player response types
 export type {
-  Player,
-  PlayersResponse,
+  Asset,
+  Character,
+  Common,
+  DamageInfo,
+  FlexibleDamageInfo,
+  GameState,
+  Item,
+  ItemPackage,
+  Location,
+  Location as TelemetryLocation,
+  LogCarePackageLand,
+  LogGameStatePeriodic,
+  LogMatchEnd,
+  LogMatchStart,
+  LogPlayerKillV2,
+  LogPlayerPosition,
   Match,
   MatchResponse,
-  Roster,
   Participant,
-  Asset,
+  Player,
+  PlayersResponse,
+  Roster,
   Season,
+  TelemetryData,
+  TelemetryEvent,
+  Vehicle,
 } from '@j03fr0st/pubg-ts';
+// Re-export utilities
+export { DamageInfoUtils } from '@j03fr0st/pubg-ts';
