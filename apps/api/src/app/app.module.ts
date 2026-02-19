@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { PubgModule } from '../pubg/pubg.module';
 import { MatchesModule } from '../matches/matches.module';
 import { PlayersModule } from '../players/players.module';
+import { HeatmapsModule } from '../heatmaps/heatmaps.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { PlayersModule } from '../players/players.module';
     PubgModule,
     MatchesModule,
     PlayersModule,
+    HeatmapsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
