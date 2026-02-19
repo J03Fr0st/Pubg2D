@@ -17,6 +17,11 @@ export const appRoutes: Routes = [
       import('./pages/player/player.component').then((m) => m.PlayerComponent),
   },
   {
+    path: 'heatmap/:accountId',
+    loadComponent: () =>
+      import('./pages/heatmap/heatmap.component').then((m) => m.HeatmapComponent),
+  },
+  {
     path: '',
     loadComponent: () =>
       import('./pages/home/home.component').then((m) => m.HomeComponent),
