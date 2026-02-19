@@ -16783,6 +16783,11 @@
     "@pubg-replay/shared-types": [
       {
         "source": "@pubg-replay/shared-types",
+        "target": "npm:@j03fr0st/pubg-ts",
+        "type": "static"
+      },
+      {
+        "source": "@pubg-replay/shared-types",
         "target": "npm:vite",
         "type": "static"
       },
@@ -38601,5 +38606,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1771511346424
+  "computedAt": 1771511735937
 }

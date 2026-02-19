@@ -51,80 +51,92 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".github/agents/ci-monitor-subagent.agent.md",
-        "hash": "17271371206473447631"
-      },
-      {
-        "file": ".github/prompts/monitor-ci.prompt.md",
-        "hash": "14111579483359899130"
-      },
-      {
-        "file": ".github/skills/link-workspace-packages/SKILL.md",
-        "hash": "15436383388001770446"
-      },
-      {
-        "file": ".github/skills/monitor-ci/SKILL.md",
-        "hash": "9468003408493328484"
-      },
-      {
-        "file": ".github/skills/nx-generate/SKILL.md",
-        "hash": "9325031674722245942"
-      },
-      {
-        "file": ".github/skills/nx-plugins/SKILL.md",
-        "hash": "17761452540263218782"
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "15239321302212089310"
       },
       {
         "file": ".github/skills/nx-run-tasks/SKILL.md",
         "hash": "6310165843200780094"
       },
       {
-        "file": ".github/skills/nx-workspace/SKILL.md",
-        "hash": "15239321302212089310"
-      },
-      {
-        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "5689225252238354455"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "12598063760286856263"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "4512172852042077378"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "13591750739247547927"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6820402234827505055"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "16884713733442577066"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "11911801181309274062"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "1539253793410688689"
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "15436383388001770446"
       },
       {
         "file": "README.md",
         "hash": "15713270296686733381"
       },
       {
-        "file": "docs/plans/2026-02-19-pubg-replay-design.md",
-        "hash": "7141623013702546955"
+        "file": ".vscode/extensions.json",
+        "hash": "16884713733442577066"
       },
       {
         "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
         "hash": "14600255494264850067"
+      },
+      {
+        "file": ".github/prompts/monitor-ci.prompt.md",
+        "hash": "14111579483359899130"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "9468003408493328484"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5679180110196049216"
+      },
+      {
+        "file": ".github/skills/nx-plugins/SKILL.md",
+        "hash": "17761452540263218782"
+      },
+      {
+        "file": ".github/agents/ci-monitor-subagent.agent.md",
+        "hash": "17271371206473447631"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "12598063760286856263"
+      },
+      {
+        "file": ".github/skills/nx-generate/SKILL.md",
+        "hash": "9325031674722245942"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4512172852042077378"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "4665328684042819579"
+      },
+      {
+        "file": "docs/plans/2026-02-19-pubg-replay-design.md",
+        "hash": "7141623013702546955"
+      },
+      {
+        "file": "package.json",
+        "hash": "11042730521032192278"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "5445344698340889520"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "5780549712593567812"
+      },
+      {
+        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "5689225252238354455"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "13591750739247547927"
       },
       {
         "file": "eslint.config.mjs",
@@ -135,24 +147,12 @@
         "hash": "16974164741354469435"
       },
       {
-        "file": "package-lock.json",
-        "hash": "5780549712593567812"
+        "file": "LICENSE",
+        "hash": "1539253793410688689"
       },
       {
-        "file": "package.json",
-        "hash": "11042730521032192278"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5679180110196049216"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "5445344698340889520"
-      },
-      {
-        "file": "vitest.workspace.ts",
-        "hash": "4665328684042819579"
+        "file": ".vscode/launch.json",
+        "hash": "11911801181309274062"
       }
     ],
     "projectFileMap": {
@@ -411,7 +411,14 @@
         },
         {
           "file": "libs/shared/types/src/index.ts",
-          "hash": "9616474743146201400"
+          "hash": "1080718483633185595"
+        },
+        {
+          "file": "libs/shared/types/src/lib/telemetry.ts",
+          "hash": "2600648703647428343",
+          "deps": [
+            "npm:@j03fr0st/pubg-ts"
+          ]
         },
         {
           "file": "libs/shared/types/src/lib/types.spec.ts",

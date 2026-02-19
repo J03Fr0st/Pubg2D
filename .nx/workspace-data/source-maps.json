@@ -947,79 +947,79 @@
       "@nx/js/typescript"
     ],
     "projectType": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "metadata.targetGroups": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "metadata.targetGroups.TEST (CI)": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.options": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.cache": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.inputs": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.outputs": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.executor": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.options.cwd": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.options.command": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.0": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.description": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.command": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.example": [
-      "libs/replay-engine/vitest.config.mts",
+      "libs/replay-engine/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.1": [
-      "libs/replay-engine/vite.config.ts",
+      "libs/replay-engine/vitest.config.mts",
       "@nx/vitest"
     ],
     "name": [
