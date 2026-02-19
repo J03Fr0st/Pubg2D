@@ -3440,6 +3440,611 @@
     "type": "static"
   },
   {
+    "source": "npm:@cacheable/utils",
+    "target": "npm:hashery",
+    "type": "static"
+  },
+  {
+    "source": "npm:@cacheable/utils",
+    "target": "npm:keyv",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:@changesets/config",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:@changesets/get-version-range-type",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:@changesets/git",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:@changesets/should-skip-package",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:detect-indent",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:fs-extra@7.0.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:lodash.startcase",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:outdent",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:prettier",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:resolve-from@5.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/apply-release-plan",
+    "target": "npm:semver",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/assemble-release-plan",
+    "target": "npm:@changesets/errors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/assemble-release-plan",
+    "target": "npm:@changesets/get-dependents-graph",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/assemble-release-plan",
+    "target": "npm:@changesets/should-skip-package",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/assemble-release-plan",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/assemble-release-plan",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/assemble-release-plan",
+    "target": "npm:semver",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/changelog-git",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/apply-release-plan",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/assemble-release-plan",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/changelog-git",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/config",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/errors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/get-dependents-graph",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/get-release-plan",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/git",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/logger",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/pre",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/read",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/should-skip-package",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@changesets/write",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@inquirer/external-editor",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:ansi-colors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:ci-info",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:enquirer@2.4.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:fs-extra@7.0.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:mri",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:p-limit@2.3.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:package-manager-detector",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:picocolors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:resolve-from@5.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:semver",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:spawndamnit",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/cli",
+    "target": "npm:term-size",
+    "type": "static"
+  },
+  {
+    "source": "npm:enquirer@2.4.1",
+    "target": "npm:ansi-colors",
+    "type": "static"
+  },
+  {
+    "source": "npm:enquirer@2.4.1",
+    "target": "npm:strip-ansi",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:p-limit@2.3.0",
+    "target": "npm:p-try",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:@changesets/errors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:@changesets/get-dependents-graph",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:@changesets/logger",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:fs-extra@7.0.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/config",
+    "target": "npm:micromatch",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/errors",
+    "target": "npm:extendable-error",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-dependents-graph",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-dependents-graph",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-dependents-graph",
+    "target": "npm:picocolors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-dependents-graph",
+    "target": "npm:semver",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-release-plan",
+    "target": "npm:@changesets/assemble-release-plan",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-release-plan",
+    "target": "npm:@changesets/config",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-release-plan",
+    "target": "npm:@changesets/pre",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-release-plan",
+    "target": "npm:@changesets/read",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-release-plan",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/get-release-plan",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/git",
+    "target": "npm:@changesets/errors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/git",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/git",
+    "target": "npm:is-subdir",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/git",
+    "target": "npm:micromatch",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/git",
+    "target": "npm:spawndamnit",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/logger",
+    "target": "npm:picocolors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/parse",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/parse",
+    "target": "npm:js-yaml@4.1.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:js-yaml@4.1.1",
+    "target": "npm:argparse",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/pre",
+    "target": "npm:@changesets/errors",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/pre",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/pre",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/pre",
+    "target": "npm:fs-extra@7.0.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:@changesets/git",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:@changesets/logger",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:@changesets/parse",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:fs-extra@7.0.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:p-filter",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/read",
+    "target": "npm:picocolors",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/should-skip-package",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/should-skip-package",
+    "target": "npm:@manypkg/get-packages",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/write",
+    "target": "npm:@changesets/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/write",
+    "target": "npm:fs-extra@7.0.1",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/write",
+    "target": "npm:human-id",
+    "type": "static"
+  },
+  {
+    "source": "npm:@changesets/write",
+    "target": "npm:prettier",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@7.0.1",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
     "source": "npm:@csstools/css-calc",
     "target": "npm:@csstools/css-parser-algorithms",
     "type": "static"
@@ -4127,6 +4732,26 @@
   {
     "source": "npm:p-locate@4.1.0",
     "target": "npm:p-limit@2.3.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@j03fr0st/pubg-ts",
+    "target": "npm:@changesets/cli",
+    "type": "static"
+  },
+  {
+    "source": "npm:@j03fr0st/pubg-ts",
+    "target": "npm:axios",
+    "type": "static"
+  },
+  {
+    "source": "npm:@j03fr0st/pubg-ts",
+    "target": "npm:fuse.js",
+    "type": "static"
+  },
+  {
+    "source": "npm:@j03fr0st/pubg-ts",
+    "target": "npm:validator",
     "type": "static"
   },
   {
@@ -5427,6 +6052,151 @@
   {
     "source": "npm:@listr2/prompt-adapter-inquirer",
     "target": "npm:@inquirer/type",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/find-root",
+    "target": "npm:@babel/runtime",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/find-root",
+    "target": "npm:@types/node@12.20.55",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/find-root",
+    "target": "npm:find-up@4.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/find-root",
+    "target": "npm:fs-extra@8.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:find-up@4.1.0",
+    "target": "npm:locate-path@5.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:find-up@4.1.0",
+    "target": "npm:path-exists",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@8.1.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@8.1.0",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@8.1.0",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:locate-path@5.0.0",
+    "target": "npm:p-locate@4.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:p-limit@2.3.0",
+    "target": "npm:p-try",
+    "type": "static"
+  },
+  {
+    "source": "npm:p-locate@4.1.0",
+    "target": "npm:p-limit@2.3.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/get-packages",
+    "target": "npm:@babel/runtime",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/get-packages",
+    "target": "npm:@changesets/types@4.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/get-packages",
+    "target": "npm:@manypkg/find-root",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/get-packages",
+    "target": "npm:fs-extra@8.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/get-packages",
+    "target": "npm:globby@11.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@manypkg/get-packages",
+    "target": "npm:read-yaml-file",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@8.1.0",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@8.1.0",
+    "target": "npm:jsonfile@4.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:fs-extra@8.1.0",
+    "target": "npm:universalify@0.1.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:globby@11.1.0",
+    "target": "npm:array-union@2.1.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:globby@11.1.0",
+    "target": "npm:dir-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:globby@11.1.0",
+    "target": "npm:fast-glob",
+    "type": "static"
+  },
+  {
+    "source": "npm:globby@11.1.0",
+    "target": "npm:ignore",
+    "type": "static"
+  },
+  {
+    "source": "npm:globby@11.1.0",
+    "target": "npm:merge2",
+    "type": "static"
+  },
+  {
+    "source": "npm:globby@11.1.0",
+    "target": "npm:slash@3.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:jsonfile@4.0.0",
+    "target": "npm:graceful-fs",
     "type": "static"
   },
   {
@@ -6837,6 +7607,31 @@
   {
     "source": "npm:@napi-rs/wasm-runtime",
     "target": "npm:@tybys/wasm-util",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/cache-manager",
+    "target": "npm:@nestjs/common",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/cache-manager",
+    "target": "npm:@nestjs/core",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/cache-manager",
+    "target": "npm:cache-manager",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/cache-manager",
+    "target": "npm:keyv",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/cache-manager",
+    "target": "npm:rxjs",
     "type": "static"
   },
   {
@@ -10195,6 +10990,26 @@
     "type": "static"
   },
   {
+    "source": "npm:@tanstack/angular-query-experimental",
+    "target": "npm:@angular/common",
+    "type": "static"
+  },
+  {
+    "source": "npm:@tanstack/angular-query-experimental",
+    "target": "npm:@angular/core",
+    "type": "static"
+  },
+  {
+    "source": "npm:@tanstack/angular-query-experimental",
+    "target": "npm:@tanstack/query-core",
+    "type": "static"
+  },
+  {
+    "source": "npm:@tanstack/angular-query-experimental",
+    "target": "npm:@tanstack/query-devtools",
+    "type": "static"
+  },
+  {
     "source": "npm:@tokenizer/inflate",
     "target": "npm:debug",
     "type": "static"
@@ -11705,6 +12520,11 @@
     "type": "static"
   },
   {
+    "source": "npm:better-path-resolve",
+    "target": "npm:is-windows",
+    "type": "static"
+  },
+  {
     "source": "npm:bidi-js",
     "target": "npm:require-from-string",
     "type": "static"
@@ -11917,6 +12737,16 @@
   {
     "source": "npm:cacache",
     "target": "npm:unique-filename",
+    "type": "static"
+  },
+  {
+    "source": "npm:cache-manager",
+    "target": "npm:@cacheable/utils",
+    "type": "static"
+  },
+  {
+    "source": "npm:cache-manager",
+    "target": "npm:keyv",
     "type": "static"
   },
   {
@@ -13631,7 +14461,12 @@
   },
   {
     "source": "npm:flat-cache",
-    "target": "npm:keyv",
+    "target": "npm:keyv@4.5.4",
+    "type": "static"
+  },
+  {
+    "source": "npm:keyv@4.5.4",
+    "target": "npm:json-buffer",
     "type": "static"
   },
   {
@@ -13945,6 +14780,11 @@
     "type": "static"
   },
   {
+    "source": "npm:gifuct-js",
+    "target": "npm:js-binary-schema-parser",
+    "type": "static"
+  },
+  {
     "source": "npm:glob",
     "target": "npm:minimatch@10.2.1",
     "type": "static"
@@ -14057,6 +14897,11 @@
   {
     "source": "npm:has-tostringtag",
     "target": "npm:has-symbols",
+    "type": "static"
+  },
+  {
+    "source": "npm:hashery",
+    "target": "npm:hookified",
     "type": "static"
   },
   {
@@ -14447,6 +15292,11 @@
   {
     "source": "npm:is-inside-container",
     "target": "npm:is-docker@3.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:is-subdir",
+    "target": "npm:better-path-resolve",
     "type": "static"
   },
   {
@@ -16661,7 +17511,7 @@
   },
   {
     "source": "npm:keyv",
-    "target": "npm:json-buffer",
+    "target": "npm:@keyv/serialize",
     "type": "static"
   },
   {
@@ -18115,6 +18965,11 @@
     "type": "static"
   },
   {
+    "source": "npm:p-filter",
+    "target": "npm:p-map@2.1.0",
+    "type": "static"
+  },
+  {
     "source": "npm:p-limit",
     "target": "npm:yocto-queue",
     "type": "static"
@@ -18137,6 +18992,11 @@
   {
     "source": "npm:p-retry",
     "target": "npm:retry",
+    "type": "static"
+  },
+  {
+    "source": "npm:package-manager-detector",
+    "target": "npm:quansync",
     "type": "static"
   },
   {
@@ -18292,6 +19152,61 @@
   {
     "source": "npm:piscina",
     "target": "npm:@napi-rs/nice",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi-viewport",
+    "target": "npm:pixi.js",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:@pixi/colord",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:@types/earcut",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:@webgpu/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:@xmldom/xmldom",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:earcut",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:eventemitter3@5.0.4",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:gifuct-js",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:ismobilejs",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:parse-svg-path",
+    "type": "static"
+  },
+  {
+    "source": "npm:pixi.js",
+    "target": "npm:tiny-lru",
     "type": "static"
   },
   {
@@ -18952,6 +19867,26 @@
   {
     "source": "npm:read-cache",
     "target": "npm:pify@2.3.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:read-yaml-file",
+    "target": "npm:graceful-fs",
+    "type": "static"
+  },
+  {
+    "source": "npm:read-yaml-file",
+    "target": "npm:js-yaml",
+    "type": "static"
+  },
+  {
+    "source": "npm:read-yaml-file",
+    "target": "npm:pify",
+    "type": "static"
+  },
+  {
+    "source": "npm:read-yaml-file",
+    "target": "npm:strip-bom",
     "type": "static"
   },
   {
@@ -19892,6 +20827,16 @@
   {
     "source": "npm:source-map-support",
     "target": "npm:source-map",
+    "type": "static"
+  },
+  {
+    "source": "npm:spawndamnit",
+    "target": "npm:cross-spawn",
+    "type": "static"
+  },
+  {
+    "source": "npm:spawndamnit",
+    "target": "npm:signal-exit@4.1.0",
     "type": "static"
   },
   {
