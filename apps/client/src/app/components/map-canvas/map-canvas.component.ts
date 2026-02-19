@@ -1,14 +1,22 @@
 import {
   Component,
-  ElementRef,
-  OnInit,
-  OnDestroy,
-  inject,
-  viewChild,
+  type ElementRef,
+  Injector,
   effect,
+  inject,
+  type OnDestroy,
+  type OnInit,
+  runInInjectionContext,
+  viewChild,
 } from '@angular/core';
+import {
+  EventRenderer,
+  MapRenderer,
+  PlayerRenderer,
+  ReplayEngine,
+  ZoneRenderer,
+} from '@pubg-replay/replay-engine';
 import { ReplayService } from '../../services/replay.service';
-import { ReplayEngine, PlayerRenderer, ZoneRenderer, EventRenderer } from '@pubg-replay/replay-engine';
 
 @Component({
   selector: 'pubg-map-canvas',
@@ -17,9 +25,11 @@ import { ReplayEngine, PlayerRenderer, ZoneRenderer, EventRenderer } from '@pubg
 })
 export class MapCanvasComponent implements OnInit, OnDestroy {
   private replay = inject(ReplayService);
+  private injector = inject(Injector);
   private containerRef = viewChild.required<ElementRef<HTMLDivElement>>('canvasContainer');
 
   private engine!: ReplayEngine;
+  private mapRenderer!: MapRenderer;
   private playerRenderer!: PlayerRenderer;
   private zoneRenderer!: ZoneRenderer;
   private eventRenderer!: EventRenderer;
@@ -32,9 +42,23 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
     const el = this.containerRef().nativeElement;
     await this.engine.init(el, this.CANVAS_SIZE, this.CANVAS_SIZE);
 
+    this.mapRenderer = new MapRenderer(this.engine.getMapLayer());
     this.playerRenderer = new PlayerRenderer(this.engine.getPlayerLayer());
     this.zoneRenderer = new ZoneRenderer(this.engine.getZoneLayer());
     this.eventRenderer = new EventRenderer(this.engine.getEventLayer());
+
+    const replayData = this.replay.replayData();
+    const mapName = replayData?.mapName ?? 'Baltic_Main';
+    await this.mapRenderer.load(mapName, this.CANVAS_SIZE, this.CANVAS_SIZE);
+
+    if (replayData?.planePath) {
+      this.mapRenderer.drawPlanePath(
+        replayData.planePath[0],
+        replayData.planePath[1],
+        this.CANVAS_SIZE,
+        this.CANVAS_SIZE,
+      );
+    }
 
     // Ticker-driven render loop
     this.engine.getApp().ticker.add((ticker) => {
@@ -43,9 +67,11 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
     });
 
     // React to selected player changes
-    effect(() => {
-      const selected = this.replay.selectedPlayer();
-      this.playerRenderer.setHighlightedPlayer(selected);
+    runInInjectionContext(this.injector, () => {
+      effect(() => {
+        const selected = this.replay.selectedPlayer();
+        this.playerRenderer.setHighlightedPlayer(selected);
+      });
     });
   }
 
@@ -63,8 +89,11 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
     const data = this.replay.replayData();
     const time = this.replay.currentTime();
     if (data) {
-      while (this.lastKillIndex < data.kills.length && data.kills[this.lastKillIndex].timestamp <= time) {
-        this.eventRenderer.addKillTracer(data.kills[this.lastKillIndex], w, h);
+      while (
+        this.lastKillIndex < data.kills.length &&
+        data.kills[this.lastKillIndex].timestamp <= time
+      ) {
+        this.eventRenderer.addKillTracer(data.kills[this.lastKillIndex], time, w, h);
         this.lastKillIndex++;
       }
     }

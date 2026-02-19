@@ -66,6 +66,8 @@ export interface ReplayData {
   kills: KillEvent[];
   carePackages: CarePackageEvent[];
   players: MatchPlayer[];
+  /** Normalized start and end of the airplane flight path */
+  planePath?: [{ x: number; y: number }, { x: number; y: number }];
 }
 
 /** Player summary for the roster panel */

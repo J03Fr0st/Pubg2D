@@ -1,14 +1,25 @@
 import type { PlayerFrame } from '@pubg-replay/shared-types';
 import { type Container, Graphics, Text, TextStyle } from 'pixi.js';
 
-const COLORS = {
-  friendly: 0xd4a832, // amber
-  enemy: 0x6a7a5a, // olive drab
-  highlighted: 0x7aff4a, // bright green
-  dead: 0xc84a2a, // muted red
+// Arc/pie overlay colors — indicate team relationship or focus
+const PLAYER_COLORS = {
+  highlighted: 0x7aff4a, // bright green  — focused / selected player
+  friendly:    0xd4a832, // amber         — same team as focused player
+  enemy:       0x6a8ac8, // steel blue    — all other players
 };
 
-const DOT_RADIUS = 4;
+// Status circle fill colors — indicate health state
+const STATUS_COLORS = {
+  alive:   0x444444, // dark grey  — normal living player
+  knocked: 0xff8800, // orange     — health = 0 but still "alive" (knocked down)
+  dead:    0x2a2a2a, // near-black — eliminated
+};
+
+const STROKE_COLOR  = 0x000000; // black outline on status circle
+const STROKE_WIDTH  = 1.5;
+const DOT_RADIUS    = 4;        // px — matches pubgsh reference (8 px diameter)
+const DEAD_RADIUS   = 3;        // slightly smaller dot for dead players
+const DEAD_ALPHA    = 0.35;
 
 interface PlayerDot {
   graphics: Graphics;
@@ -36,6 +47,7 @@ export class PlayerRenderer {
 
   update(players: PlayerFrame[], canvasWidth: number, canvasHeight: number): void {
     for (const player of players) {
+      // ── 1. Create graphics + label for first-seen players ──────────────────
       let dot = this.dots.get(player.accountId);
 
       if (!dot) {
@@ -58,37 +70,66 @@ export class PlayerRenderer {
       const x = player.x * canvasWidth;
       const y = player.y * canvasHeight;
 
-      // Determine color
-      let color: number;
-      if (!player.isAlive) {
-        color = COLORS.dead;
-      } else if (player.accountId === this.highlightedAccountId) {
-        color = COLORS.highlighted;
+      // ── 2. Determine player (arc) color ────────────────────────────────────
+      let playerColor: number;
+      if (player.accountId === this.highlightedAccountId) {
+        playerColor = PLAYER_COLORS.highlighted;
       } else if (this.friendlyTeamId !== null && player.teamId === this.friendlyTeamId) {
-        color = COLORS.friendly;
+        playerColor = PLAYER_COLORS.friendly;
       } else {
-        color = COLORS.enemy;
+        playerColor = PLAYER_COLORS.enemy;
       }
 
-      // Redraw dot
+      // ── 3. Determine status (circle fill) color ────────────────────────────
+      const isKnocked = player.isAlive && player.health === 0;
+      let statusColor: number;
+      if (!player.isAlive) {
+        statusColor = STATUS_COLORS.dead;
+      } else if (isKnocked) {
+        statusColor = STATUS_COLORS.knocked;
+      } else {
+        statusColor = STATUS_COLORS.alive;
+      }
+
+      // ── 4. Clear previous frame's drawing ─────────────────────────────────
       dot.graphics.clear();
+      dot.graphics.alpha = 1;
+
       if (player.isAlive) {
-        dot.graphics.circle(0, 0, DOT_RADIUS).fill(color);
-      } else {
-        // Dead: X marker
+        // ── 5a. Alive (including knocked): status circle + health arc ─────────
+
+        // Layer 1 — status circle with black stroke
         dot.graphics
-          .moveTo(-3, -3)
-          .lineTo(3, 3)
-          .stroke({ width: 2, color: COLORS.dead })
-          .moveTo(3, -3)
-          .lineTo(-3, 3)
-          .stroke({ width: 2, color: COLORS.dead });
+          .circle(0, 0, DOT_RADIUS)
+          .fill({ color: statusColor })
+          .stroke({ color: STROKE_COLOR, width: STROKE_WIDTH });
+
+        // Layer 2 — health arc (pie sector) drawn on top
+        // Knocked players have health = 0, so the arc covers 0° (invisible).
+        // Full health = full circle; partial health = partial arc.
+        const health = Math.max(0, Math.min(100, player.health ?? 100));
+        if (health > 0) {
+          const startAngle = -Math.PI / 2;                        // 12 o'clock
+          const endAngle   = startAngle + (health / 100) * Math.PI * 2;
+
+          dot.graphics
+            .moveTo(0, 0)
+            .arc(0, 0, DOT_RADIUS, startAngle, endAngle)
+            .lineTo(0, 0)
+            .fill({ color: playerColor });
+        }
+      } else {
+        // ── 5b. Dead: small dim grey dot (no X marker) ───────────────────────
+        dot.graphics
+          .circle(0, 0, DEAD_RADIUS)
+          .fill({ color: STATUS_COLORS.dead });
+        dot.graphics.alpha = DEAD_ALPHA;
       }
 
+      // ── 6. Position graphics and label ────────────────────────────────────
       dot.graphics.position.set(x, y);
       dot.label.position.set(x, y + DOT_RADIUS + 2);
       dot.label.visible = player.accountId === this.highlightedAccountId;
-      dot.graphics.alpha = player.isAlive ? 1 : 0.4;
     }
   }
 

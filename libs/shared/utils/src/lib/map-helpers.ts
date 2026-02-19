@@ -30,12 +30,12 @@ export function getMapDisplayName(mapName: string): string {
 }
 
 export function normalizeCoord(value: number, mapSize: number): number {
-  return value / mapSize;
+  return (value / mapSize) * (mapSize === 816000 ? 0.99609375 : 1);
 }
 
 export function telemetryToNormalized(
   location: TelemetryLocation,
-  mapName: string
+  mapName: string,
 ): { x: number; y: number } {
   const size = getMapSize(mapName);
   return {
