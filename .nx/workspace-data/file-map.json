@@ -51,6 +51,38 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "5689225252238354455"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5679180110196049216"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "9468003408493328484"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "13591750739247547927"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4512172852042077378"
+      },
+      {
+        "file": "README.md",
+        "hash": "15713270296686733381"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "4665328684042819579"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "1539253793410688689"
+      },
+      {
         "file": ".github/agents/ci-monitor-subagent.agent.md",
         "hash": "17271371206473447631"
       },
@@ -59,16 +91,16 @@
         "hash": "14111579483359899130"
       },
       {
-        "file": ".github/skills/link-workspace-packages/SKILL.md",
-        "hash": "15436383388001770446"
-      },
-      {
-        "file": ".github/skills/monitor-ci/SKILL.md",
-        "hash": "9468003408493328484"
+        "file": ".vscode/launch.json",
+        "hash": "11911801181309274062"
       },
       {
         "file": ".github/skills/nx-generate/SKILL.md",
         "hash": "9325031674722245942"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16974164741354469435"
       },
       {
         "file": ".github/skills/nx-plugins/SKILL.md",
@@ -79,24 +111,28 @@
         "hash": "6310165843200780094"
       },
       {
-        "file": ".github/skills/nx-workspace/SKILL.md",
-        "hash": "15239321302212089310"
+        "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
+        "hash": "14600255494264850067"
       },
       {
-        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "5689225252238354455"
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "15436383388001770446"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "8667042163060548688"
       },
       {
         "file": ".github/workflows/ci.yml",
         "hash": "12598063760286856263"
       },
       {
-        "file": ".gitignore",
-        "hash": "4512172852042077378"
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "15239321302212089310"
       },
       {
-        "file": ".prettierignore",
-        "hash": "13591750739247547927"
+        "file": "eslint.config.mjs",
+        "hash": "7566070839603645918"
       },
       {
         "file": ".prettierrc",
@@ -107,103 +143,19 @@
         "hash": "16884713733442577066"
       },
       {
-        "file": ".vscode/launch.json",
-        "hash": "11911801181309274062"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "1539253793410688689"
-      },
-      {
-        "file": "README.md",
-        "hash": "15713270296686733381"
-      },
-      {
         "file": "docs/plans/2026-02-19-pubg-replay-design.md",
         "hash": "7141623013702546955"
       },
       {
-        "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
-        "hash": "14600255494264850067"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "7566070839603645918"
-      },
-      {
-        "file": "nx.json",
-        "hash": "16974164741354469435"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "2198110830419591477"
-      },
-      {
         "file": "package.json",
-        "hash": "16567424217374016363"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5679180110196049216"
+        "hash": "4357437697561903012"
       },
       {
         "file": "tsconfig.json",
         "hash": "5445344698340889520"
-      },
-      {
-        "file": "vitest.workspace.ts",
-        "hash": "4665328684042819579"
       }
     ],
     "projectFileMap": {
-      "@pubg-replay/shared-types": [
-        {
-          "file": "libs/shared/types/README.md",
-          "hash": "9100919672007375316"
-        },
-        {
-          "file": "libs/shared/types/package.json",
-          "hash": "13880101611499852383"
-        },
-        {
-          "file": "libs/shared/types/src/index.ts",
-          "hash": "9616474743146201400"
-        },
-        {
-          "file": "libs/shared/types/src/lib/types.spec.ts",
-          "hash": "9354891611907858840"
-        },
-        {
-          "file": "libs/shared/types/src/lib/types.ts",
-          "hash": "5476929482655057349"
-        },
-        {
-          "file": "libs/shared/types/tsconfig.json",
-          "hash": "14186287857387999199"
-        },
-        {
-          "file": "libs/shared/types/tsconfig.lib.json",
-          "hash": "16510454407152570898"
-        },
-        {
-          "file": "libs/shared/types/tsconfig.spec.json",
-          "hash": "941360896951688704"
-        },
-        {
-          "file": "libs/shared/types/vite.config.ts",
-          "hash": "5247685006192271729",
-          "deps": [
-            "npm:vite"
-          ]
-        },
-        {
-          "file": "libs/shared/types/vitest.config.mts",
-          "hash": "14725460237203485694",
-          "deps": [
-            "npm:vitest"
-          ]
-        }
-      ],
       "api-e2e": [
         {
           "file": "apps/api-e2e/.spec.swcrc",
@@ -252,6 +204,10 @@
       ],
       "client": [
         {
+          "file": "apps/client/.postcssrc.json",
+          "hash": "1757434806578486340"
+        },
+        {
           "file": "apps/client/eslint.config.mjs",
           "hash": "8988060953375556929",
           "deps": [
@@ -280,7 +236,7 @@
         },
         {
           "file": "apps/client/src/app/app.html",
-          "hash": "5987416015445742981"
+          "hash": "16596876657544490338"
         },
         {
           "file": "apps/client/src/app/app.routes.ts",
@@ -329,7 +285,11 @@
         },
         {
           "file": "apps/client/src/styles.scss",
-          "hash": "5195668842064076916"
+          "hash": "3862753767148971360"
+        },
+        {
+          "file": "apps/client/src/styles/theme.css",
+          "hash": "9842809733726404873"
         },
         {
           "file": "apps/client/tsconfig.app.json",
@@ -502,8 +462,56 @@
             "npm:vitest"
           ]
         }
+      ],
+      "@pubg-replay/shared-types": [
+        {
+          "file": "libs/shared/types/README.md",
+          "hash": "9100919672007375316"
+        },
+        {
+          "file": "libs/shared/types/package.json",
+          "hash": "13880101611499852383"
+        },
+        {
+          "file": "libs/shared/types/src/index.ts",
+          "hash": "9616474743146201400"
+        },
+        {
+          "file": "libs/shared/types/src/lib/types.spec.ts",
+          "hash": "9354891611907858840"
+        },
+        {
+          "file": "libs/shared/types/src/lib/types.ts",
+          "hash": "5476929482655057349"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.json",
+          "hash": "14186287857387999199"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.lib.json",
+          "hash": "16510454407152570898"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.spec.json",
+          "hash": "941360896951688704"
+        },
+        {
+          "file": "libs/shared/types/vite.config.ts",
+          "hash": "5247685006192271729",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "libs/shared/types/vitest.config.mts",
+          "hash": "14725460237203485694",
+          "deps": [
+            "npm:vitest"
+          ]
+        }
       ]
     }
   },
-  "externalNodesHash": "8421122929077549004"
+  "externalNodesHash": "6193382494775110501"
 }

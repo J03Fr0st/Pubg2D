@@ -1,0 +1,10 @@
+@theme {
+  --color-bg: #0d1a0d;
+  --color-surface: #1a2a1a;
+  --color-border: #2a3a2a;
+  --color-text-primary: #c8d8b0;
+  --color-text-secondary: #6a7a5a;
+  --color-accent: #7a9a4a;
+  --color-danger: #c84a2a;
+  --color-friendly: #d4a832;
+}
