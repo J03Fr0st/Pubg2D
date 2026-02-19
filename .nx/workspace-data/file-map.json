@@ -1,0 +1,119 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.5.1",
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "tsconfig.json",
+        "hash": "12122149092871080271"
+      },
+      {
+        "file": "README.md",
+        "hash": "15713270296686733381"
+      },
+      {
+        "file": ".github/skills/nx-run-tasks/SKILL.md",
+        "hash": "6310165843200780094"
+      },
+      {
+        "file": ".github/skills/nx-generate/SKILL.md",
+        "hash": "9325031674722245942"
+      },
+      {
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "15436383388001770446"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "12598063760286856263"
+      },
+      {
+        "file": "nx.json",
+        "hash": "2955687649048293033"
+      },
+      {
+        "file": ".github/agents/ci-monitor-subagent.agent.md",
+        "hash": "17271371206473447631"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "13591750739247547927"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "3523232571032758262"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "9468003408493328484"
+      },
+      {
+        "file": ".github/prompts/monitor-ci.prompt.md",
+        "hash": "14111579483359899130"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "8027150197985138688"
+      },
+      {
+        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "5689225252238354455"
+      },
+      {
+        "file": "docs/plans/2026-02-19-pubg-replay-design.md",
+        "hash": "7141623013702546955"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "14244474672258854795"
+      },
+      {
+        "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
+        "hash": "14600255494264850067"
+      },
+      {
+        "file": "package.json",
+        "hash": "9872679117012395648"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "4315321399922957604"
+      },
+      {
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "15239321302212089310"
+      },
+      {
+        "file": ".github/skills/nx-plugins/SKILL.md",
+        "hash": "17761452540263218782"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "1539253793410688689"
+      }
+    ],
+    "projectFileMap": {}
+  },
+  "externalNodesHash": "17236652818054711632"
+}
