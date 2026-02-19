@@ -42,10 +42,21 @@ export class TelemetryProcessorService {
     let maxElapsed = 0;
     const matchStartMs = events[0]?._D ? new Date(events[0]._D).getTime() : 0;
 
+    // Track airplane phase positions to extract the flight path
+    let planePathStart: { x: number; y: number } | null = null;
+    let planePathEnd: { x: number; y: number } | null = null;
+
     for (const event of events) {
       switch (event._T) {
         case 'LogPlayerPosition': {
           const e = event as LogPlayerPosition;
+          // isGame = 0.1 means the player is on the airplane
+          if (e.common.isGame < 1) {
+            const px = norm(e.character.location.x);
+            const py = norm(e.character.location.y);
+            if (!planePathStart) planePathStart = { x: px, y: py };
+            planePathEnd = { x: px, y: py };
+          }
           const tick = Math.round(e.elapsedTime / TICK_INTERVAL) * TICK_INTERVAL;
           maxElapsed = Math.max(maxElapsed, e.elapsedTime);
           let tickPositions = positionsByTick.get(tick);
@@ -109,6 +120,20 @@ export class TelemetryProcessorService {
     const sortedTickTimes = [...positionsByTick.keys()].sort((a, b) => a - b);
     const ticks: ReplayTick[] = [];
 
+    // Carry forward the last known zone so ticks without a LogGameStatePeriodic
+    // event don't snap back to a full-map radius and cause open/close animation.
+    let lastZone: ZoneFrame = {
+      safeX: 0.5,
+      safeY: 0.5,
+      safeRadius: 0,
+      poisonX: 0.5,
+      poisonY: 0.5,
+      poisonRadius: 0,
+      redX: 0,
+      redY: 0,
+      redRadius: 0,
+    };
+
     for (const tickTime of sortedTickTimes) {
       const positions = positionsByTick.get(tickTime) ?? [];
       const gameState = gameStatesByTick.get(tickTime);
@@ -133,31 +158,21 @@ export class TelemetryProcessorService {
         };
       });
 
-      const defaultZone: ZoneFrame = {
-        safeX: 0.5,
-        safeY: 0.5,
-        safeRadius: 1,
-        poisonX: 0.5,
-        poisonY: 0.5,
-        poisonRadius: 1,
-        redX: 0,
-        redY: 0,
-        redRadius: 0,
-      };
+      if (gameState) {
+        lastZone = {
+          safeX: norm(gameState.gameState.safetyZonePosition.x),
+          safeY: norm(gameState.gameState.safetyZonePosition.y),
+          safeRadius: normalizeCoord(gameState.gameState.safetyZoneRadius, mapSize),
+          poisonX: norm(gameState.gameState.poisonGasWarningPosition.x),
+          poisonY: norm(gameState.gameState.poisonGasWarningPosition.y),
+          poisonRadius: normalizeCoord(gameState.gameState.poisonGasWarningRadius, mapSize),
+          redX: norm(gameState.gameState.redZonePosition.x),
+          redY: norm(gameState.gameState.redZonePosition.y),
+          redRadius: normalizeCoord(gameState.gameState.redZoneRadius, mapSize),
+        };
+      }
 
-      const zone: ZoneFrame = gameState
-        ? {
-            safeX: norm(gameState.gameState.safetyZonePosition.x),
-            safeY: norm(gameState.gameState.safetyZonePosition.y),
-            safeRadius: normalizeCoord(gameState.gameState.safetyZoneRadius, mapSize),
-            poisonX: norm(gameState.gameState.poisonGasWarningPosition.x),
-            poisonY: norm(gameState.gameState.poisonGasWarningPosition.y),
-            poisonRadius: normalizeCoord(gameState.gameState.poisonGasWarningRadius, mapSize),
-            redX: norm(gameState.gameState.redZonePosition.x),
-            redY: norm(gameState.gameState.redZonePosition.y),
-            redRadius: normalizeCoord(gameState.gameState.redZoneRadius, mapSize),
-          }
-        : defaultZone;
+      const zone = lastZone;
 
       ticks.push({
         elapsedTime: tickTime,
@@ -192,6 +207,9 @@ export class TelemetryProcessorService {
       kills,
       carePackages,
       players: matchPlayers,
+      ...(planePathStart && planePathEnd
+        ? { planePath: [planePathStart, planePathEnd] as [{ x: number; y: number }, { x: number; y: number }] }
+        : {}),
     };
   }
 }
