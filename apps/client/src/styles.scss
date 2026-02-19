@@ -5,3 +5,19 @@
 @import "@fontsource/inter/700.css";
 @import "tailwindcss";
 @import "./styles/theme.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
