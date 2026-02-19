@@ -37,6 +37,9 @@ export type {
 // Re-export utilities
 export { DamageInfoUtils } from '@j03fr0st/pubg-ts';
 
+// Alias for telemetry coordinate type
+export type { Location as TelemetryLocation } from '@j03fr0st/pubg-ts';
+
 // Re-export match/player response types
 export type {
   Player,
