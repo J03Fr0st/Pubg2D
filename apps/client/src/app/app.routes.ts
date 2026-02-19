@@ -12,6 +12,11 @@ export const appRoutes: Routes = [
       import('./pages/replay/replay.component').then((m) => m.ReplayComponent),
   },
   {
+    path: 'player/:platform/:name',
+    loadComponent: () =>
+      import('./pages/player/player.component').then((m) => m.PlayerComponent),
+  },
+  {
     path: '',
     loadComponent: () =>
       import('./pages/home/home.component').then((m) => m.HomeComponent),
