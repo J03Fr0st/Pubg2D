@@ -1,16 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import {
   Component,
+  type ElementRef,
   inject,
-  OnInit,
-  ElementRef,
+  type OnDestroy,
+  type OnInit,
   viewChild,
-  OnDestroy,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Application, Graphics } from 'pixi.js';
+import { ActivatedRoute } from '@angular/router';
 import type { HeatmapData } from '@pubg-replay/shared-types';
-import { HttpClient } from '@angular/common/http';
+import { Application, Graphics } from 'pixi.js';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
@@ -18,12 +18,12 @@ import { firstValueFrom } from 'rxjs';
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div class="min-h-screen bg-[var(--color-bg)] text-[var(--color-text-primary)] p-8">
-      <h1 class="font-sans font-bold text-2xl text-[var(--color-accent)] mb-4">HEATMAP</h1>
+    <div class="min-h-screen bg-bg text-text-primary p-8">
+      <h1 class="font-sans font-bold text-2xl text-accent mb-4">HEATMAP</h1>
 
       <div class="flex gap-2 mb-4">
         <select
-          class="bg-[var(--color-surface)] text-[var(--color-text-primary)] font-mono text-sm border border-[var(--color-border)] px-3 py-2"
+          class="bg-surface text-text-primary font-mono text-sm border border-border px-3 py-2"
           [(ngModel)]="mode"
           (ngModelChange)="fetchHeatmap()"
         >
@@ -33,7 +33,7 @@ import { firstValueFrom } from 'rxjs';
         </select>
       </div>
 
-      <div #canvasContainer class="inline-block border border-[var(--color-border)]"></div>
+      <div #canvasContainer class="inline-block border border-border"></div>
     </div>
   `,
 })
@@ -58,9 +58,7 @@ export class HeatmapComponent implements OnInit, OnDestroy {
 
   async fetchHeatmap(): Promise<void> {
     const data = await firstValueFrom(
-      this.http.get<HeatmapData>(
-        `/api/players/${this.accountId}/heatmap?mode=${this.mode}`
-      )
+      this.http.get<HeatmapData>(`/api/players/${this.accountId}/heatmap?mode=${this.mode}`),
     );
     this.renderHeatmap(data);
   }

@@ -10,17 +10,17 @@ import { formatTimestamp } from '@pubg-replay/shared-utils';
   template: `
     <a
       [routerLink]="['/replay', match().matchId]"
-      class="block p-3 bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors"
+      class="block p-3 bg-surface border border-border hover:border-accent transition-colors"
     >
       <div class="flex justify-between items-center mb-1">
-        <span class="font-sans font-semibold text-sm text-[var(--color-text-primary)]">
+        <span class="font-sans font-semibold text-sm text-text-primary">
           {{ match().mapDisplayName }}
         </span>
-        <span class="font-mono text-xs text-[var(--color-text-secondary)]">
+        <span class="font-mono text-xs text-text-secondary">
           {{ formatDate(match().createdAt) }}
         </span>
       </div>
-      <div class="flex gap-4 font-mono text-xs text-[var(--color-text-secondary)]">
+      <div class="flex gap-4 font-mono text-xs text-text-secondary">
         <span>#{{ match().placement }}</span>
         <span>{{ match().kills }} kills</span>
         <span>{{ match().gameMode }}</span>

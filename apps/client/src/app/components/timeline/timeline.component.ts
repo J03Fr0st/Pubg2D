@@ -5,29 +5,29 @@ import { ReplayService } from '../../services/replay.service';
   selector: 'pubg-timeline',
   standalone: true,
   template: `
-    <div class="flex items-center gap-3 px-4 py-2 bg-[var(--color-surface)] border-t border-[var(--color-border)]">
+    <div class="flex items-center gap-3 px-4 py-2 bg-surface border-t border-border">
       <!-- Rewind -->
       <button
-        class="text-[var(--color-text-primary)] font-mono text-sm hover:text-[var(--color-accent)]"
+        class="text-text-primary font-mono text-sm hover:text-accent"
         (click)="replay.seek(Math.max(0, replay.currentTime() - 10))"
       >[ &lt;&lt; ]</button>
 
       <!-- Play/Pause -->
       <button
-        class="text-[var(--color-text-primary)] font-mono text-sm hover:text-[var(--color-accent)] min-w-[70px]"
+        class="text-text-primary font-mono text-sm hover:text-accent min-w-[70px]"
         (click)="replay.togglePlay()"
       >{{ replay.isPlaying() ? '[ PAUSE ]' : '[ PLAY ]' }}</button>
 
       <!-- Fast Forward -->
       <button
-        class="text-[var(--color-text-primary)] font-mono text-sm hover:text-[var(--color-accent)]"
+        class="text-text-primary font-mono text-sm hover:text-accent"
         (click)="replay.seek(Math.min(replay.duration(), replay.currentTime() + 10))"
       >[ &gt;&gt; ]</button>
 
       <!-- Scrubber -->
       <input
         type="range"
-        class="flex-1 accent-[var(--color-accent)]"
+        class="flex-1 accent-accent"
         [min]="0"
         [max]="replay.duration()"
         [value]="replay.currentTime()"
@@ -35,13 +35,13 @@ import { ReplayService } from '../../services/replay.service';
       />
 
       <!-- Time display -->
-      <span class="font-mono text-sm text-[var(--color-text-primary)] min-w-[100px] text-right">
+      <span class="font-mono text-sm text-text-primary min-w-[100px] text-right">
         {{ replay.formattedTime() }} / {{ replay.formattedDuration() }}
       </span>
 
       <!-- Speed selector -->
       <select
-        class="bg-[var(--color-bg)] text-[var(--color-text-primary)] font-mono text-sm border border-[var(--color-border)] px-2 py-1"
+        class="bg-bg text-text-primary font-mono text-sm border border-border px-2 py-1"
         [value]="replay.playbackSpeed()"
         (change)="onSpeedChange($event)"
       >

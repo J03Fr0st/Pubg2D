@@ -1,21 +1,27 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { UpperCasePipe } from '@angular/common';
-import { MapCanvasComponent } from '../../components/map-canvas/map-canvas.component';
-import { TimelineComponent } from '../../components/timeline/timeline.component';
-import { PlayerPanelComponent } from '../../components/player-panel/player-panel.component';
+import { Component, inject, type OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { KillFeedComponent } from '../../components/kill-feed/kill-feed.component';
-import { ReplayService } from '../../services/replay.service';
+import { MapCanvasComponent } from '../../components/map-canvas/map-canvas.component';
+import { PlayerPanelComponent } from '../../components/player-panel/player-panel.component';
+import { TimelineComponent } from '../../components/timeline/timeline.component';
 import { ApiService } from '../../services/api.service';
+import { ReplayService } from '../../services/replay.service';
 
 @Component({
   selector: 'pubg-replay-page',
   standalone: true,
-  imports: [MapCanvasComponent, TimelineComponent, PlayerPanelComponent, KillFeedComponent, UpperCasePipe],
+  imports: [
+    MapCanvasComponent,
+    TimelineComponent,
+    PlayerPanelComponent,
+    KillFeedComponent,
+    UpperCasePipe,
+  ],
   template: `
-    <div class="h-screen flex flex-col bg-[var(--color-bg)] text-[var(--color-text-primary)]">
+    <div class="h-screen flex flex-col bg-bg text-text-primary">
       <!-- Top HUD bar -->
-      <div class="flex items-center justify-between px-4 py-2 bg-[var(--color-surface)] border-b border-[var(--color-border)] font-mono text-sm">
+      <div class="flex items-center justify-between px-4 py-2 bg-surface border-b border-border font-mono text-sm">
         <span>[GRID REF: {{ replay.replayData()?.mapDisplayName ?? 'LOADING' | uppercase }}]</span>
         <span>[MATCH: {{ replay.replayData()?.createdAt ?? '' }}]</span>
         <span>[{{ replay.alivePlayers() }} ALIVE]</span>
@@ -29,8 +35,8 @@ import { ApiService } from '../../services/api.service';
         </div>
 
         <!-- Right sidebar -->
-        <div class="w-72 border-l border-[var(--color-border)] bg-[var(--color-surface)] flex flex-col">
-          <div class="flex-1 min-h-0 border-b border-[var(--color-border)]">
+        <div class="w-72 border-l border-border bg-surface flex flex-col">
+          <div class="flex-1 min-h-0 border-b border-border">
             <pubg-player-panel />
           </div>
           <div class="h-64">

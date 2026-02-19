@@ -1,23 +1,23 @@
-import { Component, signal, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'pubg-home',
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div class="h-screen flex flex-col items-center justify-center bg-[var(--color-bg)]">
-      <h1 class="font-sans font-bold text-3xl text-[var(--color-accent)] tracking-wider mb-2">
+    <div class="h-screen flex flex-col items-center justify-center bg-bg">
+      <h1 class="font-sans font-bold text-3xl text-accent tracking-wider mb-2">
         PUBG REPLAY VIEWER
       </h1>
-      <p class="font-mono text-sm text-[var(--color-text-secondary)] mb-8">
+      <p class="font-mono text-sm text-text-secondary mb-8">
         2D tactical match replay
       </p>
 
       <div class="flex gap-2">
         <select
-          class="bg-[var(--color-surface)] text-[var(--color-text-primary)] font-mono text-sm border border-[var(--color-border)] px-3 py-2"
+          class="bg-surface text-text-primary font-mono text-sm border border-border px-3 py-2"
           [(ngModel)]="platform"
         >
           <option value="steam">STEAM</option>
@@ -27,20 +27,20 @@ import { FormsModule } from '@angular/forms';
 
         <input
           type="text"
-          class="bg-[var(--color-surface)] text-[var(--color-text-primary)] font-mono text-sm border border-[var(--color-border)] px-3 py-2 w-64"
+          class="bg-surface text-text-primary font-mono text-sm border border-border px-3 py-2 w-64"
           placeholder="Player name..."
           [(ngModel)]="playerName"
           (keyup.enter)="search()"
         />
 
         <button
-          class="bg-[var(--color-accent)] text-[var(--color-bg)] font-mono text-sm font-bold px-4 py-2 hover:opacity-80"
+          class="bg-accent text-bg font-mono text-sm font-bold px-4 py-2 hover:opacity-80"
           (click)="search()"
         >[ SEARCH ]</button>
       </div>
 
       @if (error()) {
-        <p class="mt-4 font-mono text-sm text-[var(--color-danger)]">{{ error() }}</p>
+        <p class="mt-4 font-mono text-sm text-danger">{{ error() }}</p>
       }
     </div>
   `,
