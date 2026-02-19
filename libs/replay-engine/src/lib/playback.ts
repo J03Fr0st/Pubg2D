@@ -20,6 +20,10 @@ function interpolatePlayers(a: PlayerFrame[], b: PlayerFrame[], t: number): Play
 }
 
 function interpolateZone(a: ZoneFrame, b: ZoneFrame, t: number): ZoneFrame {
+  // Don't interpolate from a "no data" zone — snap directly to the first real values
+  // to avoid a near-zero radius flash that turns the whole map green.
+  if (a.safeRadius === 0) return b;
+  if (b.safeRadius === 0) return a;
   return {
     safeX: lerp(a.safeX, b.safeX, t),
     safeY: lerp(a.safeY, b.safeY, t),
