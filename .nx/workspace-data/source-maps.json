@@ -868,5 +868,599 @@
       "nx.json",
       "nx/target-defaults"
     ]
+  },
+  "libs/replay-engine": {
+    "root": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "libs/replay-engine/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "projectType": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "metadata.targetGroups": [
+      "libs/replay-engine/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "metadata.targetGroups.TEST (CI)": [
+      "libs/replay-engine/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.options": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.cache": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.inputs": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.outputs": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.executor": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.options.cwd": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.options.command": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies": [
+      "libs/replay-engine/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies.0": [
+      "libs/replay-engine/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.description": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help.command": [
+      "libs/replay-engine/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help.example": [
+      "libs/replay-engine/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies.1": [
+      "libs/replay-engine/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "name": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "libs/replay-engine/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "libs/shared/types": {
+    "root": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "libs/shared/types/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "projectType": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "metadata.targetGroups": [
+      "libs/shared/types/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "metadata.targetGroups.TEST (CI)": [
+      "libs/shared/types/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.options": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.cache": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.inputs": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.outputs": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.executor": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.options.cwd": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.options.command": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies": [
+      "libs/shared/types/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies.0": [
+      "libs/shared/types/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.description": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help.command": [
+      "libs/shared/types/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help.example": [
+      "libs/shared/types/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies.1": [
+      "libs/shared/types/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "name": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "libs/shared/types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "libs/shared/utils": {
+    "root": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "libs/shared/utils/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "projectType": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "metadata.targetGroups": [
+      "libs/shared/utils/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "metadata.targetGroups.TEST (CI)": [
+      "libs/shared/utils/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.options": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.cache": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.inputs": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.outputs": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.executor": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.options.cwd": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.options.command": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies": [
+      "libs/shared/utils/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies.0": [
+      "libs/shared/utils/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.description": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help.command": [
+      "libs/shared/utils/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.help.example": [
+      "libs/shared/utils/vitest.config.mts",
+      "@nx/vitest"
+    ],
+    "targets.test.metadata.technologies.1": [
+      "libs/shared/utils/vite.config.ts",
+      "@nx/vitest"
+    ],
+    "name": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "libs/shared/utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
   }
 }

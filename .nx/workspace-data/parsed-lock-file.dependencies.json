@@ -916,6 +916,11 @@
   },
   {
     "source": "npm:vite@7.3.0",
+    "target": "npm:yaml",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite@7.3.0",
     "target": "npm:esbuild",
     "type": "static"
   },
@@ -8660,6 +8665,41 @@
     "type": "static"
   },
   {
+    "source": "npm:@nx/vitest",
+    "target": "npm:vite",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nx/vitest",
+    "target": "npm:vitest",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nx/vitest",
+    "target": "npm:@nx/devkit",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nx/vitest",
+    "target": "npm:@nx/js",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nx/vitest",
+    "target": "npm:@phenomnomnominal/tsquery",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nx/vitest",
+    "target": "npm:semver",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nx/vitest",
+    "target": "npm:tslib",
+    "type": "static"
+  },
+  {
     "source": "npm:@nx/web",
     "target": "npm:@nx/devkit",
     "type": "static"
@@ -10535,6 +10575,61 @@
     "type": "static"
   },
   {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:vitest",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:@bcoe/v8-coverage@1.0.2",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:@vitest/utils",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:ast-v8-to-istanbul",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:istanbul-lib-coverage",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:istanbul-lib-report",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:istanbul-reports",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:magicast",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:obug",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:std-env",
+    "type": "static"
+  },
+  {
+    "source": "npm:@vitest/coverage-v8",
+    "target": "npm:tinyrainbow",
+    "type": "static"
+  },
+  {
     "source": "npm:@vitest/expect",
     "target": "npm:@standard-schema/spec",
     "type": "static"
@@ -11057,6 +11152,21 @@
   {
     "source": "npm:asn1js",
     "target": "npm:tslib",
+    "type": "static"
+  },
+  {
+    "source": "npm:ast-v8-to-istanbul",
+    "target": "npm:@jridgewell/trace-mapping",
+    "type": "static"
+  },
+  {
+    "source": "npm:ast-v8-to-istanbul",
+    "target": "npm:estree-walker",
+    "type": "static"
+  },
+  {
+    "source": "npm:ast-v8-to-istanbul",
+    "target": "npm:js-tokens@10.0.0",
     "type": "static"
   },
   {
@@ -11976,7 +12086,7 @@
   },
   {
     "source": "npm:cosmiconfig",
-    "target": "npm:yaml",
+    "target": "npm:yaml@1.10.2",
     "type": "static"
   },
   {
@@ -16880,6 +16990,21 @@
     "type": "static"
   },
   {
+    "source": "npm:magicast",
+    "target": "npm:@babel/parser",
+    "type": "static"
+  },
+  {
+    "source": "npm:magicast",
+    "target": "npm:@babel/types",
+    "type": "static"
+  },
+  {
+    "source": "npm:magicast",
+    "target": "npm:source-map-js",
+    "type": "static"
+  },
+  {
     "source": "npm:make-dir",
     "target": "npm:pify",
     "type": "static"
@@ -17516,7 +17641,7 @@
   },
   {
     "source": "npm:nx",
-    "target": "npm:yaml@2.8.2",
+    "target": "npm:yaml",
     "type": "static"
   },
   {
@@ -20550,6 +20675,76 @@
     "type": "static"
   },
   {
+    "source": "npm:vite",
+    "target": "npm:@types/node",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:jiti",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:less",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:sass",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:sass-embedded",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:terser",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:yaml",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:esbuild",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:fdir",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:picomatch@4.0.3",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:postcss",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:rollup",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:tinyglobby",
+    "type": "static"
+  },
+  {
+    "source": "npm:vite",
+    "target": "npm:fsevents",
+    "type": "static"
+  },
+  {
     "source": "npm:vitest",
     "target": "npm:@types/node",
     "type": "static"
@@ -20651,7 +20846,7 @@
   },
   {
     "source": "npm:vitest",
-    "target": "npm:vite@7.3.1",
+    "target": "npm:vite",
     "type": "static"
   },
   {
@@ -20661,7 +20856,7 @@
   },
   {
     "source": "npm:@vitest/mocker@4.0.18",
-    "target": "npm:vite@7.3.1",
+    "target": "npm:vite",
     "type": "static"
   },
   {
@@ -20677,71 +20872,6 @@
   {
     "source": "npm:@vitest/mocker@4.0.18",
     "target": "npm:magic-string",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:@types/node",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:jiti",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:less",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:sass",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:sass-embedded",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:terser",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:esbuild",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:fdir",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:picomatch@4.0.3",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:postcss",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:rollup",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:tinyglobby",
-    "type": "static"
-  },
-  {
-    "source": "npm:vite@7.3.1",
-    "target": "npm:fsevents",
     "type": "static"
   },
   {

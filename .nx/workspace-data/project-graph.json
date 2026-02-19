@@ -1,5 +1,398 @@
 {
   "nodes": {
+    "@pubg-replay/replay-engine": {
+      "name": "@pubg-replay/replay-engine",
+      "type": "lib",
+      "data": {
+        "root": "libs/replay-engine",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "libs\\replay-engine",
+              "command": "tsc --build --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/**/*.js",
+              "{projectRoot}/**/*.cjs",
+              "{projectRoot}/**/*.mjs",
+              "{projectRoot}/**/*.jsx",
+              "{projectRoot}/**/*.js.map",
+              "{projectRoot}/**/*.jsx.map",
+              "{projectRoot}/**/*.d.ts",
+              "{projectRoot}/**/*.d.cts",
+              "{projectRoot}/**/*.d.mts",
+              "{projectRoot}/**/*.d.ts.map",
+              "{projectRoot}/**/*.d.cts.map",
+              "{projectRoot}/**/*.d.mts.map",
+              "{projectRoot}/tsconfig.tsbuildinfo",
+              "{projectRoot}/dist/**/*.d.ts",
+              "{projectRoot}/dist/tsconfig.lib.tsbuildinfo",
+              "{projectRoot}/out-tsc/vitest/**/*.d.ts",
+              "{projectRoot}/out-tsc/vitest/tsconfig.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "vitest"
+                ]
+              },
+              {
+                "env": "CI"
+              }
+            ],
+            "outputs": [
+              "{projectRoot}\\test-output\\vitest\\coverage"
+            ],
+            "metadata": {
+              "technologies": [
+                "vitest",
+                "vitest"
+              ],
+              "description": "Run Vitest tests",
+              "help": {
+                "command": "npx vitest --help",
+                "example": {
+                  "options": {
+                    "bail": 1,
+                    "coverage": true
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "libs/replay-engine",
+              "command": "vitest"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          }
+        },
+        "projectType": "library",
+        "metadata": {
+          "targetGroups": {
+            "TEST (CI)": []
+          },
+          "js": {
+            "packageName": "@pubg-replay/replay-engine",
+            "packageVersion": "0.0.1",
+            "packageExports": {
+              ".": {
+                "types": "./src/index.ts",
+                "import": "./src/index.ts",
+                "default": "./src/index.ts"
+              },
+              "./package.json": "./package.json"
+            },
+            "packageMain": "./src/index.ts",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "name": "@pubg-replay/replay-engine",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "@pubg-replay/shared-types": {
+      "name": "@pubg-replay/shared-types",
+      "type": "lib",
+      "data": {
+        "root": "libs/shared/types",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "libs\\shared\\types",
+              "command": "tsc --build --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/**/*.js",
+              "{projectRoot}/**/*.cjs",
+              "{projectRoot}/**/*.mjs",
+              "{projectRoot}/**/*.jsx",
+              "{projectRoot}/**/*.js.map",
+              "{projectRoot}/**/*.jsx.map",
+              "{projectRoot}/**/*.d.ts",
+              "{projectRoot}/**/*.d.cts",
+              "{projectRoot}/**/*.d.mts",
+              "{projectRoot}/**/*.d.ts.map",
+              "{projectRoot}/**/*.d.cts.map",
+              "{projectRoot}/**/*.d.mts.map",
+              "{projectRoot}/tsconfig.tsbuildinfo",
+              "{projectRoot}/dist/**/*.d.ts",
+              "{projectRoot}/dist/tsconfig.lib.tsbuildinfo",
+              "{projectRoot}/out-tsc/vitest/**/*.d.ts",
+              "{projectRoot}/out-tsc/vitest/tsconfig.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "vitest"
+                ]
+              },
+              {
+                "env": "CI"
+              }
+            ],
+            "outputs": [
+              "{projectRoot}\\test-output\\vitest\\coverage"
+            ],
+            "metadata": {
+              "technologies": [
+                "vitest",
+                "vitest"
+              ],
+              "description": "Run Vitest tests",
+              "help": {
+                "command": "npx vitest --help",
+                "example": {
+                  "options": {
+                    "bail": 1,
+                    "coverage": true
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "libs/shared/types",
+              "command": "vitest"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          }
+        },
+        "projectType": "library",
+        "metadata": {
+          "targetGroups": {
+            "TEST (CI)": []
+          },
+          "js": {
+            "packageName": "@pubg-replay/shared-types",
+            "packageVersion": "0.0.1",
+            "packageExports": {
+              ".": {
+                "types": "./src/index.ts",
+                "import": "./src/index.ts",
+                "default": "./src/index.ts"
+              },
+              "./package.json": "./package.json"
+            },
+            "packageMain": "./src/index.ts",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "name": "@pubg-replay/shared-types",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "@pubg-replay/shared-utils": {
+      "name": "@pubg-replay/shared-utils",
+      "type": "lib",
+      "data": {
+        "root": "libs/shared/utils",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "libs\\shared\\utils",
+              "command": "tsc --build --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/**/*.js",
+              "{projectRoot}/**/*.cjs",
+              "{projectRoot}/**/*.mjs",
+              "{projectRoot}/**/*.jsx",
+              "{projectRoot}/**/*.js.map",
+              "{projectRoot}/**/*.jsx.map",
+              "{projectRoot}/**/*.d.ts",
+              "{projectRoot}/**/*.d.cts",
+              "{projectRoot}/**/*.d.mts",
+              "{projectRoot}/**/*.d.ts.map",
+              "{projectRoot}/**/*.d.cts.map",
+              "{projectRoot}/**/*.d.mts.map",
+              "{projectRoot}/tsconfig.tsbuildinfo",
+              "{projectRoot}/dist/**/*.d.ts",
+              "{projectRoot}/dist/tsconfig.lib.tsbuildinfo",
+              "{projectRoot}/out-tsc/vitest/**/*.d.ts",
+              "{projectRoot}/out-tsc/vitest/tsconfig.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "vitest"
+                ]
+              },
+              {
+                "env": "CI"
+              }
+            ],
+            "outputs": [
+              "{projectRoot}\\test-output\\vitest\\coverage"
+            ],
+            "metadata": {
+              "technologies": [
+                "vitest",
+                "vitest"
+              ],
+              "description": "Run Vitest tests",
+              "help": {
+                "command": "npx vitest --help",
+                "example": {
+                  "options": {
+                    "bail": 1,
+                    "coverage": true
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "libs/shared/utils",
+              "command": "vitest"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          }
+        },
+        "projectType": "library",
+        "metadata": {
+          "targetGroups": {
+            "TEST (CI)": []
+          },
+          "js": {
+            "packageName": "@pubg-replay/shared-utils",
+            "packageVersion": "0.0.1",
+            "packageExports": {
+              ".": {
+                "types": "./src/index.ts",
+                "import": "./src/index.ts",
+                "default": "./src/index.ts"
+              },
+              "./package.json": "./package.json"
+            },
+            "packageMain": "./src/index.ts",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "name": "@pubg-replay/shared-utils",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": []
+      }
+    },
     "api-e2e": {
       "name": "api-e2e",
       "type": "app",
@@ -16,16 +409,11 @@
             },
             "cache": true,
             "inputs": [
-              "{projectRoot}/package.json",
-              "{workspaceRoot}/tsconfig.base.json",
-              "{projectRoot}/tsconfig.json",
-              "{projectRoot}/jest.config.ts",
-              "{projectRoot}/src/**/*.ts",
+              "production",
               "^production"
             ],
             "outputs": [
               "{projectRoot}/out-tsc/api-e2e/**/*.d.ts",
-              "{projectRoot}/out-tsc/api-e2e/**/*.d.ts.map",
               "{projectRoot}/out-tsc/api-e2e/tsconfig.tsbuildinfo"
             ],
             "syncGenerators": [
@@ -275,11 +663,25 @@
             "cache": true,
             "inputs": [
               "production",
-              {
-                "dependentTasksOutputFiles": "**/*.d.ts"
-              }
+              "^production"
             ],
-            "outputs": [],
+            "outputs": [
+              "{projectRoot}/**/*.js",
+              "{projectRoot}/**/*.cjs",
+              "{projectRoot}/**/*.mjs",
+              "{projectRoot}/**/*.jsx",
+              "{projectRoot}/**/*.js.map",
+              "{projectRoot}/**/*.jsx.map",
+              "{projectRoot}/**/*.d.ts",
+              "{projectRoot}/**/*.d.cts",
+              "{projectRoot}/**/*.d.mts",
+              "{projectRoot}/**/*.d.ts.map",
+              "{projectRoot}/**/*.d.cts.map",
+              "{projectRoot}/**/*.d.mts.map",
+              "{projectRoot}/tsconfig.tsbuildinfo",
+              "{projectRoot}/dist/**/*.d.ts",
+              "{projectRoot}/dist/tsconfig.app.tsbuildinfo"
+            ],
             "syncGenerators": [
               "@nx/js:typescript-sync"
             ],
@@ -1334,9 +1736,9 @@
         "hash": "sha512-dZwN5L1VlUBewiP6H9s2+B3e3Jg96D0vzN+Ry73sOefebhYr9f94wwkMNN/9ouoU8pV1BqA1d1zGk8928cx0rg=="
       }
     },
-    "npm:vite@7.3.1": {
+    "npm:vite": {
       "type": "npm",
-      "name": "npm:vite@7.3.1",
+      "name": "npm:vite",
       "data": {
         "version": "7.3.1",
         "packageName": "vite",
@@ -2772,6 +3174,15 @@
         "version": "0.2.3",
         "packageName": "@bcoe/v8-coverage",
         "hash": "sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw=="
+      }
+    },
+    "npm:@bcoe/v8-coverage@1.0.2": {
+      "type": "npm",
+      "name": "npm:@bcoe/v8-coverage@1.0.2",
+      "data": {
+        "version": "1.0.2",
+        "packageName": "@bcoe/v8-coverage",
+        "hash": "sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA=="
       }
     },
     "npm:@borewit/text-codec": {
@@ -6032,6 +6443,15 @@
         "hash": "sha512-UcJkj2wKDHaWBs5G0vNpuLdvuyGyTRoPgsl3rsoOqHjkwbWCWVBVBKc2dlDt7vSj0694U8eOaisv2sweGbK0+w=="
       }
     },
+    "npm:@nx/vitest": {
+      "type": "npm",
+      "name": "npm:@nx/vitest",
+      "data": {
+        "version": "22.5.1",
+        "packageName": "@nx/vitest",
+        "hash": "sha512-Uu97DJIgqcfqO9CYhlCY+QKgMPFgKDtJjl+9E1QBUMuGRyGMJbtPQpH0ekQJOZso7Ha31QAIOozHP6yO8Qo+hQ=="
+      }
+    },
     "npm:@nx/web": {
       "type": "npm",
       "name": "npm:@nx/web",
@@ -7895,6 +8315,15 @@
         "hash": "sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g=="
       }
     },
+    "npm:@vitest/coverage-v8": {
+      "type": "npm",
+      "name": "npm:@vitest/coverage-v8",
+      "data": {
+        "version": "4.0.18",
+        "packageName": "@vitest/coverage-v8",
+        "hash": "sha512-7i+N2i0+ME+2JFZhfuz7Tg/FqKtilHjGyGvoHYQ6iLV0zahbsJ9sljC9OcFcPDbhYKCet+sG8SsVqlyGvPflZg=="
+      }
+    },
     "npm:@vitest/expect": {
       "type": "npm",
       "name": "npm:@vitest/expect",
@@ -8397,6 +8826,33 @@
         "version": "2.0.1",
         "packageName": "assertion-error",
         "hash": "sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA=="
+      }
+    },
+    "npm:ast-v8-to-istanbul": {
+      "type": "npm",
+      "name": "npm:ast-v8-to-istanbul",
+      "data": {
+        "version": "0.3.11",
+        "packageName": "ast-v8-to-istanbul",
+        "hash": "sha512-Qya9fkoofMjCBNVdWINMjB5KZvkYfaO9/anwkWnjxibpWUxo5iHl2sOdP7/uAqaRuUYuoo8rDwnbaaKVFxoUvw=="
+      }
+    },
+    "npm:js-tokens@10.0.0": {
+      "type": "npm",
+      "name": "npm:js-tokens@10.0.0",
+      "data": {
+        "version": "10.0.0",
+        "packageName": "js-tokens",
+        "hash": "sha512-lM/UBzQmfJRo9ABXbPWemivdCW8V2G8FHaHdypQaIy523snUjog0W71ayWXTjiR+ixeMyVHN2XcpnTd/liPg/Q=="
+      }
+    },
+    "npm:js-tokens": {
+      "type": "npm",
+      "name": "npm:js-tokens",
+      "data": {
+        "version": "4.0.0",
+        "packageName": "js-tokens",
+        "hash": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
       }
     },
     "npm:async": {
@@ -9360,6 +9816,24 @@
         "version": "9.0.0",
         "packageName": "cosmiconfig",
         "hash": "sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg=="
+      }
+    },
+    "npm:yaml@1.10.2": {
+      "type": "npm",
+      "name": "npm:yaml@1.10.2",
+      "data": {
+        "version": "1.10.2",
+        "packageName": "yaml",
+        "hash": "sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg=="
+      }
+    },
+    "npm:yaml": {
+      "type": "npm",
+      "name": "npm:yaml",
+      "data": {
+        "version": "2.8.2",
+        "packageName": "yaml",
+        "hash": "sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A=="
       }
     },
     "npm:cron-parser": {
@@ -11765,15 +12239,6 @@
         "hash": "sha512-0TpaTfihd4QMNwrz/ob2Bp7X04yuxJkjRGi4aKmOqwhov54i6u79oCv7T+C7lo70MKH6BesI3vscD1yb/yzKXQ=="
       }
     },
-    "npm:js-tokens": {
-      "type": "npm",
-      "name": "npm:js-tokens",
-      "data": {
-        "version": "4.0.0",
-        "packageName": "js-tokens",
-        "hash": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
-      }
-    },
     "npm:jsdom": {
       "type": "npm",
       "name": "npm:jsdom",
@@ -12195,6 +12660,15 @@
         "version": "3.7.2",
         "packageName": "luxon",
         "hash": "sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew=="
+      }
+    },
+    "npm:magicast": {
+      "type": "npm",
+      "name": "npm:magicast",
+      "data": {
+        "version": "0.5.2",
+        "packageName": "magicast",
+        "hash": "sha512-E3ZJh4J3S9KfwdjZhe2afj6R9lGIN5Pher1pF39UGrXRqq/VDaGVIGN13BjHd2u8B61hArAGOnso7nBOouW3TQ=="
       }
     },
     "npm:make-fetch-happen": {
@@ -12726,24 +13200,6 @@
         "version": "22.5.1",
         "packageName": "nx",
         "hash": "sha512-KIQqOSdoshkav9JuoH/+Vp42niA5MTRtACupe+q8CaB7bHiLsWr5nctQVC7ul3NauAmsoqNWH7t5CIi8KgrPIQ=="
-      }
-    },
-    "npm:yaml@2.8.2": {
-      "type": "npm",
-      "name": "npm:yaml@2.8.2",
-      "data": {
-        "version": "2.8.2",
-        "packageName": "yaml",
-        "hash": "sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A=="
-      }
-    },
-    "npm:yaml": {
-      "type": "npm",
-      "name": "npm:yaml",
-      "data": {
-        "version": "1.10.2",
-        "packageName": "yaml",
-        "hash": "sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg=="
       }
     },
     "npm:object-assign": {
@@ -15448,6 +15904,42 @@
     }
   },
   "dependencies": {
+    "@pubg-replay/replay-engine": [
+      {
+        "source": "@pubg-replay/replay-engine",
+        "target": "npm:vite",
+        "type": "static"
+      },
+      {
+        "source": "@pubg-replay/replay-engine",
+        "target": "npm:vitest",
+        "type": "static"
+      }
+    ],
+    "@pubg-replay/shared-types": [
+      {
+        "source": "@pubg-replay/shared-types",
+        "target": "npm:vite",
+        "type": "static"
+      },
+      {
+        "source": "@pubg-replay/shared-types",
+        "target": "npm:vitest",
+        "type": "static"
+      }
+    ],
+    "@pubg-replay/shared-utils": [
+      {
+        "source": "@pubg-replay/shared-utils",
+        "target": "npm:vite",
+        "type": "static"
+      },
+      {
+        "source": "@pubg-replay/shared-utils",
+        "target": "npm:vitest",
+        "type": "static"
+      }
+    ],
     "api-e2e": [
       {
         "source": "api-e2e",
@@ -16522,6 +17014,11 @@
       {
         "source": "npm:vite@7.3.0",
         "target": "npm:terser",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite@7.3.0",
+        "target": "npm:yaml",
         "type": "static"
       },
       {
@@ -23768,6 +24265,43 @@
         "type": "static"
       }
     ],
+    "npm:@nx/vitest": [
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:vite",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:vitest",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:@nx/devkit",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:@nx/js",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:@phenomnomnominal/tsquery",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:semver",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/vitest",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
     "npm:@nx/web": [
       {
         "source": "npm:@nx/web",
@@ -25750,6 +26284,63 @@
         "type": "static"
       }
     ],
+    "npm:@vitest/coverage-v8": [
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:vitest",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:@bcoe/v8-coverage@1.0.2",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:@vitest/utils",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:ast-v8-to-istanbul",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:istanbul-lib-coverage",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:istanbul-lib-report",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:istanbul-reports",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:magicast",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:obug",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:std-env",
+        "type": "static"
+      },
+      {
+        "source": "npm:@vitest/coverage-v8",
+        "target": "npm:tinyrainbow",
+        "type": "static"
+      }
+    ],
     "npm:@vitest/expect": [
       {
         "source": "npm:@vitest/expect",
@@ -26331,6 +26922,23 @@
       {
         "source": "npm:asn1js",
         "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:ast-v8-to-istanbul": [
+      {
+        "source": "npm:ast-v8-to-istanbul",
+        "target": "npm:@jridgewell/trace-mapping",
+        "type": "static"
+      },
+      {
+        "source": "npm:ast-v8-to-istanbul",
+        "target": "npm:estree-walker",
+        "type": "static"
+      },
+      {
+        "source": "npm:ast-v8-to-istanbul",
+        "target": "npm:js-tokens@10.0.0",
         "type": "static"
       }
     ],
@@ -27342,7 +27950,7 @@
       },
       {
         "source": "npm:cosmiconfig",
-        "target": "npm:yaml",
+        "target": "npm:yaml@1.10.2",
         "type": "static"
       }
     ],
@@ -31301,6 +31909,23 @@
         "type": "static"
       }
     ],
+    "npm:magicast": [
+      {
+        "source": "npm:magicast",
+        "target": "npm:@babel/parser",
+        "type": "static"
+      },
+      {
+        "source": "npm:magicast",
+        "target": "npm:@babel/types",
+        "type": "static"
+      },
+      {
+        "source": "npm:magicast",
+        "target": "npm:source-map-js",
+        "type": "static"
+      }
+    ],
     "npm:make-dir": [
       {
         "source": "npm:make-dir",
@@ -31997,7 +32622,7 @@
       },
       {
         "source": "npm:nx",
-        "target": "npm:yaml@2.8.2",
+        "target": "npm:yaml",
         "type": "static"
       },
       {
@@ -35206,6 +35831,78 @@
         "type": "static"
       }
     ],
+    "npm:vite": [
+      {
+        "source": "npm:vite",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:jiti",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:less",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:sass",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:sass-embedded",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:terser",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:yaml",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:esbuild",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:fdir",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:picomatch@4.0.3",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:postcss",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:rollup",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:tinyglobby",
+        "type": "static"
+      },
+      {
+        "source": "npm:vite",
+        "target": "npm:fsevents",
+        "type": "static"
+      }
+    ],
     "npm:vitest": [
       {
         "source": "npm:vitest",
@@ -35309,7 +36006,7 @@
       },
       {
         "source": "npm:vitest",
-        "target": "npm:vite@7.3.1",
+        "target": "npm:vite",
         "type": "static"
       },
       {
@@ -35321,7 +36018,7 @@
     "npm:@vitest/mocker@4.0.18": [
       {
         "source": "npm:@vitest/mocker@4.0.18",
-        "target": "npm:vite@7.3.1",
+        "target": "npm:vite",
         "type": "static"
       },
       {
@@ -35337,73 +36034,6 @@
       {
         "source": "npm:@vitest/mocker@4.0.18",
         "target": "npm:magic-string",
-        "type": "static"
-      }
-    ],
-    "npm:vite@7.3.1": [
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:@types/node",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:jiti",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:less",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:sass",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:sass-embedded",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:terser",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:esbuild",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:fdir",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:picomatch@4.0.3",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:rollup",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:tinyglobby",
-        "type": "static"
-      },
-      {
-        "source": "npm:vite@7.3.1",
-        "target": "npm:fsevents",
         "type": "static"
       }
     ],
@@ -36045,5 +36675,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1771510504620
+  "computedAt": 1771511076886
 }

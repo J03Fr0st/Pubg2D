@@ -1,7 +1,17 @@
 {
   "version": "6.0",
   "nxVersion": "22.5.1",
-  "pathMappings": {},
+  "pathMappings": {
+    "@pubg-replay/shared-types": [
+      "libs/shared/types/src/index.ts"
+    ],
+    "@pubg-replay/shared-utils": [
+      "libs/shared/utils/src/index.ts"
+    ],
+    "@pubg-replay/replay-engine": [
+      "libs/replay-engine/src/index.ts"
+    ]
+  },
   "nxJsonPlugins": [
     {
       "name": "@nx/js/typescript",
@@ -26,6 +36,15 @@
         "buildDepsTargetName": "build-deps",
         "watchDepsTargetName": "watch-deps",
         "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "name": "@nx/vitest",
+      "version": "22.5.1",
+      "options": {
+        "testTargetName": "test",
+        "ciTargetName": "test-ci",
+        "testMode": "watch"
       }
     }
   ],
@@ -73,7 +92,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "16653904922013351745"
+        "hash": "4512172852042077378"
       },
       {
         "file": ".prettierignore",
@@ -109,30 +128,82 @@
       },
       {
         "file": "eslint.config.mjs",
-        "hash": "12926286793420397906"
+        "hash": "7566070839603645918"
       },
       {
         "file": "nx.json",
-        "hash": "5015610194561528992"
+        "hash": "16974164741354469435"
       },
       {
         "file": "package-lock.json",
-        "hash": "12890439318636651014"
+        "hash": "2198110830419591477"
       },
       {
         "file": "package.json",
-        "hash": "9645729834737632887"
+        "hash": "16567424217374016363"
       },
       {
         "file": "tsconfig.base.json",
-        "hash": "4315321399922957604"
+        "hash": "5679180110196049216"
       },
       {
         "file": "tsconfig.json",
-        "hash": "7480320933674468071"
+        "hash": "5445344698340889520"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "4665328684042819579"
       }
     ],
     "projectFileMap": {
+      "@pubg-replay/shared-types": [
+        {
+          "file": "libs/shared/types/README.md",
+          "hash": "9100919672007375316"
+        },
+        {
+          "file": "libs/shared/types/package.json",
+          "hash": "13880101611499852383"
+        },
+        {
+          "file": "libs/shared/types/src/index.ts",
+          "hash": "9616474743146201400"
+        },
+        {
+          "file": "libs/shared/types/src/lib/types.spec.ts",
+          "hash": "9354891611907858840"
+        },
+        {
+          "file": "libs/shared/types/src/lib/types.ts",
+          "hash": "5476929482655057349"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.json",
+          "hash": "14186287857387999199"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.lib.json",
+          "hash": "16510454407152570898"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.spec.json",
+          "hash": "941360896951688704"
+        },
+        {
+          "file": "libs/shared/types/vite.config.ts",
+          "hash": "5247685006192271729",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "libs/shared/types/vitest.config.mts",
+          "hash": "14725460237203485694",
+          "deps": [
+            "npm:vitest"
+          ]
+        }
+      ],
       "api-e2e": [
         {
           "file": "apps/api-e2e/.spec.swcrc",
@@ -273,6 +344,54 @@
           "hash": "13919890687900665478"
         }
       ],
+      "@pubg-replay/shared-utils": [
+        {
+          "file": "libs/shared/utils/README.md",
+          "hash": "17034218750445164374"
+        },
+        {
+          "file": "libs/shared/utils/package.json",
+          "hash": "1206729766370370308"
+        },
+        {
+          "file": "libs/shared/utils/src/index.ts",
+          "hash": "1424520165591673030"
+        },
+        {
+          "file": "libs/shared/utils/src/lib/utils.spec.ts",
+          "hash": "17453479995195199863"
+        },
+        {
+          "file": "libs/shared/utils/src/lib/utils.ts",
+          "hash": "17287710670217841263"
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.json",
+          "hash": "14186287857387999199"
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.lib.json",
+          "hash": "16510454407152570898"
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.spec.json",
+          "hash": "941360896951688704"
+        },
+        {
+          "file": "libs/shared/utils/vite.config.ts",
+          "hash": "10656643705186750320",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "libs/shared/utils/vitest.config.mts",
+          "hash": "2085821504603256022",
+          "deps": [
+            "npm:vitest"
+          ]
+        }
+      ],
       "api": [
         {
           "file": "apps/api/package.json",
@@ -335,8 +454,56 @@
             "npm:@nx/webpack"
           ]
         }
+      ],
+      "@pubg-replay/replay-engine": [
+        {
+          "file": "libs/replay-engine/README.md",
+          "hash": "7410901065840022058"
+        },
+        {
+          "file": "libs/replay-engine/package.json",
+          "hash": "5020735266573918688"
+        },
+        {
+          "file": "libs/replay-engine/src/index.ts",
+          "hash": "2089018534333885605"
+        },
+        {
+          "file": "libs/replay-engine/src/lib/replay-engine.spec.ts",
+          "hash": "8163475856195818796"
+        },
+        {
+          "file": "libs/replay-engine/src/lib/replay-engine.ts",
+          "hash": "16392959635748229007"
+        },
+        {
+          "file": "libs/replay-engine/tsconfig.json",
+          "hash": "12834038490315927699"
+        },
+        {
+          "file": "libs/replay-engine/tsconfig.lib.json",
+          "hash": "15299785940044794528"
+        },
+        {
+          "file": "libs/replay-engine/tsconfig.spec.json",
+          "hash": "12757693314151657395"
+        },
+        {
+          "file": "libs/replay-engine/vite.config.ts",
+          "hash": "7738933013628119304",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "libs/replay-engine/vitest.config.mts",
+          "hash": "16179561834097687813",
+          "deps": [
+            "npm:vitest"
+          ]
+        }
       ]
     }
   },
-  "externalNodesHash": "1460281941932782829"
+  "externalNodesHash": "8421122929077549004"
 }
