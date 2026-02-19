@@ -1,11 +1,11 @@
-import { Container, Graphics, Text, TextStyle } from 'pixi.js';
 import type { PlayerFrame } from '@pubg-replay/shared-types';
+import { type Container, Graphics, Text, TextStyle } from 'pixi.js';
 
 const COLORS = {
-  friendly: 0xd4a832,    // amber
-  enemy: 0x6a7a5a,       // olive drab
+  friendly: 0xd4a832, // amber
+  enemy: 0x6a7a5a, // olive drab
   highlighted: 0x7aff4a, // bright green
-  dead: 0xc84a2a,        // muted red
+  dead: 0xc84a2a, // muted red
 };
 
 const DOT_RADIUS = 4;
@@ -46,7 +46,7 @@ export class PlayerRenderer {
           fill: 0xc8d8b0,
         });
         const label = new Text({ text: player.name, style: labelStyle });
-        label.anchor = { x: 0.5, y: 0 } as any;
+        label.anchor.set(0.5, 0);
 
         this.container.addChild(graphics);
         this.container.addChild(label);
@@ -77,8 +77,12 @@ export class PlayerRenderer {
       } else {
         // Dead: X marker
         dot.graphics
-          .moveTo(-3, -3).lineTo(3, 3).stroke({ width: 2, color: COLORS.dead })
-          .moveTo(3, -3).lineTo(-3, 3).stroke({ width: 2, color: COLORS.dead });
+          .moveTo(-3, -3)
+          .lineTo(3, 3)
+          .stroke({ width: 2, color: COLORS.dead })
+          .moveTo(3, -3)
+          .lineTo(-3, 3)
+          .stroke({ width: 2, color: COLORS.dead });
       }
 
       dot.graphics.position.set(x, y);

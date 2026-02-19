@@ -49,8 +49,8 @@ export class PlayerComponent implements OnInit {
     try {
       const result = await this.api.searchPlayer(platform, name);
       this.player.set(result);
-    } catch (e: any) {
-      this.error.set(e.message ?? 'Player not found');
+    } catch (e: unknown) {
+      this.error.set(e instanceof Error ? e.message : 'Player not found');
     } finally {
       this.loading.set(false);
     }

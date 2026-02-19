@@ -1,24 +1,22 @@
+import { assetManager } from '@j03fr0st/pubg-ts';
 import { Injectable } from '@nestjs/common';
 import type {
-  TelemetryData,
-  LogMatchStart,
-  LogPlayerPosition,
-  LogGameStatePeriodic,
-  LogPlayerKillV2,
+  CarePackageEvent,
+  KillEvent,
   LogCarePackageLand,
-} from '@pubg-replay/shared-types';
-import { DamageInfoUtils } from '@pubg-replay/shared-types';
-import type {
+  LogGameStatePeriodic,
+  LogMatchStart,
+  LogPlayerKillV2,
+  LogPlayerPosition,
+  MatchPlayer,
+  PlayerFrame,
   ReplayData,
   ReplayTick,
-  PlayerFrame,
+  TelemetryData,
   ZoneFrame,
-  KillEvent,
-  CarePackageEvent,
-  MatchPlayer,
 } from '@pubg-replay/shared-types';
-import { getMapSize, getMapDisplayName, normalizeCoord } from '@pubg-replay/shared-utils';
-import { assetManager } from '@j03fr0st/pubg-ts';
+import { DamageInfoUtils } from '@pubg-replay/shared-types';
+import { getMapDisplayName, getMapSize, normalizeCoord } from '@pubg-replay/shared-utils';
 
 const TICK_INTERVAL = 5; // seconds
 
@@ -42,6 +40,7 @@ export class TelemetryProcessorService {
     const carePackages: CarePackageEvent[] = [];
     const playerKills = new Map<string, number>();
     let maxElapsed = 0;
+    const matchStartMs = events[0]?._D ? new Date(events[0]._D).getTime() : 0;
 
     for (const event of events) {
       switch (event._T) {
@@ -49,8 +48,12 @@ export class TelemetryProcessorService {
           const e = event as LogPlayerPosition;
           const tick = Math.round(e.elapsedTime / TICK_INTERVAL) * TICK_INTERVAL;
           maxElapsed = Math.max(maxElapsed, e.elapsedTime);
-          if (!positionsByTick.has(tick)) positionsByTick.set(tick, []);
-          positionsByTick.get(tick)!.push(e);
+          let tickPositions = positionsByTick.get(tick);
+          if (!tickPositions) {
+            tickPositions = [];
+            positionsByTick.set(tick, tickPositions);
+          }
+          tickPositions.push(e);
           break;
         }
         case 'LogGameStatePeriodic': {
@@ -62,9 +65,8 @@ export class TelemetryProcessorService {
         }
         case 'LogPlayerKillV2': {
           const e = event as LogPlayerKillV2;
-          const timestamp = e.common.isGame > 0
-            ? (new Date(e._D!).getTime() - new Date(events[0]._D!).getTime()) / 1000
-            : 0;
+          const timestamp =
+            e.common.isGame > 0 && e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0;
           const damageInfo = DamageInfoUtils.getFirst(e.killerDamageInfo);
           kills.push({
             timestamp,
@@ -89,7 +91,7 @@ export class TelemetryProcessorService {
           const e = event as LogCarePackageLand;
           if (!e.itemPackage) break; // itemPackage is optional
           carePackages.push({
-            timestamp: (new Date(e._D!).getTime() - new Date(events[0]._D!).getTime()) / 1000,
+            timestamp: e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0,
             x: norm(e.itemPackage.location.x),
             y: norm(e.itemPackage.location.y),
           });
@@ -132,9 +134,15 @@ export class TelemetryProcessorService {
       });
 
       const defaultZone: ZoneFrame = {
-        safeX: 0.5, safeY: 0.5, safeRadius: 1,
-        poisonX: 0.5, poisonY: 0.5, poisonRadius: 1,
-        redX: 0, redY: 0, redRadius: 0,
+        safeX: 0.5,
+        safeY: 0.5,
+        safeRadius: 1,
+        poisonX: 0.5,
+        poisonY: 0.5,
+        poisonRadius: 1,
+        redX: 0,
+        redY: 0,
+        redRadius: 0,
       };
 
       const zone: ZoneFrame = gameState
@@ -155,7 +163,8 @@ export class TelemetryProcessorService {
         elapsedTime: tickTime,
         players,
         zone,
-        alivePlayers: gameState?.gameState.numAlivePlayers ?? players.filter((p) => p.isAlive).length,
+        alivePlayers:
+          gameState?.gameState.numAlivePlayers ?? players.filter((p) => p.isAlive).length,
       });
     }
 

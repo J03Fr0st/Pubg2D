@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { PubgService } from '../pubg/pubg.service';
-import type { PlayerSearchResult, MatchSummary, Platform } from '@pubg-replay/shared-types';
+import type { MatchSummary, Platform, PlayerSearchResult } from '@pubg-replay/shared-types';
 import { getMapDisplayName } from '@pubg-replay/shared-utils';
+import type { PubgPlayerResource } from '../pubg/pubg.service';
+import { PubgService } from '../pubg/pubg.service';
 
 const PLATFORM_TO_SHARD: Record<Platform, string> = {
   steam: 'steam',
@@ -21,10 +22,10 @@ export class PlayersService {
       throw new Error(`Player not found: ${name}`);
     }
 
-    const player = Array.isArray(result) ? result[0] : result;
+    const player: PubgPlayerResource = Array.isArray(result) ? result[0] : result;
 
     // Fetch recent match summaries (up to 5)
-    const matchIds = (player.relationships?.matches?.data ?? []).slice(0, 5).map((m: any) => m.id);
+    const matchIds = (player.relationships?.matches?.data ?? []).slice(0, 5).map((m) => m.id);
     const recentMatches: MatchSummary[] = [];
 
     for (const matchId of matchIds) {
@@ -32,8 +33,11 @@ export class PlayersService {
         const match = await this.pubgService.getMatch(matchId, shard);
         if (match) {
           const participant = match.included
-            ?.filter((i: any) => i.type === 'participant')
-            ?.find((p: any) => p.attributes?.stats?.playerId === player.id || p.attributes?.stats?.name === name);
+            ?.filter((i) => i.type === 'participant')
+            ?.find(
+              (p) =>
+                p.attributes?.stats?.playerId === player.id || p.attributes?.stats?.name === name,
+            );
 
           recentMatches.push({
             matchId,
