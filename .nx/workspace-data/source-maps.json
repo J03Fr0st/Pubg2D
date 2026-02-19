@@ -1145,79 +1145,79 @@
       "@nx/js/typescript"
     ],
     "projectType": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "metadata.targetGroups": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "metadata.targetGroups.TEST (CI)": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.options": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.cache": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.inputs": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.outputs": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.executor": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.options.cwd": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.options.command": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.0": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.description": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.command": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.help.example": [
-      "libs/shared/types/vite.config.ts",
+      "libs/shared/types/vitest.config.mts",
       "@nx/vitest"
     ],
     "targets.test.metadata.technologies.1": [
-      "libs/shared/types/vitest.config.mts",
+      "libs/shared/types/vite.config.ts",
       "@nx/vitest"
     ],
     "name": [
