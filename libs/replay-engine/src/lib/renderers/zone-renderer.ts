@@ -3,6 +3,7 @@ import { type Container, Graphics } from 'pixi.js';
 
 export class ZoneRenderer {
   private container: Container;
+  private closedOverlay: Graphics;
   private safeZone: Graphics;
   private poisonZone: Graphics;
   private redZone: Graphics;
@@ -10,9 +11,12 @@ export class ZoneRenderer {
 
   constructor(container: Container) {
     this.container = container;
+    this.closedOverlay = new Graphics();
     this.safeZone = new Graphics();
     this.poisonZone = new Graphics();
     this.redZone = new Graphics();
+    // closed overlay sits behind the zone circles
+    this.container.addChild(this.closedOverlay);
     this.container.addChild(this.poisonZone);
     this.container.addChild(this.redZone);
     this.container.addChild(this.safeZone);
@@ -25,6 +29,17 @@ export class ZoneRenderer {
 
   update(zone: ZoneFrame, canvasWidth: number, canvasHeight: number): void {
     if (!this.visible) return;
+
+    // Green overlay on the area outside the blue zone (the "closed" region)
+    this.closedOverlay.clear();
+    if (zone.safeRadius > 0) {
+      this.closedOverlay
+        .rect(0, 0, canvasWidth, canvasHeight)
+        .fill({ color: 0x00ff00, alpha: 0.18 });
+      this.closedOverlay
+        .circle(zone.safeX * canvasWidth, zone.safeY * canvasHeight, zone.safeRadius * canvasWidth)
+        .cut();
+    }
 
     // safetyZonePosition → the blue zone (current shrinking boundary)
     this.safeZone.clear();

@@ -143,3 +143,13 @@ vite.config.ts.timestamp-*
 __screenshots__/
 
 vitest.config.*.timestamp*
+
+# NX cache and generated workspace data
+.nx/cache
+.nx/workspace-data/*.db
+.nx/workspace-data/*.db-shm
+.nx/workspace-data/*.db-wal
+.nx/workspace-data/*~*
+
+# Playwright MCP
+.playwright-mcp/
