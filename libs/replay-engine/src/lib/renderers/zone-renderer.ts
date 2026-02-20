@@ -27,8 +27,10 @@ export class ZoneRenderer {
     this.container.visible = visible;
   }
 
-  update(zone: ZoneFrame, canvasWidth: number, canvasHeight: number): void {
+  update(zone: ZoneFrame, canvasWidth: number, canvasHeight: number, zoom = 1): void {
     if (!this.visible) return;
+    const safeZoom = Math.max(zoom, 0.001);
+    const strokeScale = 1 / safeZoom;
 
     // Closed-area tint disabled by request.
     this.closedOverlay.clear();
@@ -37,7 +39,7 @@ export class ZoneRenderer {
     this.safeZone.clear();
     this.safeZone
       .circle(zone.safeX * canvasWidth, zone.safeY * canvasHeight, zone.safeRadius * canvasWidth)
-      .stroke({ width: 2, color: 0x0000ff, alpha: 0.8 });
+      .stroke({ width: 2 * strokeScale, color: 0x0000ff, alpha: 0.8 });
 
     // poisonGasWarningPosition → the white circle (next safe zone destination)
     this.poisonZone.clear();
@@ -47,7 +49,7 @@ export class ZoneRenderer {
         zone.poisonY * canvasHeight,
         zone.poisonRadius * canvasWidth,
       )
-      .stroke({ width: 2, color: 0xffffff, alpha: 0.8 });
+      .stroke({ width: 2 * strokeScale, color: 0xffffff, alpha: 0.8 });
 
     // Red zone — same semi-transparent red for fill and stroke (matches pubgsh)
     if (zone.redRadius > 0) {
@@ -55,7 +57,7 @@ export class ZoneRenderer {
       this.redZone
         .circle(zone.redX * canvasWidth, zone.redY * canvasHeight, zone.redRadius * canvasWidth)
         .fill({ color: 0xff0000, alpha: 0.27 })
-        .stroke({ width: 1, color: 0xff0000, alpha: 0.27 });
+        .stroke({ width: 1 * strokeScale, color: 0xff0000, alpha: 0.27 });
     } else {
       this.redZone.clear();
     }

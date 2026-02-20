@@ -15,16 +15,19 @@ const STATUS_COLORS = {
   dead:    0x2a2a2a, // near-black — eliminated
 };
 
-const STROKE_COLOR  = 0x000000; // black outline on status circle
 const STROKE_WIDTH  = 1.5;
 const DOT_RADIUS    = 4;        // px — matches pubgsh reference (8 px diameter)
 const DEAD_RADIUS   = 3;        // slightly smaller dot for dead players
 const DEAD_ALPHA    = 0.35;
+const POSITION_SMOOTHING = 0.16;
+const SNAP_DISTANCE_PX = 120;
 
 interface PlayerDot {
   graphics: Graphics;
   label: Text;
   accountId: string;
+  renderX: number;
+  renderY: number;
 }
 
 export class PlayerRenderer {
@@ -45,8 +48,17 @@ export class PlayerRenderer {
     this.friendlyTeamId = teamId;
   }
 
-  update(players: PlayerFrame[], canvasWidth: number, canvasHeight: number): void {
+  update(players: PlayerFrame[], canvasWidth: number, canvasHeight: number, zoom = 1): void {
+    const safeZoom = Math.max(zoom, 0.001);
+    const scale = 1 / safeZoom;
+    const dotRadius = DOT_RADIUS * scale;
+    const deadRadius = DEAD_RADIUS * scale;
+    const strokeWidth = STROKE_WIDTH * scale;
+
     for (const player of players) {
+      const x = player.x * canvasWidth;
+      const y = player.y * canvasHeight;
+
       // ── 1. Create graphics + label for first-seen players ──────────────────
       let dot = this.dots.get(player.accountId);
 
@@ -54,7 +66,7 @@ export class PlayerRenderer {
         const graphics = new Graphics();
         const labelStyle = new TextStyle({
           fontFamily: 'IBM Plex Mono',
-          fontSize: 9,
+          fontSize: 9 * scale,
           fill: 0xc8d8b0,
         });
         const label = new Text({ text: player.name, style: labelStyle });
@@ -63,12 +75,10 @@ export class PlayerRenderer {
         this.container.addChild(graphics);
         this.container.addChild(label);
 
-        dot = { graphics, label, accountId: player.accountId };
+        dot = { graphics, label, accountId: player.accountId, renderX: x, renderY: y };
         this.dots.set(player.accountId, dot);
       }
-
-      const x = player.x * canvasWidth;
-      const y = player.y * canvasHeight;
+      (dot.label.style as TextStyle).fontSize = 9 * scale;
 
       // ── 2. Determine player (arc) color ────────────────────────────────────
       let playerColor: number;
@@ -97,12 +107,13 @@ export class PlayerRenderer {
 
       if (player.isAlive) {
         // ── 5a. Alive (including knocked): status circle + health arc ─────────
+        const strokeColor = playerColor;
 
         // Layer 1 — status circle with black stroke
         dot.graphics
-          .circle(0, 0, DOT_RADIUS)
+          .circle(0, 0, dotRadius)
           .fill({ color: statusColor })
-          .stroke({ color: STROKE_COLOR, width: STROKE_WIDTH });
+          .stroke({ color: strokeColor, width: strokeWidth });
 
         // Layer 2 — health arc (pie sector) drawn on top
         // Knocked players have health = 0, so the arc covers 0° (invisible).
@@ -114,21 +125,33 @@ export class PlayerRenderer {
 
           dot.graphics
             .moveTo(0, 0)
-            .arc(0, 0, DOT_RADIUS, startAngle, endAngle)
+            .arc(0, 0, dotRadius, startAngle, endAngle)
             .lineTo(0, 0)
             .fill({ color: playerColor });
         }
       } else {
         // ── 5b. Dead: small dim grey dot (no X marker) ───────────────────────
         dot.graphics
-          .circle(0, 0, DEAD_RADIUS)
+          .circle(0, 0, deadRadius)
           .fill({ color: STATUS_COLORS.dead });
         dot.graphics.alpha = DEAD_ALPHA;
       }
 
       // ── 6. Position graphics and label ────────────────────────────────────
-      dot.graphics.position.set(x, y);
-      dot.label.position.set(x, y + DOT_RADIUS + 2);
+      // Smooth small frame-to-frame movement; snap on large jumps (seek/teleport).
+      const dx = x - dot.renderX;
+      const dy = y - dot.renderY;
+      const distance = Math.hypot(dx, dy);
+      if (distance > SNAP_DISTANCE_PX) {
+        dot.renderX = x;
+        dot.renderY = y;
+      } else {
+        dot.renderX += dx * POSITION_SMOOTHING;
+        dot.renderY += dy * POSITION_SMOOTHING;
+      }
+
+      dot.graphics.position.set(dot.renderX, dot.renderY);
+      dot.label.position.set(dot.renderX, dot.renderY + dotRadius + 2 * scale);
       dot.label.visible = player.accountId === this.highlightedAccountId;
     }
   }

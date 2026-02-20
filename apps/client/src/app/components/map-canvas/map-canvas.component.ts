@@ -38,7 +38,7 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
   private readonly CANVAS_SIZE = 800;
   private readonly MIN_AUTO_ZOOM = 1;
   private readonly MAX_AUTO_ZOOM = 4;
-  private readonly ZONE_SCREEN_DIAMETER = 0.7;
+  private readonly ZONE_SCREEN_DIAMETER = 0.8;
   private readonly CAMERA_SMOOTHING = 0.12;
 
   async ngOnInit(): Promise<void> {
@@ -67,11 +67,26 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
       this.render();
     });
 
-    // React to selected player changes.
+    // React to selected player changes (highlight + teammate color on map).
     runInInjectionContext(this.injector, () => {
       effect(() => {
         const selected = this.replay.selectedPlayer();
         this.playerRenderer.setHighlightedPlayer(selected);
+
+        const replayData = this.replay.replayData();
+        if (!selected || !replayData) {
+          this.playerRenderer.setFriendlyTeam(null);
+          return;
+        }
+
+        // Resolve once from stable replay data to avoid per-frame team flicker.
+        const teamFromRoster = replayData.players.find((p) => p.accountId === selected)?.teamId ?? null;
+        const teamFromTicks =
+          replayData.ticks
+            .flatMap((t) => t.players)
+            .find((p) => p.accountId === selected)?.teamId ?? null;
+        const friendlyTeamId = teamFromRoster ?? teamFromTicks ?? null;
+        this.playerRenderer.setFriendlyTeam(friendlyTeamId ?? null);
       });
     });
   }
@@ -82,10 +97,11 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
 
     const w = this.CANVAS_SIZE;
     const h = this.CANVAS_SIZE;
+    const zoom = this.getViewportScale();
 
     this.updateAutoCamera(tick.zone, w, h);
-    this.playerRenderer.update(tick.players, w, h);
-    this.zoneRenderer.update(tick.zone, w, h);
+    this.playerRenderer.update(tick.players, w, h, zoom);
+    this.zoneRenderer.update(tick.zone, w, h, zoom);
 
     // Trigger kill tracers for newly passed kills
     const data = this.replay.replayData();
@@ -127,6 +143,11 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
 
     viewport.moveCenter?.(centerX, centerY);
     viewport.setZoom?.(nextZoom, true);
+  }
+
+  private getViewportScale(): number {
+    const viewport = this.engine.getViewport() as unknown as { scale?: { x?: number } };
+    return viewport.scale?.x ?? 1;
   }
 
   ngOnDestroy(): void {

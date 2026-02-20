@@ -112,6 +112,7 @@ export class TelemetryProcessorService {
         case 'LogGameStatePeriodic': {
           const e = event as LogGameStatePeriodic;
           if (!e.gameState) break; // gameState is optional
+          maxElapsed = Math.max(maxElapsed, e.gameState.elapsedTime);
           const tick = Math.round(e.gameState.elapsedTime / TICK_INTERVAL) * TICK_INTERVAL;
           gameStatesByTick.set(tick, e);
           // Also store as a dense keyframe at natural cadence (~1 s)
@@ -136,6 +137,7 @@ export class TelemetryProcessorService {
           const e = event as LogPlayerKillV2;
           const timestamp =
             e.common.isGame > 0 && e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0;
+          maxElapsed = Math.max(maxElapsed, timestamp);
           const damageInfo = DamageInfoUtils.getFirst(e.killerDamageInfo);
           kills.push({
             timestamp,
@@ -163,8 +165,10 @@ export class TelemetryProcessorService {
         case 'LogCarePackageLand': {
           const e = event as LogCarePackageLand;
           if (!e.itemPackage) break; // itemPackage is optional
+          const timestamp = e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0;
+          maxElapsed = Math.max(maxElapsed, timestamp);
           carePackages.push({
-            timestamp: e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0,
+            timestamp,
             x: norm(e.itemPackage.location.x),
             y: norm(e.itemPackage.location.y),
           });
@@ -180,6 +184,7 @@ export class TelemetryProcessorService {
 
           const timestamp =
             (e.common?.isGame ?? 0) > 0 && e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0;
+          maxElapsed = Math.max(maxElapsed, timestamp);
 
           damageEvents.push({
             timestamp,

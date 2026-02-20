@@ -176,6 +176,6 @@ export function interpolateTick(ticks: ReplayTick[], time: number): ReplayTick {
     elapsedTime: time,
     players: interpolatePlayers(a.players, b.players, t),
     zone: interpolateZone(a.zone, b.zone, t),
-    alivePlayers: Math.round(lerp(a.alivePlayers, b.alivePlayers, t)),
+    alivePlayers: a.alivePlayers, // discrete count – use from-tick value to avoid jumping
   };
 }

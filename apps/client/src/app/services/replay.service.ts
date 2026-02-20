@@ -36,7 +36,13 @@ export class ReplayService {
     return { ...tick, zone, players };
   });
 
-  readonly alivePlayers = computed(() => this.currentTick()?.alivePlayers ?? 0);
+  readonly alivePlayers = computed(() => {
+    const data = this.replayData();
+    const time = this.currentTime();
+    if (!data) return 0;
+    const deaths = data.kills.filter((k) => k.timestamp <= time).length;
+    return Math.max(0, data.players.length - deaths);
+  });
 
   readonly visibleKills = computed(() => {
     const data = this.replayData();

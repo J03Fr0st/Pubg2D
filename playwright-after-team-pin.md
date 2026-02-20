@@ -1,0 +1,1031 @@
+- generic [ref=e4]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: Name
+      - generic [ref=e10]: Kills
+      - generic [ref=e11]: Assists
+      - generic [ref=e12]: Dmg
+    - generic [ref=e13]:
+      - generic [ref=e40]:
+        - generic [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]: J03Fr0st
+          - generic [ref=e43]: "0"
+          - generic [ref=e44]: "0"
+          - generic [ref=e45]: "0"
+        - generic [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: shamelless
+          - generic [ref=e48]: "0"
+          - generic [ref=e49]: "0"
+          - generic [ref=e50]: "0"
+      - generic [ref=e51]:
+        - generic [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: ame-TH
+          - generic [ref=e54]: "0"
+          - generic [ref=e55]: "0"
+          - generic [ref=e56]: "0"
+        - generic [ref=e57] [cursor=pointer]:
+          - generic [ref=e58]: S2G_XEWRON
+          - generic [ref=e59]: "0"
+          - generic [ref=e60]: "0"
+          - generic [ref=e61]: "0"
+      - generic [ref=e62]:
+        - generic [ref=e63] [cursor=pointer]:
+          - generic [ref=e64]: Carcajada
+          - generic [ref=e65]: "0"
+          - generic [ref=e66]: "0"
+          - generic [ref=e67]: "0"
+        - generic [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: Coyan94
+          - generic [ref=e70]: "0"
+          - generic [ref=e71]: "0"
+          - generic [ref=e72]: "0"
+      - generic [ref=e73]:
+        - generic [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: huewslqxx
+          - generic [ref=e76]: "0"
+          - generic [ref=e77]: "0"
+          - generic [ref=e78]: "0"
+        - generic [ref=e79] [cursor=pointer]:
+          - generic [ref=e80]: jfghcxdsdz
+          - generic [ref=e81]: "0"
+          - generic [ref=e82]: "0"
+          - generic [ref=e83]: "0"
+      - generic [ref=e84]:
+        - generic [ref=e85] [cursor=pointer]:
+          - generic [ref=e86]: Cerf__
+          - generic [ref=e87]: "0"
+          - generic [ref=e88]: "0"
+          - generic [ref=e89]: "0"
+        - generic [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: WinstonAlone
+          - generic [ref=e92]: "0"
+          - generic [ref=e93]: "0"
+          - generic [ref=e94]: "0"
+      - generic [ref=e95]:
+        - generic [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: H-Y-P-N-O-T-I-C
+          - generic [ref=e98]: "0"
+          - generic [ref=e99]: "0"
+          - generic [ref=e100]: "0"
+        - generic [ref=e101] [cursor=pointer]:
+          - generic [ref=e102]: TrueDmg69
+          - generic [ref=e103]: "0"
+          - generic [ref=e104]: "0"
+          - generic [ref=e105]: "0"
+      - generic [ref=e106]:
+        - generic [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: Ante_ten
+          - generic [ref=e109]: "0"
+          - generic [ref=e110]: "0"
+          - generic [ref=e111]: "0"
+        - generic [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: Vin_Kostya
+          - generic [ref=e114]: "0"
+          - generic [ref=e115]: "0"
+          - generic [ref=e116]: "0"
+      - generic [ref=e117]:
+        - generic [ref=e118] [cursor=pointer]:
+          - generic [ref=e119]: TR-ZenG
+          - generic [ref=e120]: "0"
+          - generic [ref=e121]: "0"
+          - generic [ref=e122]: "0"
+        - generic [ref=e123] [cursor=pointer]:
+          - generic [ref=e124]: Vasya_pianino1
+          - generic [ref=e125]: "0"
+          - generic [ref=e126]: "0"
+          - generic [ref=e127]: "0"
+      - generic [ref=e128]:
+        - generic [ref=e129] [cursor=pointer]:
+          - generic [ref=e130]: 9_Ebashu-Vsolo_
+          - generic [ref=e131]: "0"
+          - generic [ref=e132]: "0"
+          - generic [ref=e133]: "0"
+        - generic [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]: kenhaiseken
+          - generic [ref=e136]: "0"
+          - generic [ref=e137]: "0"
+          - generic [ref=e138]: "0"
+      - generic [ref=e139]:
+        - generic [ref=e140] [cursor=pointer]:
+          - generic [ref=e141]: Badel1862Penki
+          - generic [ref=e142]: "0"
+          - generic [ref=e143]: "0"
+          - generic [ref=e144]: "0"
+        - generic [ref=e145] [cursor=pointer]:
+          - generic [ref=e146]: SasQuatchKid
+          - generic [ref=e147]: "0"
+          - generic [ref=e148]: "0"
+          - generic [ref=e149]: "0"
+      - generic [ref=e151] [cursor=pointer]:
+        - generic [ref=e152]: No_Sens
+        - generic [ref=e153]: "0"
+        - generic [ref=e154]: "0"
+        - generic [ref=e155]: "0"
+      - generic [ref=e157] [cursor=pointer]:
+        - generic [ref=e158]: CheK4w4K4
+        - generic [ref=e159]: "0"
+        - generic [ref=e160]: "0"
+        - generic [ref=e161]: "0"
+      - generic [ref=e162]:
+        - generic [ref=e163] [cursor=pointer]:
+          - generic [ref=e164]: L1nton56
+          - generic [ref=e165]: "0"
+          - generic [ref=e166]: "0"
+          - generic [ref=e167]: "0"
+        - generic [ref=e168] [cursor=pointer]:
+          - generic [ref=e169]: Roma2145
+          - generic [ref=e170]: "0"
+          - generic [ref=e171]: "0"
+          - generic [ref=e172]: "0"
+      - generic [ref=e173]:
+        - generic [ref=e174] [cursor=pointer]:
+          - generic [ref=e175]: MT_SEANZZ
+          - generic [ref=e176]: "0"
+          - generic [ref=e177]: "0"
+          - generic [ref=e178]: "0"
+        - generic [ref=e179] [cursor=pointer]:
+          - generic [ref=e180]: Rascol_Nikov
+          - generic [ref=e181]: "0"
+          - generic [ref=e182]: "0"
+          - generic [ref=e183]: "0"
+      - generic [ref=e184]:
+        - generic [ref=e185] [cursor=pointer]:
+          - generic [ref=e186]: Boot_Noob
+          - generic [ref=e187]: "0"
+          - generic [ref=e188]: "0"
+          - generic [ref=e189]: "0"
+        - generic [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]: tareq-aha
+          - generic [ref=e192]: "0"
+          - generic [ref=e193]: "0"
+          - generic [ref=e194]: "0"
+      - generic [ref=e195]:
+        - generic [ref=e196] [cursor=pointer]:
+          - generic [ref=e197]: LustyOf
+          - generic [ref=e198]: "0"
+          - generic [ref=e199]: "0"
+          - generic [ref=e200]: "0"
+        - generic [ref=e201] [cursor=pointer]:
+          - generic [ref=e202]: ripdx
+          - generic [ref=e203]: "0"
+          - generic [ref=e204]: "0"
+          - generic [ref=e205]: "0"
+      - generic [ref=e206]:
+        - generic [ref=e207] [cursor=pointer]:
+          - generic [ref=e208]: Desporedos
+          - generic [ref=e209]: "0"
+          - generic [ref=e210]: "0"
+          - generic [ref=e211]: "0"
+        - generic [ref=e212] [cursor=pointer]:
+          - generic [ref=e213]: LorenzoSarc
+          - generic [ref=e214]: "0"
+          - generic [ref=e215]: "0"
+          - generic [ref=e216]: "0"
+      - generic [ref=e217]:
+        - generic [ref=e218] [cursor=pointer]:
+          - generic [ref=e219]: MlTHRANDlR
+          - generic [ref=e220]: "0"
+          - generic [ref=e221]: "0"
+          - generic [ref=e222]: "0"
+        - generic [ref=e223] [cursor=pointer]:
+          - generic [ref=e224]: MUHAMMEDALII
+          - generic [ref=e225]: "0"
+          - generic [ref=e226]: "0"
+          - generic [ref=e227]: "0"
+      - generic [ref=e228]:
+        - generic [ref=e229] [cursor=pointer]:
+          - generic [ref=e230]: Dima_Volniy
+          - generic [ref=e231]: "0"
+          - generic [ref=e232]: "0"
+          - generic [ref=e233]: "0"
+        - generic [ref=e234] [cursor=pointer]:
+          - generic [ref=e235]: yylxqq
+          - generic [ref=e236]: "0"
+          - generic [ref=e237]: "0"
+          - generic [ref=e238]: "0"
+      - generic [ref=e239]:
+        - generic [ref=e240] [cursor=pointer]:
+          - generic [ref=e241]: PaulePanik
+          - generic [ref=e242]: "0"
+          - generic [ref=e243]: "0"
+          - generic [ref=e244]: "0"
+        - generic [ref=e245] [cursor=pointer]:
+          - generic [ref=e246]: psyie
+          - generic [ref=e247]: "0"
+          - generic [ref=e248]: "0"
+          - generic [ref=e249]: "0"
+      - generic [ref=e250]:
+        - generic [ref=e251] [cursor=pointer]:
+          - generic [ref=e252]: BARBAROSSA_TN
+          - generic [ref=e253]: "0"
+          - generic [ref=e254]: "0"
+          - generic [ref=e255]: "0"
+        - generic [ref=e256] [cursor=pointer]:
+          - generic [ref=e257]: MOMO_TN
+          - generic [ref=e258]: "0"
+          - generic [ref=e259]: "0"
+          - generic [ref=e260]: "0"
+      - generic [ref=e261]:
+        - generic [ref=e262] [cursor=pointer]:
+          - generic [ref=e263]: S1MAAAA
+          - generic [ref=e264]: "0"
+          - generic [ref=e265]: "0"
+          - generic [ref=e266]: "0"
+        - generic [ref=e267] [cursor=pointer]:
+          - generic [ref=e268]: tserber__
+          - generic [ref=e269]: "0"
+          - generic [ref=e270]: "0"
+          - generic [ref=e271]: "0"
+      - generic [ref=e272]:
+        - generic [ref=e273] [cursor=pointer]:
+          - generic [ref=e274]: dorfkek
+          - generic [ref=e275]: "0"
+          - generic [ref=e276]: "0"
+          - generic [ref=e277]: "0"
+        - generic [ref=e278] [cursor=pointer]:
+          - generic [ref=e279]: Gumpyx
+          - generic [ref=e280]: "0"
+          - generic [ref=e281]: "0"
+          - generic [ref=e282]: "0"
+      - generic [ref=e283]:
+        - generic [ref=e284] [cursor=pointer]:
+          - generic [ref=e285]: ONE-ABOVE-ALL55
+          - generic [ref=e286]: "0"
+          - generic [ref=e287]: "0"
+          - generic [ref=e288]: "0"
+        - generic [ref=e289] [cursor=pointer]:
+          - generic [ref=e290]: SlenderMattres
+          - generic [ref=e291]: "0"
+          - generic [ref=e292]: "0"
+          - generic [ref=e293]: "0"
+      - generic [ref=e294]:
+        - generic [ref=e295] [cursor=pointer]:
+          - generic [ref=e296]: minonino
+          - generic [ref=e297]: "0"
+          - generic [ref=e298]: "0"
+          - generic [ref=e299]: "0"
+        - generic [ref=e300] [cursor=pointer]:
+          - generic [ref=e301]: ORIGINALISTAS87
+          - generic [ref=e302]: "0"
+          - generic [ref=e303]: "0"
+          - generic [ref=e304]: "0"
+      - generic [ref=e305]:
+        - generic [ref=e306] [cursor=pointer]:
+          - generic [ref=e307]: Samsalt
+          - generic [ref=e308]: "0"
+          - generic [ref=e309]: "0"
+          - generic [ref=e310]: "0"
+        - generic [ref=e311] [cursor=pointer]:
+          - generic [ref=e312]: Vattuh
+          - generic [ref=e313]: "0"
+          - generic [ref=e314]: "0"
+          - generic [ref=e315]: "0"
+      - generic [ref=e316]:
+        - generic [ref=e317] [cursor=pointer]:
+          - generic [ref=e318]: MarksmaN2810
+          - generic [ref=e319]: "0"
+          - generic [ref=e320]: "0"
+          - generic [ref=e321]: "0"
+        - generic [ref=e322] [cursor=pointer]:
+          - generic [ref=e323]: tsitsop420
+          - generic [ref=e324]: "0"
+          - generic [ref=e325]: "0"
+          - generic [ref=e326]: "0"
+      - generic [ref=e327]:
+        - generic [ref=e328] [cursor=pointer]:
+          - generic [ref=e329]: Huysuz_Tavuk
+          - generic [ref=e330]: "0"
+          - generic [ref=e331]: "0"
+          - generic [ref=e332]: "0"
+        - generic [ref=e333] [cursor=pointer]:
+          - generic [ref=e334]: Kgn_Dghn16
+          - generic [ref=e335]: "0"
+          - generic [ref=e336]: "0"
+          - generic [ref=e337]: "0"
+      - generic [ref=e338]:
+        - generic [ref=e339] [cursor=pointer]:
+          - generic [ref=e340]: DARKCRY1234
+          - generic [ref=e341]: "0"
+          - generic [ref=e342]: "0"
+          - generic [ref=e343]: "0"
+        - generic [ref=e344] [cursor=pointer]:
+          - generic [ref=e345]: futorpaupau
+          - generic [ref=e346]: "0"
+          - generic [ref=e347]: "0"
+          - generic [ref=e348]: "0"
+      - generic [ref=e349]:
+        - generic [ref=e350] [cursor=pointer]:
+          - generic [ref=e351]: kapust0chka
+          - generic [ref=e352]: "0"
+          - generic [ref=e353]: "0"
+          - generic [ref=e354]: "0"
+        - generic [ref=e355] [cursor=pointer]:
+          - generic [ref=e356]: MblXa_B_Tpycax
+          - generic [ref=e357]: "0"
+          - generic [ref=e358]: "0"
+          - generic [ref=e359]: "0"
+      - generic [ref=e360]:
+        - generic [ref=e361] [cursor=pointer]:
+          - generic [ref=e362]: BLACK-FADE
+          - generic [ref=e363]: "0"
+          - generic [ref=e364]: "0"
+          - generic [ref=e365]: "0"
+        - generic [ref=e366] [cursor=pointer]:
+          - generic [ref=e367]: GG_EZ_VSE_BOMZI
+          - generic [ref=e368]: "0"
+          - generic [ref=e369]: "0"
+          - generic [ref=e370]: "0"
+      - generic [ref=e371]:
+        - generic [ref=e372] [cursor=pointer]:
+          - generic [ref=e373]: Friedricat
+          - generic [ref=e374]: "0"
+          - generic [ref=e375]: "0"
+          - generic [ref=e376]: "0"
+        - generic [ref=e377] [cursor=pointer]:
+          - generic [ref=e378]: r5kiu
+          - generic [ref=e379]: "0"
+          - generic [ref=e380]: "0"
+          - generic [ref=e381]: "0"
+      - generic [ref=e382]:
+        - generic [ref=e383] [cursor=pointer]:
+          - generic [ref=e384]: MitsoU
+          - generic [ref=e385]: "0"
+          - generic [ref=e386]: "0"
+          - generic [ref=e387]: "0"
+        - generic [ref=e388] [cursor=pointer]:
+          - generic [ref=e389]: Rolandioks
+          - generic [ref=e390]: "0"
+          - generic [ref=e391]: "0"
+          - generic [ref=e392]: "0"
+      - generic [ref=e393]:
+        - generic [ref=e394] [cursor=pointer]:
+          - generic [ref=e395]: ellesskrr
+          - generic [ref=e396]: "0"
+          - generic [ref=e397]: "0"
+          - generic [ref=e398]: "0"
+        - generic [ref=e399] [cursor=pointer]:
+          - generic [ref=e400]: Visenity
+          - generic [ref=e401]: "0"
+          - generic [ref=e402]: "0"
+          - generic [ref=e403]: "0"
+      - generic [ref=e404]:
+        - generic [ref=e405] [cursor=pointer]:
+          - generic [ref=e406]: Past1x
+          - generic [ref=e407]: "0"
+          - generic [ref=e408]: "0"
+          - generic [ref=e409]: "0"
+        - generic [ref=e410] [cursor=pointer]:
+          - generic [ref=e411]: VACbtw
+          - generic [ref=e412]: "0"
+          - generic [ref=e413]: "0"
+          - generic [ref=e414]: "0"
+      - generic [ref=e415]:
+        - generic [ref=e416] [cursor=pointer]:
+          - generic [ref=e417]: Mollmann
+          - generic [ref=e418]: "0"
+          - generic [ref=e419]: "0"
+          - generic [ref=e420]: "0"
+        - generic [ref=e421] [cursor=pointer]:
+          - generic [ref=e422]: N_ico
+          - generic [ref=e423]: "0"
+          - generic [ref=e424]: "0"
+          - generic [ref=e425]: "0"
+      - generic [ref=e426]:
+        - generic [ref=e427] [cursor=pointer]:
+          - generic [ref=e428]: JiayxGaming
+          - generic [ref=e429]: "0"
+          - generic [ref=e430]: "0"
+          - generic [ref=e431]: "0"
+        - generic [ref=e432] [cursor=pointer]:
+          - generic [ref=e433]: Noemi_123
+          - generic [ref=e434]: "0"
+          - generic [ref=e435]: "0"
+          - generic [ref=e436]: "0"
+      - generic [ref=e437]:
+        - generic [ref=e438] [cursor=pointer]:
+          - generic [ref=e439]: XennonXD
+          - generic [ref=e440]: "0"
+          - generic [ref=e441]: "0"
+          - generic [ref=e442]: "0"
+        - generic [ref=e443] [cursor=pointer]:
+          - generic [ref=e444]: XennonXZ
+          - generic [ref=e445]: "0"
+          - generic [ref=e446]: "0"
+          - generic [ref=e447]: "0"
+      - generic [ref=e448]:
+        - generic [ref=e449] [cursor=pointer]:
+          - generic [ref=e450]: klava-pofeg
+          - generic [ref=e451]: "0"
+          - generic [ref=e452]: "0"
+          - generic [ref=e453]: "0"
+        - generic [ref=e454] [cursor=pointer]:
+          - generic [ref=e455]: TouchButton
+          - generic [ref=e456]: "0"
+          - generic [ref=e457]: "0"
+          - generic [ref=e458]: "0"
+      - generic [ref=e459]:
+        - generic [ref=e460] [cursor=pointer]:
+          - generic [ref=e461]: gLa1dEe
+          - generic [ref=e462]: "0"
+          - generic [ref=e463]: "0"
+          - generic [ref=e464]: "0"
+        - generic [ref=e465] [cursor=pointer]:
+          - generic [ref=e466]: HiSoKi228
+          - generic [ref=e467]: "0"
+          - generic [ref=e468]: "0"
+          - generic [ref=e469]: "0"
+      - generic [ref=e470]:
+        - generic [ref=e471] [cursor=pointer]:
+          - generic [ref=e472]: PRSM
+          - generic [ref=e473]: "0"
+          - generic [ref=e474]: "0"
+          - generic [ref=e475]: "0"
+        - generic [ref=e476] [cursor=pointer]:
+          - generic [ref=e477]: RinZ-J
+          - generic [ref=e478]: "0"
+          - generic [ref=e479]: "0"
+          - generic [ref=e480]: "0"
+      - generic [ref=e481]:
+        - generic [ref=e482] [cursor=pointer]:
+          - generic [ref=e483]: lord_diabet
+          - generic [ref=e484]: "0"
+          - generic [ref=e485]: "0"
+          - generic [ref=e486]: "0"
+        - generic [ref=e487] [cursor=pointer]:
+          - generic [ref=e488]: Serken_
+          - generic [ref=e489]: "0"
+          - generic [ref=e490]: "0"
+          - generic [ref=e491]: "0"
+      - generic [ref=e492]:
+        - generic [ref=e493] [cursor=pointer]:
+          - generic [ref=e494]: MOOONTES
+          - generic [ref=e495]: "0"
+          - generic [ref=e496]: "0"
+          - generic [ref=e497]: "0"
+        - generic [ref=e498] [cursor=pointer]:
+          - generic [ref=e499]: sta1rz
+          - generic [ref=e500]: "0"
+          - generic [ref=e501]: "0"
+          - generic [ref=e502]: "0"
+      - generic [ref=e503]:
+        - generic [ref=e504] [cursor=pointer]:
+          - generic [ref=e505]: equalaizor
+          - generic [ref=e506]: "0"
+          - generic [ref=e507]: "0"
+          - generic [ref=e508]: "0"
+        - generic [ref=e509] [cursor=pointer]:
+          - generic [ref=e510]: FP_Veysel
+          - generic [ref=e511]: "0"
+          - generic [ref=e512]: "0"
+          - generic [ref=e513]: "0"
+      - generic [ref=e514]:
+        - generic [ref=e515] [cursor=pointer]:
+          - generic [ref=e516]: Sarachen
+          - generic [ref=e517]: "0"
+          - generic [ref=e518]: "0"
+          - generic [ref=e519]: "0"
+        - generic [ref=e520] [cursor=pointer]:
+          - generic [ref=e521]: SemkoDP-
+          - generic [ref=e522]: "0"
+          - generic [ref=e523]: "0"
+          - generic [ref=e524]: "0"
+      - generic [ref=e525]:
+        - generic [ref=e526] [cursor=pointer]:
+          - generic [ref=e527]: DARKZIII
+          - generic [ref=e528]: "0"
+          - generic [ref=e529]: "0"
+          - generic [ref=e530]: "0"
+        - generic [ref=e531] [cursor=pointer]:
+          - generic [ref=e532]: tatarFIT1
+          - generic [ref=e533]: "0"
+          - generic [ref=e534]: "0"
+          - generic [ref=e535]: "0"
+      - generic [ref=e536]:
+        - generic [ref=e537] [cursor=pointer]:
+          - generic [ref=e538]: Denison4ik
+          - generic [ref=e539]: "0"
+          - generic [ref=e540]: "0"
+          - generic [ref=e541]: "0"
+        - generic [ref=e542] [cursor=pointer]:
+          - generic [ref=e543]: Nikki22816
+          - generic [ref=e544]: "0"
+          - generic [ref=e545]: "0"
+          - generic [ref=e546]: "0"
+      - generic [ref=e547]:
+        - generic [ref=e548] [cursor=pointer]:
+          - generic [ref=e549]: Demis1k
+          - generic [ref=e550]: "0"
+          - generic [ref=e551]: "0"
+          - generic [ref=e552]: "0"
+        - generic [ref=e553] [cursor=pointer]:
+          - generic [ref=e554]: Kokot2004
+          - generic [ref=e555]: "0"
+          - generic [ref=e556]: "0"
+          - generic [ref=e557]: "0"
+      - generic [ref=e558]:
+        - generic [ref=e559] [cursor=pointer]:
+          - generic [ref=e560]: LICIA92
+          - generic [ref=e561]: "0"
+          - generic [ref=e562]: "0"
+          - generic [ref=e563]: "0"
+        - generic [ref=e564] [cursor=pointer]:
+          - generic [ref=e565]: MaTaJuAnEs
+          - generic [ref=e566]: "0"
+          - generic [ref=e567]: "0"
+          - generic [ref=e568]: "0"
+      - generic [ref=e569]:
+        - generic [ref=e570] [cursor=pointer]:
+          - generic [ref=e571]: Ivanoooo123
+          - generic [ref=e572]: "0"
+          - generic [ref=e573]: "0"
+          - generic [ref=e574]: "0"
+        - generic [ref=e575] [cursor=pointer]:
+          - generic [ref=e576]: Markic
+          - generic [ref=e577]: "0"
+          - generic [ref=e578]: "0"
+          - generic [ref=e579]: "0"
+      - generic [ref=e580]:
+        - generic [ref=e581] [cursor=pointer]:
+          - generic [ref=e582]: pam05
+          - generic [ref=e583]: "0"
+          - generic [ref=e584]: "0"
+          - generic [ref=e585]: "0"
+        - generic [ref=e586] [cursor=pointer]:
+          - generic [ref=e587]: Stupiditycoded_
+          - generic [ref=e588]: "0"
+          - generic [ref=e589]: "0"
+          - generic [ref=e590]: "0"
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: "[GRID REF: MIRAMAR]"
+      - generic [ref=e17]: "[MATCH: 2026-02-19T21:19:43.489Z]"
+      - generic [ref=e18]: "[100 ALIVE]"
+    - generic [ref=e26]:
+      - heading "Teams" [level=3] [ref=e27]
+      - textbox "Search player..." [ref=e28]
+      - generic [ref=e591]:
+        - generic [ref=e592]:
+          - generic [ref=e594]: TEAM 29
+          - generic [ref=e595]:
+            - generic [ref=e596] [cursor=pointer]:
+              - generic [ref=e598]: J03Fr0st
+              - generic [ref=e599]: 100hp
+            - generic [ref=e600] [cursor=pointer]:
+              - generic [ref=e602]: shamelless
+              - generic [ref=e603]: 100hp
+        - generic [ref=e604]:
+          - generic [ref=e606]: TEAM 1
+          - generic [ref=e607]:
+            - generic [ref=e608] [cursor=pointer]:
+              - generic [ref=e610]: ame-TH
+              - generic [ref=e611]: 100hp
+            - generic [ref=e612] [cursor=pointer]:
+              - generic [ref=e614]: S2G_XEWRON
+              - generic [ref=e615]: 100hp
+        - generic [ref=e616]:
+          - generic [ref=e618]: TEAM 2
+          - generic [ref=e619]:
+            - generic [ref=e620] [cursor=pointer]:
+              - generic [ref=e622]: Carcajada
+              - generic [ref=e623]: 100hp
+            - generic [ref=e624] [cursor=pointer]:
+              - generic [ref=e626]: Coyan94
+              - generic [ref=e627]: 100hp
+        - generic [ref=e628]:
+          - generic [ref=e630]: TEAM 3
+          - generic [ref=e631]:
+            - generic [ref=e632] [cursor=pointer]:
+              - generic [ref=e634]: huewslqxx
+              - generic [ref=e635]: 100hp
+            - generic [ref=e636] [cursor=pointer]:
+              - generic [ref=e638]: jfghcxdsdz
+              - generic [ref=e639]: 100hp
+        - generic [ref=e640]:
+          - generic [ref=e642]: TEAM 4
+          - generic [ref=e643]:
+            - generic [ref=e644] [cursor=pointer]:
+              - generic [ref=e646]: Cerf__
+              - generic [ref=e647]: 100hp
+            - generic [ref=e648] [cursor=pointer]:
+              - generic [ref=e650]: WinstonAlone
+              - generic [ref=e651]: 100hp
+        - generic [ref=e652]:
+          - generic [ref=e654]: TEAM 5
+          - generic [ref=e655]:
+            - generic [ref=e656] [cursor=pointer]:
+              - generic [ref=e658]: H-Y-P-N-O-T-I-C
+              - generic [ref=e659]: 100hp
+            - generic [ref=e660] [cursor=pointer]:
+              - generic [ref=e662]: TrueDmg69
+              - generic [ref=e663]: 100hp
+        - generic [ref=e664]:
+          - generic [ref=e666]: TEAM 6
+          - generic [ref=e667]:
+            - generic [ref=e668] [cursor=pointer]:
+              - generic [ref=e670]: Ante_ten
+              - generic [ref=e671]: 100hp
+            - generic [ref=e672] [cursor=pointer]:
+              - generic [ref=e674]: Vin_Kostya
+              - generic [ref=e675]: 100hp
+        - generic [ref=e676]:
+          - generic [ref=e678]: TEAM 7
+          - generic [ref=e679]:
+            - generic [ref=e680] [cursor=pointer]:
+              - generic [ref=e682]: TR-ZenG
+              - generic [ref=e683]: 100hp
+            - generic [ref=e684] [cursor=pointer]:
+              - generic [ref=e686]: Vasya_pianino1
+              - generic [ref=e687]: 100hp
+        - generic [ref=e688]:
+          - generic [ref=e690]: TEAM 8
+          - generic [ref=e691]:
+            - generic [ref=e692] [cursor=pointer]:
+              - generic [ref=e694]: 9_Ebashu-Vsolo_
+              - generic [ref=e695]: 100hp
+            - generic [ref=e696] [cursor=pointer]:
+              - generic [ref=e698]: kenhaiseken
+              - generic [ref=e699]: 100hp
+        - generic [ref=e700]:
+          - generic [ref=e702]: TEAM 9
+          - generic [ref=e703]:
+            - generic [ref=e704] [cursor=pointer]:
+              - generic [ref=e706]: Badel1862Penki
+              - generic [ref=e707]: 100hp
+            - generic [ref=e708] [cursor=pointer]:
+              - generic [ref=e710]: SasQuatchKid
+              - generic [ref=e711]: 100hp
+        - generic [ref=e712]:
+          - generic [ref=e714]: TEAM 10
+          - generic [ref=e716] [cursor=pointer]:
+            - generic [ref=e718]: No_Sens
+            - generic [ref=e719]: 100hp
+        - generic [ref=e720]:
+          - generic [ref=e722]: TEAM 11
+          - generic [ref=e724] [cursor=pointer]:
+            - generic [ref=e726]: CheK4w4K4
+            - generic [ref=e727]: 100hp
+        - generic [ref=e728]:
+          - generic [ref=e730]: TEAM 12
+          - generic [ref=e731]:
+            - generic [ref=e732] [cursor=pointer]:
+              - generic [ref=e734]: L1nton56
+              - generic [ref=e735]: 100hp
+            - generic [ref=e736] [cursor=pointer]:
+              - generic [ref=e738]: Roma2145
+              - generic [ref=e739]: 100hp
+        - generic [ref=e740]:
+          - generic [ref=e742]: TEAM 13
+          - generic [ref=e743]:
+            - generic [ref=e744] [cursor=pointer]:
+              - generic [ref=e746]: MT_SEANZZ
+              - generic [ref=e747]: 100hp
+            - generic [ref=e748] [cursor=pointer]:
+              - generic [ref=e750]: Rascol_Nikov
+              - generic [ref=e751]: 100hp
+        - generic [ref=e752]:
+          - generic [ref=e754]: TEAM 14
+          - generic [ref=e755]:
+            - generic [ref=e756] [cursor=pointer]:
+              - generic [ref=e758]: Boot_Noob
+              - generic [ref=e759]: 100hp
+            - generic [ref=e760] [cursor=pointer]:
+              - generic [ref=e762]: tareq-aha
+              - generic [ref=e763]: 100hp
+        - generic [ref=e764]:
+          - generic [ref=e766]: TEAM 15
+          - generic [ref=e767]:
+            - generic [ref=e768] [cursor=pointer]:
+              - generic [ref=e770]: LustyOf
+              - generic [ref=e771]: 100hp
+            - generic [ref=e772] [cursor=pointer]:
+              - generic [ref=e774]: ripdx
+              - generic [ref=e775]: 100hp
+        - generic [ref=e776]:
+          - generic [ref=e778]: TEAM 16
+          - generic [ref=e779]:
+            - generic [ref=e780] [cursor=pointer]:
+              - generic [ref=e782]: Desporedos
+              - generic [ref=e783]: 100hp
+            - generic [ref=e784] [cursor=pointer]:
+              - generic [ref=e786]: LorenzoSarc
+              - generic [ref=e787]: 100hp
+        - generic [ref=e788]:
+          - generic [ref=e790]: TEAM 17
+          - generic [ref=e791]:
+            - generic [ref=e792] [cursor=pointer]:
+              - generic [ref=e794]: MlTHRANDlR
+              - generic [ref=e795]: 100hp
+            - generic [ref=e796] [cursor=pointer]:
+              - generic [ref=e798]: MUHAMMEDALII
+              - generic [ref=e799]: 100hp
+        - generic [ref=e800]:
+          - generic [ref=e802]: TEAM 18
+          - generic [ref=e803]:
+            - generic [ref=e804] [cursor=pointer]:
+              - generic [ref=e806]: Dima_Volniy
+              - generic [ref=e807]: 100hp
+            - generic [ref=e808] [cursor=pointer]:
+              - generic [ref=e810]: yylxqq
+              - generic [ref=e811]: 100hp
+        - generic [ref=e812]:
+          - generic [ref=e814]: TEAM 19
+          - generic [ref=e815]:
+            - generic [ref=e816] [cursor=pointer]:
+              - generic [ref=e818]: PaulePanik
+              - generic [ref=e819]: 100hp
+            - generic [ref=e820] [cursor=pointer]:
+              - generic [ref=e822]: psyie
+              - generic [ref=e823]: 100hp
+        - generic [ref=e824]:
+          - generic [ref=e826]: TEAM 20
+          - generic [ref=e827]:
+            - generic [ref=e828] [cursor=pointer]:
+              - generic [ref=e830]: BARBAROSSA_TN
+              - generic [ref=e831]: 100hp
+            - generic [ref=e832] [cursor=pointer]:
+              - generic [ref=e834]: MOMO_TN
+              - generic [ref=e835]: 100hp
+        - generic [ref=e836]:
+          - generic [ref=e838]: TEAM 21
+          - generic [ref=e839]:
+            - generic [ref=e840] [cursor=pointer]:
+              - generic [ref=e842]: S1MAAAA
+              - generic [ref=e843]: 100hp
+            - generic [ref=e844] [cursor=pointer]:
+              - generic [ref=e846]: tserber__
+              - generic [ref=e847]: 100hp
+        - generic [ref=e848]:
+          - generic [ref=e850]: TEAM 22
+          - generic [ref=e851]:
+            - generic [ref=e852] [cursor=pointer]:
+              - generic [ref=e854]: dorfkek
+              - generic [ref=e855]: 100hp
+            - generic [ref=e856] [cursor=pointer]:
+              - generic [ref=e858]: Gumpyx
+              - generic [ref=e859]: 100hp
+        - generic [ref=e860]:
+          - generic [ref=e862]: TEAM 23
+          - generic [ref=e863]:
+            - generic [ref=e864] [cursor=pointer]:
+              - generic [ref=e866]: ONE-ABOVE-ALL55
+              - generic [ref=e867]: 100hp
+            - generic [ref=e868] [cursor=pointer]:
+              - generic [ref=e870]: SlenderMattres
+              - generic [ref=e871]: 100hp
+        - generic [ref=e872]:
+          - generic [ref=e874]: TEAM 24
+          - generic [ref=e875]:
+            - generic [ref=e876] [cursor=pointer]:
+              - generic [ref=e878]: minonino
+              - generic [ref=e879]: 100hp
+            - generic [ref=e880] [cursor=pointer]:
+              - generic [ref=e882]: ORIGINALISTAS87
+              - generic [ref=e883]: 100hp
+        - generic [ref=e884]:
+          - generic [ref=e886]: TEAM 25
+          - generic [ref=e887]:
+            - generic [ref=e888] [cursor=pointer]:
+              - generic [ref=e890]: Samsalt
+              - generic [ref=e891]: 100hp
+            - generic [ref=e892] [cursor=pointer]:
+              - generic [ref=e894]: Vattuh
+              - generic [ref=e895]: 100hp
+        - generic [ref=e896]:
+          - generic [ref=e898]: TEAM 26
+          - generic [ref=e899]:
+            - generic [ref=e900] [cursor=pointer]:
+              - generic [ref=e902]: MarksmaN2810
+              - generic [ref=e903]: 100hp
+            - generic [ref=e904] [cursor=pointer]:
+              - generic [ref=e906]: tsitsop420
+              - generic [ref=e907]: 100hp
+        - generic [ref=e908]:
+          - generic [ref=e910]: TEAM 27
+          - generic [ref=e911]:
+            - generic [ref=e912] [cursor=pointer]:
+              - generic [ref=e914]: Huysuz_Tavuk
+              - generic [ref=e915]: 100hp
+            - generic [ref=e916] [cursor=pointer]:
+              - generic [ref=e918]: Kgn_Dghn16
+              - generic [ref=e919]: 100hp
+        - generic [ref=e920]:
+          - generic [ref=e922]: TEAM 28
+          - generic [ref=e923]:
+            - generic [ref=e924] [cursor=pointer]:
+              - generic [ref=e926]: DARKCRY1234
+              - generic [ref=e927]: 100hp
+            - generic [ref=e928] [cursor=pointer]:
+              - generic [ref=e930]: futorpaupau
+              - generic [ref=e931]: 100hp
+        - generic [ref=e932]:
+          - generic [ref=e934]: TEAM 30
+          - generic [ref=e935]:
+            - generic [ref=e936] [cursor=pointer]:
+              - generic [ref=e938]: kapust0chka
+              - generic [ref=e939]: 100hp
+            - generic [ref=e940] [cursor=pointer]:
+              - generic [ref=e942]: MblXa_B_Tpycax
+              - generic [ref=e943]: 100hp
+        - generic [ref=e944]:
+          - generic [ref=e946]: TEAM 31
+          - generic [ref=e947]:
+            - generic [ref=e948] [cursor=pointer]:
+              - generic [ref=e950]: BLACK-FADE
+              - generic [ref=e951]: 100hp
+            - generic [ref=e952] [cursor=pointer]:
+              - generic [ref=e954]: GG_EZ_VSE_BOMZI
+              - generic [ref=e955]: 100hp
+        - generic [ref=e956]:
+          - generic [ref=e958]: TEAM 32
+          - generic [ref=e959]:
+            - generic [ref=e960] [cursor=pointer]:
+              - generic [ref=e962]: Friedricat
+              - generic [ref=e963]: 100hp
+            - generic [ref=e964] [cursor=pointer]:
+              - generic [ref=e966]: r5kiu
+              - generic [ref=e967]: 100hp
+        - generic [ref=e968]:
+          - generic [ref=e970]: TEAM 33
+          - generic [ref=e971]:
+            - generic [ref=e972] [cursor=pointer]:
+              - generic [ref=e974]: MitsoU
+              - generic [ref=e975]: 100hp
+            - generic [ref=e976] [cursor=pointer]:
+              - generic [ref=e978]: Rolandioks
+              - generic [ref=e979]: 100hp
+        - generic [ref=e980]:
+          - generic [ref=e982]: TEAM 34
+          - generic [ref=e983]:
+            - generic [ref=e984] [cursor=pointer]:
+              - generic [ref=e986]: ellesskrr
+              - generic [ref=e987]: 100hp
+            - generic [ref=e988] [cursor=pointer]:
+              - generic [ref=e990]: Visenity
+              - generic [ref=e991]: 100hp
+        - generic [ref=e992]:
+          - generic [ref=e994]: TEAM 35
+          - generic [ref=e995]:
+            - generic [ref=e996] [cursor=pointer]:
+              - generic [ref=e998]: Past1x
+              - generic [ref=e999]: 100hp
+            - generic [ref=e1000] [cursor=pointer]:
+              - generic [ref=e1002]: VACbtw
+              - generic [ref=e1003]: 100hp
+        - generic [ref=e1004]:
+          - generic [ref=e1006]: TEAM 36
+          - generic [ref=e1007]:
+            - generic [ref=e1008] [cursor=pointer]:
+              - generic [ref=e1010]: Mollmann
+              - generic [ref=e1011]: 100hp
+            - generic [ref=e1012] [cursor=pointer]:
+              - generic [ref=e1014]: N_ico
+              - generic [ref=e1015]: 100hp
+        - generic [ref=e1016]:
+          - generic [ref=e1018]: TEAM 37
+          - generic [ref=e1019]:
+            - generic [ref=e1020] [cursor=pointer]:
+              - generic [ref=e1022]: JiayxGaming
+              - generic [ref=e1023]: 100hp
+            - generic [ref=e1024] [cursor=pointer]:
+              - generic [ref=e1026]: Noemi_123
+              - generic [ref=e1027]: 100hp
+        - generic [ref=e1028]:
+          - generic [ref=e1030]: TEAM 38
+          - generic [ref=e1031]:
+            - generic [ref=e1032] [cursor=pointer]:
+              - generic [ref=e1034]: XennonXD
+              - generic [ref=e1035]: 100hp
+            - generic [ref=e1036] [cursor=pointer]:
+              - generic [ref=e1038]: XennonXZ
+              - generic [ref=e1039]: 100hp
+        - generic [ref=e1040]:
+          - generic [ref=e1042]: TEAM 39
+          - generic [ref=e1043]:
+            - generic [ref=e1044] [cursor=pointer]:
+              - generic [ref=e1046]: klava-pofeg
+              - generic [ref=e1047]: 100hp
+            - generic [ref=e1048] [cursor=pointer]:
+              - generic [ref=e1050]: TouchButton
+              - generic [ref=e1051]: 100hp
+        - generic [ref=e1052]:
+          - generic [ref=e1054]: TEAM 40
+          - generic [ref=e1055]:
+            - generic [ref=e1056] [cursor=pointer]:
+              - generic [ref=e1058]: gLa1dEe
+              - generic [ref=e1059]: 100hp
+            - generic [ref=e1060] [cursor=pointer]:
+              - generic [ref=e1062]: HiSoKi228
+              - generic [ref=e1063]: 100hp
+        - generic [ref=e1064]:
+          - generic [ref=e1066]: TEAM 41
+          - generic [ref=e1067]:
+            - generic [ref=e1068] [cursor=pointer]:
+              - generic [ref=e1070]: PRSM
+              - generic [ref=e1071]: 100hp
+            - generic [ref=e1072] [cursor=pointer]:
+              - generic [ref=e1074]: RinZ-J
+              - generic [ref=e1075]: 100hp
+        - generic [ref=e1076]:
+          - generic [ref=e1078]: TEAM 42
+          - generic [ref=e1079]:
+            - generic [ref=e1080] [cursor=pointer]:
+              - generic [ref=e1082]: lord_diabet
+              - generic [ref=e1083]: 100hp
+            - generic [ref=e1084] [cursor=pointer]:
+              - generic [ref=e1086]: Serken_
+              - generic [ref=e1087]: 100hp
+        - generic [ref=e1088]:
+          - generic [ref=e1090]: TEAM 43
+          - generic [ref=e1091]:
+            - generic [ref=e1092] [cursor=pointer]:
+              - generic [ref=e1094]: MOOONTES
+              - generic [ref=e1095]: 100hp
+            - generic [ref=e1096] [cursor=pointer]:
+              - generic [ref=e1098]: sta1rz
+              - generic [ref=e1099]: 100hp
+        - generic [ref=e1100]:
+          - generic [ref=e1102]: TEAM 44
+          - generic [ref=e1103]:
+            - generic [ref=e1104] [cursor=pointer]:
+              - generic [ref=e1106]: equalaizor
+              - generic [ref=e1107]: 100hp
+            - generic [ref=e1108] [cursor=pointer]:
+              - generic [ref=e1110]: FP_Veysel
+              - generic [ref=e1111]: 100hp
+        - generic [ref=e1112]:
+          - generic [ref=e1114]: TEAM 45
+          - generic [ref=e1115]:
+            - generic [ref=e1116] [cursor=pointer]:
+              - generic [ref=e1118]: Sarachen
+              - generic [ref=e1119]: 100hp
+            - generic [ref=e1120] [cursor=pointer]:
+              - generic [ref=e1122]: SemkoDP-
+              - generic [ref=e1123]: 100hp
+        - generic [ref=e1124]:
+          - generic [ref=e1126]: TEAM 46
+          - generic [ref=e1127]:
+            - generic [ref=e1128] [cursor=pointer]:
+              - generic [ref=e1130]: DARKZIII
+              - generic [ref=e1131]: 100hp
+            - generic [ref=e1132] [cursor=pointer]:
+              - generic [ref=e1134]: tatarFIT1
+              - generic [ref=e1135]: 100hp
+        - generic [ref=e1136]:
+          - generic [ref=e1138]: TEAM 47
+          - generic [ref=e1139]:
+            - generic [ref=e1140] [cursor=pointer]:
+              - generic [ref=e1142]: Denison4ik
+              - generic [ref=e1143]: 100hp
+            - generic [ref=e1144] [cursor=pointer]:
+              - generic [ref=e1146]: Nikki22816
+              - generic [ref=e1147]: 100hp
+        - generic [ref=e1148]:
+          - generic [ref=e1150]: TEAM 48
+          - generic [ref=e1151]:
+            - generic [ref=e1152] [cursor=pointer]:
+              - generic [ref=e1154]: Demis1k
+              - generic [ref=e1155]: 100hp
+            - generic [ref=e1156] [cursor=pointer]:
+              - generic [ref=e1158]: Kokot2004
+              - generic [ref=e1159]: 100hp
+        - generic [ref=e1160]:
+          - generic [ref=e1162]: TEAM 49
+          - generic [ref=e1163]:
+            - generic [ref=e1164] [cursor=pointer]:
+              - generic [ref=e1166]: LICIA92
+              - generic [ref=e1167]: 100hp
+            - generic [ref=e1168] [cursor=pointer]:
+              - generic [ref=e1170]: MaTaJuAnEs
+              - generic [ref=e1171]: 100hp
+        - generic [ref=e1172]:
+          - generic [ref=e1174]: TEAM 50
+          - generic [ref=e1175]:
+            - generic [ref=e1176] [cursor=pointer]:
+              - generic [ref=e1178]: Ivanoooo123
+              - generic [ref=e1179]: 100hp
+            - generic [ref=e1180] [cursor=pointer]:
+              - generic [ref=e1182]: Markic
+              - generic [ref=e1183]: 100hp
+        - generic [ref=e1184]:
+          - generic [ref=e1186]: TEAM 200
+          - generic [ref=e1187]:
+            - generic [ref=e1188] [cursor=pointer]:
+              - generic [ref=e1190]: pam05
+              - generic [ref=e1191]: 100hp
+            - generic [ref=e1192] [cursor=pointer]:
+              - generic [ref=e1194]: Stupiditycoded_
+              - generic [ref=e1195]: 100hp
+    - generic [ref=e30]:
+      - button "[ << ]" [ref=e31]
+      - button "[ PLAY ]" [ref=e32]
+      - button "[ >> ]" [ref=e33]
+      - generic [ref=e34]:
+        - slider [ref=e35]: "0"
+        - 'button "[18:57] Kill: shamelless -> ORIGINALISTAS87" [ref=e1196]'
+        - 'button "[19:30] Kill: shamelless -> minonino" [ref=e1197]'
+        - 'button "[20:57] Kill: shamelless -> RinZ-J" [ref=e1198]'
+        - 'button "[24:11] Death: Visenity -> shamelless" [ref=e1199]'
+      - generic [ref=e36]: 00:00 / 24:08
+      - generic [ref=e37]:
+        - slider [ref=e38]: "1"
+        - generic [ref=e39]: 1x
