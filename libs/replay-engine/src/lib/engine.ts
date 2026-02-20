@@ -1,7 +1,9 @@
 import { Application, Container } from 'pixi.js';
+import { Viewport } from 'pixi-viewport';
 
 export class ReplayEngine {
   private app!: Application;
+  private viewport!: Viewport;
   private mapLayer!: Container;
   private zoneLayer!: Container;
   private carePackageLayer!: Container;
@@ -18,7 +20,23 @@ export class ReplayEngine {
     });
     container.appendChild(this.app.canvas);
 
-    // Build layer stack
+    this.viewport = new Viewport({
+      screenWidth: width,
+      screenHeight: height,
+      worldWidth: width,
+      worldHeight: height,
+      events: this.app.renderer.events,
+    });
+
+    this.app.stage.addChild(this.viewport);
+
+    this.viewport
+      .drag()
+      .pinch()
+      .wheel()
+      .clampZoom({ minScale: 0.5, maxScale: 10 });
+
+    // Build layer stack inside the viewport
     this.mapLayer = new Container();
     this.mapLayer.label = 'map';
 
@@ -34,11 +52,11 @@ export class ReplayEngine {
     this.eventLayer = new Container();
     this.eventLayer.label = 'events';
 
-    this.app.stage.addChild(this.mapLayer);
-    this.app.stage.addChild(this.zoneLayer);
-    this.app.stage.addChild(this.carePackageLayer);
-    this.app.stage.addChild(this.playerLayer);
-    this.app.stage.addChild(this.eventLayer);
+    this.viewport.addChild(this.mapLayer);
+    this.viewport.addChild(this.zoneLayer);
+    this.viewport.addChild(this.carePackageLayer);
+    this.viewport.addChild(this.playerLayer);
+    this.viewport.addChild(this.eventLayer);
   }
 
   getCanvas(): HTMLCanvasElement {
@@ -47,6 +65,10 @@ export class ReplayEngine {
 
   getApp(): Application {
     return this.app;
+  }
+
+  getViewport(): Viewport {
+    return this.viewport;
   }
 
   getPlayerLayer(): Container {
