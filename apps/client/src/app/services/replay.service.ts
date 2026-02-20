@@ -44,8 +44,7 @@ export class ReplayService {
     if (!data) return [];
     return data.kills
       .filter((k) => k.timestamp <= time)
-      .reverse()
-      .slice(0, 20);
+      .reverse();
   });
 
   load(data: ReplayData): void {

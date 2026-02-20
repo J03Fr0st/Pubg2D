@@ -19,34 +19,37 @@ import { ReplayService } from '../../services/replay.service';
     UpperCasePipe,
   ],
   template: `
-    <div class="h-screen flex flex-col bg-bg text-text-primary">
-      <!-- Top HUD bar -->
-      <div class="flex items-center justify-between px-4 py-2 bg-surface border-b border-border font-mono text-sm">
-        <span>[GRID REF: {{ replay.replayData()?.mapDisplayName ?? 'LOADING' | uppercase }}]</span>
-        <span>[MATCH: {{ replay.replayData()?.createdAt ?? '' }}]</span>
-        <span>[{{ replay.alivePlayers() }} ALIVE]</span>
+    <div class="h-screen flex bg-bg text-text-primary">
+      <!-- Left sidebar (full screen height) -->
+      <div class="w-72 h-full border-r border-border bg-surface">
+        <pubg-kill-feed />
       </div>
 
-      <!-- Main content -->
-      <div class="flex flex-1 min-h-0">
-        <!-- Map canvas -->
-        <div class="flex-1 flex items-center justify-center">
-          <pubg-map-canvas />
+      <!-- Right content -->
+      <div class="flex-1 min-h-0 flex flex-col">
+        <!-- Top HUD bar -->
+        <div class="flex items-center justify-between px-4 py-2 bg-surface border-b border-border font-mono text-sm">
+          <span>[GRID REF: {{ replay.replayData()?.mapDisplayName ?? 'LOADING' | uppercase }}]</span>
+          <span>[MATCH: {{ replay.replayData()?.createdAt ?? '' }}]</span>
+          <span>[{{ replay.alivePlayers() }} ALIVE]</span>
         </div>
 
-        <!-- Right sidebar -->
-        <div class="w-72 border-l border-border bg-surface flex flex-col">
-          <div class="flex-1 min-h-0 border-b border-border">
+        <!-- Main content -->
+        <div class="flex flex-1 min-h-0">
+          <!-- Map canvas -->
+          <div class="flex-1 flex items-center justify-center">
+            <pubg-map-canvas />
+          </div>
+
+          <!-- Right sidebar -->
+          <div class="w-72 border-l border-border bg-surface">
             <pubg-player-panel />
           </div>
-          <div class="h-64">
-            <pubg-kill-feed />
-          </div>
         </div>
-      </div>
 
-      <!-- Timeline -->
-      <pubg-timeline />
+        <!-- Timeline -->
+        <pubg-timeline />
+      </div>
     </div>
   `,
 })

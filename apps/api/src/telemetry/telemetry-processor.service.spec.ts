@@ -160,5 +160,57 @@ describe('TelemetryProcessorService', () => {
     expect(result.kills[0].killerName).toBe('Player1');
     expect(result.kills[0].victimName).toBe('Player2');
     expect(result.kills[0].weaponName).toContain('M416');
+    expect(result.kills[0].distance).toBe(50);
+  });
+
+  it('falls back to coordinate distance when telemetry distance is missing', () => {
+    const events: TelemetryData = [
+      {
+        _T: 'LogMatchStart',
+        _D: '2026-01-01T00:00:00Z',
+        common: { isGame: 0 },
+        mapName: 'Baltic_Main',
+        weatherId: 'Clear',
+        characters: [],
+        teamSize: 1,
+        isCustomGame: false,
+      } as LogMatchStart,
+      {
+        _T: 'LogPlayerKillV2',
+        _D: '2026-01-01T00:01:00Z',
+        common: { isGame: 1 },
+        killer: {
+          name: 'Player1',
+          teamId: 1,
+          health: 80,
+          location: { x: 100000, y: 100000, z: 0 },
+          ranking: 0,
+          accountId: 'acc1',
+          zone: [],
+        },
+        victim: {
+          name: 'Player2',
+          teamId: 2,
+          health: 0,
+          location: { x: 105000, y: 100000, z: 0 },
+          ranking: 0,
+          accountId: 'acc2',
+          zone: [],
+        },
+        finisher: null,
+        killerDamageInfo: {
+          damageReason: 'ArmShot',
+          damageTypeCategory: 'Damage_Gun',
+          damageCauserName: 'WeapM416_C',
+        },
+        finishDamageInfo: null,
+        isSuicide: false,
+        assists_AccountId: [],
+      } as unknown as LogPlayerKillV2,
+    ];
+
+    const result = service.process(events, 'test-match-id');
+    expect(result.kills).toHaveLength(1);
+    expect(result.kills[0].distance).toBe(50);
   });
 });

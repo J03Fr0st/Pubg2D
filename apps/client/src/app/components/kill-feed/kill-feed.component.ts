@@ -5,6 +5,9 @@ import { ReplayService } from '../../services/replay.service';
 @Component({
   selector: 'pubg-kill-feed',
   standalone: true,
+  host: {
+    class: 'block h-full',
+  },
   template: `
     <div class="h-full overflow-y-auto p-3">
       <h3 class="font-sans font-semibold text-text-primary text-sm mb-2 tracking-wider uppercase">

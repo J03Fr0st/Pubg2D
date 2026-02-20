@@ -27,6 +27,22 @@ function resolveWeaponName(damageCauserName: string): string {
   return assetManager.getDamageCauserName(damageCauserName) ?? damageCauserName;
 }
 
+/** Compute kill distance in meters with telemetry fallback when distance is missing. */
+function resolveKillDistanceMeters(e: LogPlayerKillV2): number {
+  if (typeof e.distance === 'number' && Number.isFinite(e.distance) && e.distance > 0) {
+    return Math.round(e.distance / 100); // telemetry distance is in centimeters
+  }
+
+  if (!e.killer) return 0;
+
+  const dx = e.victim.location.x - e.killer.location.x;
+  const dy = e.victim.location.y - e.killer.location.y;
+  const dz = e.victim.location.z - e.killer.location.z;
+
+  const distanceCm = Math.sqrt(dx * dx + dy * dy + dz * dz);
+  return Number.isFinite(distanceCm) ? Math.round(distanceCm / 100) : 0;
+}
+
 @Injectable()
 export class TelemetryProcessorService {
   process(events: TelemetryData, matchId: string): ReplayData {
@@ -117,7 +133,7 @@ export class TelemetryProcessorService {
             victimAccountId: e.victim.accountId,
             victimName: e.victim.name,
             weaponName: damageInfo ? resolveWeaponName(damageInfo.damageCauserName) : 'Unknown',
-            distance: Math.round((e.distance ?? 0) / 100),
+            distance: resolveKillDistanceMeters(e),
             isSuicide: e.isSuicide,
             killerX: e.killer ? norm(e.killer.location.x) : 0,
             killerY: e.killer ? norm(e.killer.location.y) : 0,
