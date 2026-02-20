@@ -1,8 +1,8 @@
 import {
   Component,
   type ElementRef,
-  Injector,
   effect,
+  Injector,
   inject,
   type OnDestroy,
   type OnInit,
@@ -38,7 +38,7 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
   private readonly CANVAS_SIZE = 800;
   private readonly MIN_AUTO_ZOOM = 1;
   private readonly MAX_AUTO_ZOOM = 4;
-  private readonly ZONE_SCREEN_DIAMETER = 0.8;
+  private readonly ZONE_SCREEN_DIAMETER = 0.95;
   private readonly CAMERA_SMOOTHING = 0.12;
 
   async ngOnInit(): Promise<void> {
@@ -80,11 +80,11 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
         }
 
         // Resolve once from stable replay data to avoid per-frame team flicker.
-        const teamFromRoster = replayData.players.find((p) => p.accountId === selected)?.teamId ?? null;
+        const teamFromRoster =
+          replayData.players.find((p) => p.accountId === selected)?.teamId ?? null;
         const teamFromTicks =
-          replayData.ticks
-            .flatMap((t) => t.players)
-            .find((p) => p.accountId === selected)?.teamId ?? null;
+          replayData.ticks.flatMap((t) => t.players).find((p) => p.accountId === selected)
+            ?.teamId ?? null;
         const friendlyTeamId = teamFromRoster ?? teamFromTicks ?? null;
         this.playerRenderer.setFriendlyTeam(friendlyTeamId ?? null);
       });
