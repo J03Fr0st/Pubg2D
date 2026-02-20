@@ -8,3 +8,23 @@
   --color-danger: #c84a2a;
   --color-friendly: #d4a832;
 }
+
+/* Themed scrollbars (Chrome, Safari, Edge) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text-secondary);
+}

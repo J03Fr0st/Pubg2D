@@ -21,7 +21,7 @@ import { ReplayService } from '../../services/replay.service';
   template: `
     <div class="h-screen flex bg-bg text-text-primary">
       <!-- Left sidebar (full screen height) -->
-      <div class="w-72 h-full border-r border-border bg-surface">
+      <div class="w-[28rem] h-full border-r border-border bg-surface">
         <pubg-kill-feed />
       </div>
 
