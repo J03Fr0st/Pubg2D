@@ -13,6 +13,8 @@ function extendToEdge(px: number, py: number, ux: number, uy: number): { x: numb
 
 export class MapRenderer {
   private sprite: Sprite | null = null;
+  private planeShadow: Graphics | null = null;
+  private planePath: Graphics | null = null;
   private container: Container;
 
   constructor(container: Container) {
@@ -20,11 +22,34 @@ export class MapRenderer {
   }
 
   async load(mapName: string, width: number, height: number): Promise<void> {
-    const url = `/assets/maps/${mapName}.png`;
-    const texture = await Assets.load(url);
+    const aliases: Record<string, string> = {
+      Erangel_Main: 'Baltic_Main',
+    };
+    const candidates = Array.from(
+      new Set([mapName, aliases[mapName], 'Baltic_Main'].filter((v): v is string => Boolean(v))),
+    );
+
+    let texture: Awaited<ReturnType<typeof Assets.load>> | null = null;
+    for (const candidate of candidates) {
+      try {
+        texture = await Assets.load(`/assets/maps/${candidate}.png`);
+        break;
+      } catch {
+        // Try the next candidate (alias/fallback).
+      }
+    }
+
+    if (!texture) return;
+
+    if (this.sprite) {
+      this.container.removeChild(this.sprite);
+      this.sprite.destroy();
+      this.sprite = null;
+    }
     this.sprite = new Sprite(texture);
     this.sprite.width = width;
     this.sprite.height = height;
+    this.sprite.zIndex = 0;
     this.container.addChild(this.sprite);
   }
 
@@ -58,6 +83,17 @@ export class MapRenderer {
 
     const ux = dx / len;
     const uy = dy / len;
+
+    if (this.planeShadow) {
+      this.container.removeChild(this.planeShadow);
+      this.planeShadow.destroy();
+      this.planeShadow = null;
+    }
+    if (this.planePath) {
+      this.container.removeChild(this.planePath);
+      this.planePath.destroy();
+      this.planePath = null;
+    }
 
     const shadow = new Graphics();
     const g = new Graphics();
@@ -118,8 +154,11 @@ export class MapRenderer {
       .lineTo(x2, y2)
       .fill({ color: COLOR, alpha: ALPHA });
 
+    shadow.zIndex = 1;
+    g.zIndex = 2;
     this.container.addChild(shadow);
-
     this.container.addChild(g);
+    this.planeShadow = shadow;
+    this.planePath = g;
   }
 }

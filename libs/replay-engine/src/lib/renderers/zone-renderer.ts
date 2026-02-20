@@ -30,16 +30,8 @@ export class ZoneRenderer {
   update(zone: ZoneFrame, canvasWidth: number, canvasHeight: number): void {
     if (!this.visible) return;
 
-    // Green overlay on the area outside the blue zone (the "closed" region)
+    // Closed-area tint disabled by request.
     this.closedOverlay.clear();
-    if (zone.safeRadius > 0) {
-      this.closedOverlay
-        .rect(0, 0, canvasWidth, canvasHeight)
-        .fill({ color: 0x00ff00, alpha: 0.18 });
-      this.closedOverlay
-        .circle(zone.safeX * canvasWidth, zone.safeY * canvasHeight, zone.safeRadius * canvasWidth)
-        .cut();
-    }
 
     // safetyZonePosition → the blue zone (current shrinking boundary)
     this.safeZone.clear();

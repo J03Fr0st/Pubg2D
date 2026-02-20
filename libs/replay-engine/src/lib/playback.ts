@@ -58,7 +58,9 @@ function bsearch<T extends { time: number }>(arr: T[], time: number): number {
 /** Interpolate zone from dense keyframes (~1 s cadence) */
 export function interpolateZoneAt(keyframes: ZoneKeyframe[], time: number): ZoneFrame | null {
   if (keyframes.length === 0) return null;
-  if (time <= keyframes[0].time) return keyframes[0];
+  // Don't clamp to the first keyframe before its time — return null so callers fall back to
+  // tick-level zone data (safeRadius=0) instead of showing a premature zone at match start.
+  if (time < keyframes[0].time) return null;
   if (time >= keyframes[keyframes.length - 1].time) return keyframes[keyframes.length - 1];
 
   const lo = bsearch(keyframes, time);

@@ -51,232 +51,358 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".playwright-mcp/page-2026-02-19T20-36-56-805Z.png",
-        "hash": "5222633619282240174"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "12598063760286856263"
-      },
-      {
-        "file": "biome.json",
-        "hash": "13726533172052215124"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-22-22-436Z.png",
-        "hash": "11649260843938434902"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "7566070839603645918"
-      },
-      {
-        "file": "package.json",
-        "hash": "5743373054656944821"
-      },
-      {
-        "file": "nx.json",
-        "hash": "16974164741354469435"
-      },
-      {
-        "file": ".github/skills/nx-generate/SKILL.md",
-        "hash": "9325031674722245942"
-      },
-      {
-        "file": ".github/skills/nx-workspace/SKILL.md",
-        "hash": "15239321302212089310"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "4512172852042077378"
-      },
-      {
         "file": ".prettierrc",
         "hash": "6820402234827505055"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-32-51-433Z.png",
-        "hash": "6382304364508918853"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-22-04-016Z.png",
-        "hash": "15510390982549363410"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-32-07-355Z.png",
-        "hash": "7098591118749307461"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "1539253793410688689"
-      },
-      {
-        "file": "README.md",
-        "hash": "11310407407408995848"
-      },
-      {
-        "file": "vitest.workspace.ts",
-        "hash": "14594439412287490675"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "17637368926737444469"
-      },
-      {
-        "file": ".github/skills/monitor-ci/SKILL.md",
-        "hash": "9468003408493328484"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "15264001227920638272"
-      },
-      {
-        "file": ".github/skills/nx-run-tasks/SKILL.md",
-        "hash": "6310165843200780094"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "3246487966739389015"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-25-25-555Z.png",
-        "hash": "17970348815348117523"
-      },
-      {
-        "file": ".github/prompts/monitor-ci.prompt.md",
-        "hash": "14111579483359899130"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-36-00-370Z.png",
-        "hash": "17970348815348117523"
-      },
-      {
-        "file": "docs/plans/2026-02-19-pubg-replay-design.md",
-        "hash": "7141623013702546955"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-52-27-890Z.png",
-        "hash": "3854639952148083433"
-      },
-      {
-        "file": ".playwright-mcp/map-zoom.png",
-        "hash": "14060054845515448596"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "9639500179109087342"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-20-37-054Z.png",
-        "hash": "12461076885891917289"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-25-46-515Z.png",
-        "hash": "13286010822764640847"
-      },
-      {
-        "file": ".playwright-mcp/page-2026-02-19T20-29-55-925Z.png",
-        "hash": "7098591118749307461"
       },
       {
         "file": ".env.example",
         "hash": "18000392523513038374"
       },
       {
-        "file": ".prettierignore",
-        "hash": "13591750739247547927"
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "15436383388001770446"
       },
       {
-        "file": ".github/skills/nx-plugins/SKILL.md",
-        "hash": "17761452540263218782"
-      },
-      {
-        "file": ".github/agents/ci-monitor-subagent.agent.md",
-        "hash": "17271371206473447631"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "14370049258054741321"
+        "file": "tsconfig.json",
+        "hash": "9639500179109087342"
       },
       {
         "file": ".github/skills/nx-workspace/references/AFFECTED.md",
         "hash": "5689225252238354455"
       },
       {
+        "file": "LICENSE",
+        "hash": "1539253793410688689"
+      },
+      {
+        "file": "package.json",
+        "hash": "5743373054656944821"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "7566070839603645918"
+      },
+      {
+        "file": "biome.json",
+        "hash": "13726533172052215124"
+      },
+      {
+        "file": "README.md",
+        "hash": "11310407407408995848"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16974164741354469435"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "14370049258054741321"
+      },
+      {
+        "file": ".github/skills/nx-plugins/SKILL.md",
+        "hash": "17761452540263218782"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "14594439412287490675"
+      },
+      {
+        "file": ".github/skills/nx-run-tasks/SKILL.md",
+        "hash": "6310165843200780094"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "17637368926737444469"
+      },
+      {
+        "file": "docs/plans/2026-02-20-zoom-pan.md",
+        "hash": "16911066095496253406"
+      },
+      {
+        "file": "docs/plans/2026-02-19-pubg-replay-design.md",
+        "hash": "7141623013702546955"
+      },
+      {
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "15239321302212089310"
+      },
+      {
+        "file": ".github/prompts/monitor-ci.prompt.md",
+        "hash": "14111579483359899130"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "12598063760286856263"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "15264001227920638272"
+      },
+      {
+        "file": ".github/agents/ci-monitor-subagent.agent.md",
+        "hash": "17271371206473447631"
+      },
+      {
+        "file": ".github/skills/nx-generate/SKILL.md",
+        "hash": "9325031674722245942"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "9468003408493328484"
+      },
+      {
         "file": "docs/plans/2026-02-19-pubg-replay-implementation.md",
         "hash": "14600255494264850067"
       },
       {
-        "file": ".playwright-mcp/page-2026-02-19T20-52-55-706Z.png",
-        "hash": "1896744544846480927"
+        "file": "package-lock.json",
+        "hash": "3246487966739389015"
       },
       {
-        "file": ".github/skills/link-workspace-packages/SKILL.md",
-        "hash": "15436383388001770446"
+        "file": ".gitignore",
+        "hash": "8175996622868499803"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "13591750739247547927"
       }
     ],
     "projectFileMap": {
-      "@pubg-replay/shared-types": [
+      "client": [
         {
-          "file": "libs/shared/types/README.md",
-          "hash": "9100919672007375316"
+          "file": "apps/client/.postcssrc.json",
+          "hash": "1757434806578486340"
         },
         {
-          "file": "libs/shared/types/package.json",
-          "hash": "13880101611499852383"
-        },
-        {
-          "file": "libs/shared/types/src/index.ts",
-          "hash": "12700367831995252733"
-        },
-        {
-          "file": "libs/shared/types/src/lib/api.ts",
-          "hash": "2216475967694084723"
-        },
-        {
-          "file": "libs/shared/types/src/lib/frames.ts",
-          "hash": "10383961589498180394"
-        },
-        {
-          "file": "libs/shared/types/src/lib/telemetry.ts",
-          "hash": "5147372686290521806",
+          "file": "apps/client/eslint.config.mjs",
+          "hash": "8988060953375556929",
           "deps": [
-            "npm:@j03fr0st/pubg-ts"
+            "npm:@nx/eslint-plugin"
           ]
         },
         {
-          "file": "libs/shared/types/src/lib/types.spec.ts",
-          "hash": "9354891611907858840"
+          "file": "apps/client/project.json",
+          "hash": "10017835871909790034"
         },
         {
-          "file": "libs/shared/types/src/lib/types.ts",
-          "hash": "5476929482655057349"
+          "file": "apps/client/proxy.conf.json",
+          "hash": "11281046345527164812"
         },
         {
-          "file": "libs/shared/types/tsconfig.json",
-          "hash": "14186287857387999199"
+          "file": "apps/client/public/assets/maps/Baltic_Main.png",
+          "hash": "14562939281892800866"
         },
         {
-          "file": "libs/shared/types/tsconfig.lib.json",
-          "hash": "16510454407152570898"
+          "file": "apps/client/public/assets/maps/Desert_Main.png",
+          "hash": "9838411660307883092"
         },
         {
-          "file": "libs/shared/types/tsconfig.spec.json",
-          "hash": "12233809024625175605"
+          "file": "apps/client/public/assets/maps/DihorOtok_Main.png",
+          "hash": "14658842752934467170"
         },
         {
-          "file": "libs/shared/types/vite.config.ts",
-          "hash": "5247685006192271729",
+          "file": "apps/client/public/assets/maps/Kiki_Main.png",
+          "hash": "17934765677185266686"
+        },
+        {
+          "file": "apps/client/public/assets/maps/Neon_Main.png",
+          "hash": "15132594976870960043"
+        },
+        {
+          "file": "apps/client/public/assets/maps/Savage_Main.png",
+          "hash": "1386923136693757797"
+        },
+        {
+          "file": "apps/client/public/assets/maps/Summerland_Main.png",
+          "hash": "8483537588994480173"
+        },
+        {
+          "file": "apps/client/public/assets/maps/Tiger_Main.png",
+          "hash": "7725574852507947582"
+        },
+        {
+          "file": "apps/client/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/client/src/app/app.config.ts",
+          "hash": "4707613141450098103",
           "deps": [
-            "npm:vite"
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router"
           ]
         },
         {
-          "file": "libs/shared/types/vitest.config.mts",
-          "hash": "14725460237203485694",
+          "file": "apps/client/src/app/app.html",
+          "hash": "16460337178097590485"
+        },
+        {
+          "file": "apps/client/src/app/app.routes.ts",
+          "hash": "17522974133324017810",
           "deps": [
-            "npm:vitest"
+            "npm:@angular/router"
           ]
+        },
+        {
+          "file": "apps/client/src/app/app.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/client/src/app/app.spec.ts",
+          "hash": "10369929719456800617",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/app.ts",
+          "hash": "9967383198563757584",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/kill-feed/kill-feed.component.ts",
+          "hash": "9088307328034550014",
+          "deps": [
+            "npm:@angular/core",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/map-canvas/map-canvas.component.ts",
+          "hash": "13522367013495164796",
+          "deps": [
+            "npm:@angular/core",
+            "@pubg-replay/replay-engine"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/match-card/match-card.component.ts",
+          "hash": "6531639975714653547",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/player-panel/player-panel.component.ts",
+          "hash": "5876827019458321853",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/components/timeline/timeline.component.ts",
+          "hash": "11516396259168465094",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/nx-welcome.ts",
+          "hash": "15112551851584566316",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/heatmap/heatmap.component.ts",
+          "hash": "11158316522520227863",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "@pubg-replay/shared-types",
+            "npm:pixi.js",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/home/home.component.ts",
+          "hash": "17073001482104779061",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/player/player.component.ts",
+          "hash": "2170681776932628309",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "@pubg-replay/shared-types"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/pages/replay/replay.component.ts",
+          "hash": "9969830283455234671",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/services/api.service.ts",
+          "hash": "11291312680620937178",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "@pubg-replay/shared-types",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/client/src/app/services/replay.service.ts",
+          "hash": "1983892934968534833",
+          "deps": [
+            "npm:@angular/core",
+            "@pubg-replay/replay-engine",
+            "@pubg-replay/shared-types",
+            "@pubg-replay/shared-utils"
+          ]
+        },
+        {
+          "file": "apps/client/src/index.html",
+          "hash": "17200319539059527561"
+        },
+        {
+          "file": "apps/client/src/main.ts",
+          "hash": "2468093891557611168",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/client/src/styles.scss",
+          "hash": "11265180916429094172"
+        },
+        {
+          "file": "apps/client/src/styles/theme.css",
+          "hash": "9842809733726404873"
+        },
+        {
+          "file": "apps/client/tsconfig.app.json",
+          "hash": "1246040711918193541"
+        },
+        {
+          "file": "apps/client/tsconfig.json",
+          "hash": "14904413700065535041"
+        },
+        {
+          "file": "apps/client/tsconfig.spec.json",
+          "hash": "13919890687900665478"
         }
       ],
       "api": [
@@ -434,14 +560,14 @@
         },
         {
           "file": "apps/api/src/telemetry/telemetry-processor.service.spec.ts",
-          "hash": "15072852816130550182",
+          "hash": "2033228621657703292",
           "deps": [
             "@pubg-replay/shared-types"
           ]
         },
         {
           "file": "apps/api/src/telemetry/telemetry-processor.service.ts",
-          "hash": "12363134036690285482",
+          "hash": "5768929537950146753",
           "deps": [
             "npm:@j03fr0st/pubg-ts",
             "npm:@nestjs/common",
@@ -481,6 +607,115 @@
           "deps": [
             "npm:@nx/webpack"
           ]
+        }
+      ],
+      "@pubg-replay/shared-types": [
+        {
+          "file": "libs/shared/types/README.md",
+          "hash": "9100919672007375316"
+        },
+        {
+          "file": "libs/shared/types/package.json",
+          "hash": "13880101611499852383"
+        },
+        {
+          "file": "libs/shared/types/src/index.ts",
+          "hash": "12700367831995252733"
+        },
+        {
+          "file": "libs/shared/types/src/lib/api.ts",
+          "hash": "2216475967694084723"
+        },
+        {
+          "file": "libs/shared/types/src/lib/frames.ts",
+          "hash": "6724895717112353495"
+        },
+        {
+          "file": "libs/shared/types/src/lib/telemetry.ts",
+          "hash": "5147372686290521806",
+          "deps": [
+            "npm:@j03fr0st/pubg-ts"
+          ]
+        },
+        {
+          "file": "libs/shared/types/src/lib/types.spec.ts",
+          "hash": "9354891611907858840"
+        },
+        {
+          "file": "libs/shared/types/src/lib/types.ts",
+          "hash": "5476929482655057349"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.json",
+          "hash": "14186287857387999199"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.lib.json",
+          "hash": "16510454407152570898"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.spec.json",
+          "hash": "12233809024625175605"
+        },
+        {
+          "file": "libs/shared/types/vite.config.ts",
+          "hash": "5247685006192271729",
+          "deps": [
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "libs/shared/types/vitest.config.mts",
+          "hash": "14725460237203485694",
+          "deps": [
+            "npm:vitest"
+          ]
+        }
+      ],
+      "api-e2e": [
+        {
+          "file": "apps/api-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "apps/api-e2e/jest.config.cts",
+          "hash": "1223382667478503924"
+        },
+        {
+          "file": "apps/api-e2e/package.json",
+          "hash": "3548454101353470866"
+        },
+        {
+          "file": "apps/api-e2e/src/api/api.spec.ts",
+          "hash": "110394728024017389",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/src/support/global-setup.ts",
+          "hash": "6146289554655166360",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/src/support/global-teardown.ts",
+          "hash": "13944585948107331229",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/src/support/test-setup.ts",
+          "hash": "14204450746074348513",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/tsconfig.json",
+          "hash": "1965520049042779865"
         }
       ],
       "@pubg-replay/shared-utils": [
@@ -556,257 +791,6 @@
           ]
         }
       ],
-      "api-e2e": [
-        {
-          "file": "apps/api-e2e/.spec.swcrc",
-          "hash": "18201067170784284381"
-        },
-        {
-          "file": "apps/api-e2e/jest.config.cts",
-          "hash": "1223382667478503924"
-        },
-        {
-          "file": "apps/api-e2e/package.json",
-          "hash": "3548454101353470866"
-        },
-        {
-          "file": "apps/api-e2e/src/api/api.spec.ts",
-          "hash": "110394728024017389",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/src/support/global-setup.ts",
-          "hash": "6146289554655166360",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/src/support/global-teardown.ts",
-          "hash": "13944585948107331229",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/src/support/test-setup.ts",
-          "hash": "14204450746074348513",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/tsconfig.json",
-          "hash": "1965520049042779865"
-        }
-      ],
-      "client": [
-        {
-          "file": "apps/client/.postcssrc.json",
-          "hash": "1757434806578486340"
-        },
-        {
-          "file": "apps/client/eslint.config.mjs",
-          "hash": "8988060953375556929",
-          "deps": [
-            "npm:@nx/eslint-plugin"
-          ]
-        },
-        {
-          "file": "apps/client/project.json",
-          "hash": "10017835871909790034"
-        },
-        {
-          "file": "apps/client/proxy.conf.json",
-          "hash": "11281046345527164812"
-        },
-        {
-          "file": "apps/client/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/client/src/app/app.config.ts",
-          "hash": "4707613141450098103",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/app.html",
-          "hash": "16460337178097590485"
-        },
-        {
-          "file": "apps/client/src/app/app.routes.ts",
-          "hash": "17522974133324017810",
-          "deps": [
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/app.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/client/src/app/app.spec.ts",
-          "hash": "10369929719456800617",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/app.ts",
-          "hash": "9967383198563757584",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/components/kill-feed/kill-feed.component.ts",
-          "hash": "3993841967210513188",
-          "deps": [
-            "npm:@angular/core",
-            "@pubg-replay/shared-utils"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/components/map-canvas/map-canvas.component.ts",
-          "hash": "17406425916206025814",
-          "deps": [
-            "npm:@angular/core",
-            "@pubg-replay/replay-engine"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/components/match-card/match-card.component.ts",
-          "hash": "6531639975714653547",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "@pubg-replay/shared-types",
-            "@pubg-replay/shared-utils"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/components/player-panel/player-panel.component.ts",
-          "hash": "2578655287194134804",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/components/timeline/timeline.component.ts",
-          "hash": "11516396259168465094",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/nx-welcome.ts",
-          "hash": "15112551851584566316",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/pages/heatmap/heatmap.component.ts",
-          "hash": "11158316522520227863",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router",
-            "@pubg-replay/shared-types",
-            "npm:pixi.js",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/pages/home/home.component.ts",
-          "hash": "17073001482104779061",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/pages/player/player.component.ts",
-          "hash": "2170681776932628309",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router",
-            "@pubg-replay/shared-types"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/pages/replay/replay.component.ts",
-          "hash": "7299926890359885237",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/services/api.service.ts",
-          "hash": "11291312680620937178",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "@pubg-replay/shared-types",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "apps/client/src/app/services/replay.service.ts",
-          "hash": "1139118122333015210",
-          "deps": [
-            "npm:@angular/core",
-            "@pubg-replay/replay-engine",
-            "@pubg-replay/shared-types",
-            "@pubg-replay/shared-utils"
-          ]
-        },
-        {
-          "file": "apps/client/src/index.html",
-          "hash": "17200319539059527561"
-        },
-        {
-          "file": "apps/client/src/main.ts",
-          "hash": "2468093891557611168",
-          "deps": [
-            "npm:@angular/platform-browser"
-          ]
-        },
-        {
-          "file": "apps/client/src/styles.scss",
-          "hash": "11265180916429094172"
-        },
-        {
-          "file": "apps/client/src/styles/theme.css",
-          "hash": "9842809733726404873"
-        },
-        {
-          "file": "apps/client/tsconfig.app.json",
-          "hash": "1246040711918193541"
-        },
-        {
-          "file": "apps/client/tsconfig.json",
-          "hash": "14904413700065535041"
-        },
-        {
-          "file": "apps/client/tsconfig.spec.json",
-          "hash": "13919890687900665478"
-        }
-      ],
       "@pubg-replay/replay-engine": [
         {
           "file": "libs/replay-engine/README.md",
@@ -818,20 +802,21 @@
         },
         {
           "file": "libs/replay-engine/src/index.ts",
-          "hash": "1840227116081274280"
+          "hash": "2920099050222692517"
         },
         {
           "file": "libs/replay-engine/src/lib/engine.spec.ts",
-          "hash": "15418806871789313938",
+          "hash": "17496629631262077796",
           "deps": [
             "npm:vitest"
           ]
         },
         {
           "file": "libs/replay-engine/src/lib/engine.ts",
-          "hash": "5556775751633093676",
+          "hash": "10447256259709715813",
           "deps": [
-            "npm:pixi.js"
+            "npm:pixi.js",
+            "npm:pixi-viewport"
           ]
         },
         {
@@ -844,7 +829,7 @@
         },
         {
           "file": "libs/replay-engine/src/lib/playback.ts",
-          "hash": "7905754432024444004",
+          "hash": "4402587074091180687",
           "deps": [
             "@pubg-replay/shared-types"
           ]
@@ -859,7 +844,7 @@
         },
         {
           "file": "libs/replay-engine/src/lib/renderers/map-renderer.ts",
-          "hash": "10863552529632741913",
+          "hash": "11750569302777243062",
           "deps": [
             "npm:pixi.js"
           ]
@@ -874,7 +859,7 @@
         },
         {
           "file": "libs/replay-engine/src/lib/renderers/zone-renderer.ts",
-          "hash": "16467451359535434188",
+          "hash": "3581966967370352198",
           "deps": [
             "@pubg-replay/shared-types",
             "npm:pixi.js"

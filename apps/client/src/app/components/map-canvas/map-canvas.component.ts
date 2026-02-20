@@ -36,6 +36,10 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
   private lastKillIndex = 0;
 
   private readonly CANVAS_SIZE = 800;
+  private readonly MIN_AUTO_ZOOM = 1;
+  private readonly MAX_AUTO_ZOOM = 4;
+  private readonly ZONE_SCREEN_DIAMETER = 0.7;
+  private readonly CAMERA_SMOOTHING = 0.12;
 
   async ngOnInit(): Promise<void> {
     this.engine = new ReplayEngine();
@@ -47,18 +51,23 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
     this.zoneRenderer = new ZoneRenderer(this.engine.getZoneLayer());
     this.eventRenderer = new EventRenderer(this.engine.getEventLayer());
 
-    const replayData = this.replay.replayData();
-    const mapName = replayData?.mapName ?? 'Baltic_Main';
-    await this.mapRenderer.load(mapName, this.CANVAS_SIZE, this.CANVAS_SIZE);
+    // Load static map layers once replay data arrives (avoids default-map lock-in).
+    runInInjectionContext(this.injector, () => {
+      effect(() => {
+        const replayData = this.replay.replayData();
+        if (!replayData) return;
 
-    if (replayData?.planePath) {
-      this.mapRenderer.drawPlanePath(
-        replayData.planePath[0],
-        replayData.planePath[1],
-        this.CANVAS_SIZE,
-        this.CANVAS_SIZE,
-      );
-    }
+        void this.mapRenderer.load(replayData.mapName, this.CANVAS_SIZE, this.CANVAS_SIZE);
+        if (replayData.planePath) {
+          this.mapRenderer.drawPlanePath(
+            replayData.planePath[0],
+            replayData.planePath[1],
+            this.CANVAS_SIZE,
+            this.CANVAS_SIZE,
+          );
+        }
+      });
+    });
 
     // Ticker-driven render loop
     this.engine.getApp().ticker.add((ticker) => {
@@ -66,7 +75,7 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
       this.render();
     });
 
-    // React to selected player changes
+    // React to selected player changes.
     runInInjectionContext(this.injector, () => {
       effect(() => {
         const selected = this.replay.selectedPlayer();
@@ -82,6 +91,7 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
     const w = this.CANVAS_SIZE;
     const h = this.CANVAS_SIZE;
 
+    this.updateAutoCamera(tick.zone, w, h);
     this.playerRenderer.update(tick.players, w, h);
     this.zoneRenderer.update(tick.zone, w, h);
 
@@ -98,6 +108,33 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
       }
     }
     this.eventRenderer.update(time);
+  }
+
+  private updateAutoCamera(
+    zone: { safeX: number; safeY: number; safeRadius: number; poisonX: number; poisonY: number },
+    width: number,
+    height: number,
+  ): void {
+    const viewport = this.engine.getViewport() as unknown as {
+      scale: { x: number };
+      moveCenter?: (x: number, y: number) => void;
+      setZoom?: (scale: number, center?: boolean) => void;
+    };
+
+    const hasSafeZone = zone.safeRadius > 0;
+    const centerX = (hasSafeZone ? zone.safeX : zone.poisonX) * width;
+    const centerY = (hasSafeZone ? zone.safeY : zone.poisonY) * height;
+
+    // Keep the active zone roughly this wide on screen.
+    const baseTargetZoom = hasSafeZone
+      ? this.ZONE_SCREEN_DIAMETER / Math.max(zone.safeRadius * 2, 0.001)
+      : this.MIN_AUTO_ZOOM;
+    const targetZoom = Math.min(this.MAX_AUTO_ZOOM, Math.max(this.MIN_AUTO_ZOOM, baseTargetZoom));
+    const currentZoom = viewport.scale.x || this.MIN_AUTO_ZOOM;
+    const nextZoom = currentZoom + (targetZoom - currentZoom) * this.CAMERA_SMOOTHING;
+
+    viewport.moveCenter?.(centerX, centerY);
+    viewport.setZoom?.(nextZoom, true);
   }
 
   ngOnDestroy(): void {

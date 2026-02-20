@@ -17012,6 +17012,11 @@
       },
       {
         "source": "@pubg-replay/replay-engine",
+        "target": "npm:pixi-viewport",
+        "type": "static"
+      },
+      {
+        "source": "@pubg-replay/replay-engine",
         "target": "@pubg-replay/shared-types",
         "type": "static"
       },
@@ -39398,5 +39403,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1771537083178
+  "computedAt": 1771578534903
 }
