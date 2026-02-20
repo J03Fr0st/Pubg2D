@@ -58,14 +58,6 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
         if (!replayData) return;
 
         void this.mapRenderer.load(replayData.mapName, this.CANVAS_SIZE, this.CANVAS_SIZE);
-        if (replayData.planePath) {
-          this.mapRenderer.drawPlanePath(
-            replayData.planePath[0],
-            replayData.planePath[1],
-            this.CANVAS_SIZE,
-            this.CANVAS_SIZE,
-          );
-        }
       });
     });
 

@@ -25,7 +25,12 @@ import { ApiService } from '../../services/api.service';
         </h2>
         <div class="space-y-2 max-w-2xl">
           @for (match of player()!.recentMatches; track match.matchId) {
-            <pubg-match-card [match]="match" />
+            <pubg-match-card
+              [match]="match"
+              [defaultAccountId]="player()!.accountId"
+              [routePlayerName]="player()!.name"
+              [routePlatform]="player()!.platform.toLowerCase()"
+            />
           }
         </div>
       } @else {

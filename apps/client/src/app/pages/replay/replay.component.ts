@@ -58,17 +58,71 @@ export class ReplayComponent implements OnInit {
   private api = inject(ApiService);
   replay = inject(ReplayService);
 
+  private normalizePlayerKey(value: string): string {
+    return value.toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
+  private resolveFromReplayPlayers(
+    preferred: string,
+    players: Array<{ accountId: string; name: string }>,
+  ): string | null {
+    const preferredNormalized = this.normalizePlayerKey(preferred);
+    const byAccountId = players.find((p) => p?.accountId === preferred)?.accountId ?? null;
+    const byNameExact =
+      players.find((p) => (p?.name ?? '').toLowerCase() === preferred.toLowerCase())?.accountId ?? null;
+    const byNameNormalized =
+      players.find((p) => this.normalizePlayerKey(p?.name ?? '') === preferredNormalized)?.accountId ?? null;
+    const byNameIncludes =
+      players
+        .find((p) => this.normalizePlayerKey(p?.name ?? '').includes(preferredNormalized))
+        ?.accountId ?? null;
+
+    return byAccountId ?? byNameExact ?? byNameNormalized ?? byNameIncludes;
+  }
+
+  private extractPlayersFromTicks(
+    ticks: Array<{ players: Array<{ accountId: string; name: string }> }>,
+  ): Array<{ accountId: string; name: string }> {
+    const byId = new Map<string, string>();
+    for (const tick of ticks ?? []) {
+      for (const player of tick.players ?? []) {
+        if (!player?.accountId) continue;
+        if (!byId.has(player.accountId)) {
+          byId.set(player.accountId, player.name ?? '');
+        }
+      }
+    }
+    return [...byId.entries()].map(([accountId, name]) => ({ accountId, name }));
+  }
+
   async ngOnInit(): Promise<void> {
     const matchId = this.route.snapshot.paramMap.get('matchId');
     if (!matchId) return;
 
     const accountId = this.route.snapshot.paramMap.get('accountId');
+    const routePlayerName = this.route.snapshot.paramMap.get('name');
+    const routePlatform = this.route.snapshot.paramMap.get('platform');
+    const queryPlayer = this.route.snapshot.queryParamMap.get('player');
+
+    const preferred = accountId ?? queryPlayer ?? routePlayerName;
+    const lookedUpAccountId =
+      !accountId && routePlayerName && routePlatform
+        ? await this.api
+            .searchPlayer(routePlatform, routePlayerName)
+            .then((player) => player.accountId)
+            .catch(() => null)
+        : null;
 
     const data = await this.api.getReplayData(matchId);
-    this.replay.load(data);
+    const replayPlayers =
+      data.players?.some((p) => p?.accountId) ? data.players : this.extractPlayersFromTicks(data.ticks);
+    const resolvedPreferred =
+      (preferred ? this.resolveFromReplayPlayers(preferred, replayPlayers) : null) ??
+      (lookedUpAccountId ? this.resolveFromReplayPlayers(lookedUpAccountId, replayPlayers) : null);
 
-    if (accountId) {
-      this.replay.selectPlayer(accountId);
-    }
+    // Apply selected player first so every subscriber (timeline, teams, map highlights)
+    // starts from the same URL-driven selection state on initial load.
+    if (resolvedPreferred) this.replay.selectPlayer(resolvedPreferred);
+    this.replay.load(data);
   }
 }

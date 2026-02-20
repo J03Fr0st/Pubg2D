@@ -27,6 +27,7 @@ export interface KillEvent {
   timestamp: number; // elapsed seconds
   killerAccountId: string | null;
   killerName: string | null;
+  assistantAccountIds: string[];
   victimAccountId: string;
   victimName: string;
   weaponName: string;
@@ -43,6 +44,14 @@ export interface CarePackageEvent {
   timestamp: number;
   x: number;
   y: number;
+}
+
+/** A player damage event */
+export interface DamageEvent {
+  timestamp: number; // elapsed seconds
+  attackerAccountId: string;
+  victimAccountId: string;
+  damage: number; // raw health damage amount
 }
 
 /** A single tick of processed replay data (5-second intervals) */
@@ -82,6 +91,7 @@ export interface ReplayData {
   /** Compact per-player position tracks at ~1 s cadence for smooth interpolation */
   playerPositionTracks: PlayerPositionTrack[];
   kills: KillEvent[];
+  damageEvents: DamageEvent[];
   carePackages: CarePackageEvent[];
   players: MatchPlayer[];
   /** Normalized start and end of the airplane flight path */
@@ -94,6 +104,7 @@ export interface MatchPlayer {
   name: string;
   teamId: number;
   kills: number;
+  assists: number;
   damageDealt: number;
   survivalTime: number;
   placement: number;

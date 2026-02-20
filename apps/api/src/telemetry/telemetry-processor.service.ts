@@ -2,6 +2,7 @@ import { assetManager } from '@j03fr0st/pubg-ts';
 import { Injectable } from '@nestjs/common';
 import type {
   CarePackageEvent,
+  DamageEvent,
   KillEvent,
   LogCarePackageLand,
   LogGameStatePeriodic,
@@ -43,6 +44,26 @@ function resolveKillDistanceMeters(e: LogPlayerKillV2): number {
   return Number.isFinite(distanceCm) ? Math.round(distanceCm / 100) : 0;
 }
 
+function resolveAssistAccountIds(e: LogPlayerKillV2): string[] {
+  const candidate = (e as { assists_AccountId?: unknown; assistsAccountId?: unknown });
+  const assists = candidate.assists_AccountId ?? candidate.assistsAccountId;
+  if (!Array.isArray(assists)) return [];
+  return assists.filter((id): id is string => typeof id === 'string' && id.length > 0);
+}
+
+interface LogPlayerTakeDamageLike {
+  _D?: string;
+  common?: { isGame?: number };
+  attacker?: { accountId?: string | null } | null;
+  victim?: { accountId?: string | null } | null;
+  damage?: number;
+}
+
+function isLogPlayerTakeDamageLike(event: unknown): event is LogPlayerTakeDamageLike {
+  if (!event || typeof event !== 'object') return false;
+  return (event as { _T?: unknown })._T === 'LogPlayerTakeDamage';
+}
+
 @Injectable()
 export class TelemetryProcessorService {
   process(events: TelemetryData, matchId: string): ReplayData {
@@ -58,26 +79,18 @@ export class TelemetryProcessorService {
     // Compact per-player position data: accountId → [t, x, y, t, x, y, ...]
     const playerTrackMap = new Map<string, number[]>();
     const kills: KillEvent[] = [];
+    const damageEvents: DamageEvent[] = [];
     const carePackages: CarePackageEvent[] = [];
     const playerKills = new Map<string, number>();
+    const playerAssists = new Map<string, number>();
+    const playerDamage = new Map<string, number>();
     let maxElapsed = 0;
     const matchStartMs = events[0]?._D ? new Date(events[0]._D).getTime() : 0;
-
-    // Track airplane phase positions to extract the flight path
-    let planePathStart: { x: number; y: number } | null = null;
-    let planePathEnd: { x: number; y: number } | null = null;
 
     for (const event of events) {
       switch (event._T) {
         case 'LogPlayerPosition': {
           const e = event as LogPlayerPosition;
-          // isGame = 0.1 means the player is on the airplane
-          if (e.common.isGame < 1) {
-            const px = norm(e.character.location.x);
-            const py = norm(e.character.location.y);
-            if (!planePathStart) planePathStart = { x: px, y: py };
-            planePathEnd = { x: px, y: py };
-          }
           const tick = Math.round(e.elapsedTime / TICK_INTERVAL) * TICK_INTERVAL;
           maxElapsed = Math.max(maxElapsed, e.elapsedTime);
           let tickPositions = positionsByTick.get(tick);
@@ -86,16 +99,14 @@ export class TelemetryProcessorService {
             positionsByTick.set(tick, tickPositions);
           }
           tickPositions.push(e);
-          // Dense position track (in-game only, skip airplane phase)
-          if (e.common.isGame >= 1) {
-            const id = e.character.accountId;
-            let track = playerTrackMap.get(id);
-            if (!track) {
-              track = [];
-              playerTrackMap.set(id, track);
-            }
-            track.push(e.elapsedTime, norm(e.character.location.x), norm(e.character.location.y));
+          // Dense position track (include plane + parachute + ground so players are visible during jump)
+          const id = e.character.accountId;
+          let track = playerTrackMap.get(id);
+          if (!track) {
+            track = [];
+            playerTrackMap.set(id, track);
           }
+          track.push(e.elapsedTime, norm(e.character.location.x), norm(e.character.location.y));
           break;
         }
         case 'LogGameStatePeriodic': {
@@ -130,6 +141,7 @@ export class TelemetryProcessorService {
             timestamp,
             killerAccountId: e.killer?.accountId ?? null,
             killerName: e.killer?.name ?? null,
+            assistantAccountIds: resolveAssistAccountIds(e),
             victimAccountId: e.victim.accountId,
             victimName: e.victim.name,
             weaponName: damageInfo ? resolveWeaponName(damageInfo.damageCauserName) : 'Unknown',
@@ -143,6 +155,9 @@ export class TelemetryProcessorService {
           if (e.killer) {
             playerKills.set(e.killer.accountId, (playerKills.get(e.killer.accountId) ?? 0) + 1);
           }
+          for (const accountId of resolveAssistAccountIds(e)) {
+            playerAssists.set(accountId, (playerAssists.get(accountId) ?? 0) + 1);
+          }
           break;
         }
         case 'LogCarePackageLand': {
@@ -153,6 +168,26 @@ export class TelemetryProcessorService {
             x: norm(e.itemPackage.location.x),
             y: norm(e.itemPackage.location.y),
           });
+          break;
+        }
+        default: {
+          if (!isLogPlayerTakeDamageLike(event)) break;
+          const e = event;
+          const attackerId = e.attacker?.accountId ?? null;
+          const victimId = e.victim?.accountId ?? null;
+          const damage = e.damage;
+          if (!attackerId || !victimId || typeof damage !== 'number' || damage <= 0) break;
+
+          const timestamp =
+            (e.common?.isGame ?? 0) > 0 && e._D ? (new Date(e._D).getTime() - matchStartMs) / 1000 : 0;
+
+          damageEvents.push({
+            timestamp,
+            attackerAccountId: attackerId,
+            victimAccountId: victimId,
+            damage,
+          });
+          playerDamage.set(attackerId, (playerDamage.get(attackerId) ?? 0) + damage);
           break;
         }
       }
@@ -237,7 +272,8 @@ export class TelemetryProcessorService {
       name: c.name,
       teamId: c.teamId,
       kills: playerKills.get(c.accountId) ?? 0,
-      damageDealt: 0, // not available from telemetry alone
+      damageDealt: Math.round(playerDamage.get(c.accountId) ?? 0),
+      assists: playerAssists.get(c.accountId) ?? 0,
       survivalTime: killTimestamps.get(c.accountId) ?? maxElapsed,
       placement: 0, // set from match data, not telemetry
     }));
@@ -258,11 +294,9 @@ export class TelemetryProcessorService {
       zoneKeyframes,
       playerPositionTracks,
       kills,
+      damageEvents,
       carePackages,
       players: matchPlayers,
-      ...(planePathStart && planePathEnd
-        ? { planePath: [planePathStart, planePathEnd] as [{ x: number; y: number }, { x: number; y: number }] }
-        : {}),
     };
   }
 }

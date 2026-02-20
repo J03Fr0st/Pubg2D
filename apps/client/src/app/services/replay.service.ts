@@ -9,7 +9,7 @@ export class ReplayService {
   readonly replayData = signal<ReplayData | null>(null);
   readonly currentTime = signal(0);
   readonly isPlaying = signal(false);
-  readonly playbackSpeed = signal(1);
+  readonly playbackSpeed = signal(20);
   readonly selectedPlayer = signal<string | null>(null);
 
   // Derived signals

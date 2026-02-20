@@ -10,6 +10,10 @@ export const appRoutes: Routes = [
     loadComponent: () => import('./pages/replay/replay.component').then((m) => m.ReplayComponent),
   },
   {
+    path: ':name/:platform/:matchId',
+    loadComponent: () => import('./pages/replay/replay.component').then((m) => m.ReplayComponent),
+  },
+  {
     path: 'player/:platform/:name',
     loadComponent: () => import('./pages/player/player.component').then((m) => m.PlayerComponent),
   },
