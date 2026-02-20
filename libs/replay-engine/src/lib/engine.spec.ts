@@ -8,6 +8,7 @@ vi.mock('pixi.js', () => {
     canvas = document.createElement('canvas');
     stage = { addChild: vi.fn() };
     ticker = { add: vi.fn() };
+    renderer = { events: {} };
     init = vi.fn().mockResolvedValue(undefined);
     destroy = vi.fn();
   }
@@ -35,6 +36,18 @@ vi.mock('pixi.js', () => {
     Container: MockContainer,
     Graphics: MockGraphics,
   };
+});
+
+// Mock pixi-viewport since it requires a real renderer
+vi.mock('pixi-viewport', () => {
+  class MockViewport {
+    addChild = vi.fn();
+    drag() { return this; }
+    pinch() { return this; }
+    wheel() { return this; }
+    clampZoom() { return this; }
+  }
+  return { Viewport: MockViewport };
 });
 
 describe('ReplayEngine', () => {
