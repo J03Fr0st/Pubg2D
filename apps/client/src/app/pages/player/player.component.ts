@@ -24,13 +24,17 @@ import { ApiService } from '../../services/api.service';
           Recent Matches
         </h2>
         <div class="space-y-2 max-w-2xl">
-          @for (match of player()!.recentMatches; track match.matchId) {
-            <pubg-match-card
-              [match]="match"
-              [defaultAccountId]="player()!.accountId"
-              [routePlayerName]="player()!.name"
-              [routePlatform]="player()!.platform.toLowerCase()"
-            />
+          @if (player()!.recentMatches.length === 0) {
+            <p class="font-mono text-sm text-text-secondary">No recent matches found.</p>
+          } @else {
+            @for (match of player()!.recentMatches; track match.matchId) {
+              <pubg-match-card
+                [match]="match"
+                [defaultAccountId]="player()!.accountId"
+                [routePlayerName]="player()!.name"
+                [routePlatform]="player()!.platform.toLowerCase()"
+              />
+            }
           }
         </div>
       } @else {
@@ -48,13 +52,25 @@ export class PlayerComponent implements OnInit {
   error = signal('');
 
   async ngOnInit(): Promise<void> {
+    await this.loadFromRoute();
+    // When user runs another search while staying on this page,
+    // route params change but component instance can be reused.
+    this.route.paramMap.subscribe(() => {
+      void this.loadFromRoute();
+    });
+  }
+
+  private async loadFromRoute(): Promise<void> {
     const platform = this.route.snapshot.paramMap.get('platform') ?? 'steam';
     const name = this.route.snapshot.paramMap.get('name') ?? '';
+    this.loading.set(true);
+    this.error.set('');
 
     try {
       const result = await this.api.searchPlayer(platform, name);
       this.player.set(result);
     } catch (e: unknown) {
+      this.player.set(null);
       this.error.set(e instanceof Error ? e.message : 'Player not found');
     } finally {
       this.loading.set(false);

@@ -2,6 +2,10 @@ import type { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
   {
+    path: 'player/:platform/:name',
+    loadComponent: () => import('./pages/player/player.component').then((m) => m.PlayerComponent),
+  },
+  {
     path: 'replay/:matchId',
     loadComponent: () => import('./pages/replay/replay.component').then((m) => m.ReplayComponent),
   },
@@ -12,10 +16,6 @@ export const appRoutes: Routes = [
   {
     path: ':name/:platform/:matchId',
     loadComponent: () => import('./pages/replay/replay.component').then((m) => m.ReplayComponent),
-  },
-  {
-    path: 'player/:platform/:name',
-    loadComponent: () => import('./pages/player/player.component').then((m) => m.PlayerComponent),
   },
   {
     path: 'heatmap/:accountId',

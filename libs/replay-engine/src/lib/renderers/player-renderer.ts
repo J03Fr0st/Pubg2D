@@ -21,6 +21,13 @@ const DEAD_RADIUS   = 3;        // slightly smaller dot for dead players
 const DEAD_ALPHA    = 0.35;
 const POSITION_SMOOTHING = 0.16;
 const SNAP_DISTANCE_PX = 120;
+const LABEL_BASE_FONT_SIZE = 9;
+const LABEL_SCALE_MIN = 0.8;
+const LABEL_SCALE_MAX = 1.6;
+
+function clamp(value: number, min: number, max: number): number {
+  return Math.min(max, Math.max(min, value));
+}
 
 interface PlayerDot {
   graphics: Graphics;
@@ -54,6 +61,7 @@ export class PlayerRenderer {
     const dotRadius = DOT_RADIUS * scale;
     const deadRadius = DEAD_RADIUS * scale;
     const strokeWidth = STROKE_WIDTH * scale;
+    const labelScale = clamp(scale, LABEL_SCALE_MIN, LABEL_SCALE_MAX);
 
     for (const player of players) {
       const x = player.x * canvasWidth;
@@ -66,7 +74,7 @@ export class PlayerRenderer {
         const graphics = new Graphics();
         const labelStyle = new TextStyle({
           fontFamily: 'IBM Plex Mono',
-          fontSize: 9 * scale,
+          fontSize: LABEL_BASE_FONT_SIZE,
           fill: 0xc8d8b0,
         });
         const label = new Text({ text: player.name, style: labelStyle });
@@ -78,7 +86,7 @@ export class PlayerRenderer {
         dot = { graphics, label, accountId: player.accountId, renderX: x, renderY: y };
         this.dots.set(player.accountId, dot);
       }
-      (dot.label.style as TextStyle).fontSize = 9 * scale;
+      dot.label.scale.set(labelScale);
 
       // ── 2. Determine player (arc) color ────────────────────────────────────
       let playerColor: number;
@@ -151,7 +159,7 @@ export class PlayerRenderer {
       }
 
       dot.graphics.position.set(dot.renderX, dot.renderY);
-      dot.label.position.set(dot.renderX, dot.renderY + dotRadius + 2 * scale);
+      dot.label.position.set(dot.renderX, dot.renderY + dotRadius + 2 * labelScale);
       dot.label.visible = player.accountId === this.highlightedAccountId;
     }
   }

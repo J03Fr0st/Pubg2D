@@ -16,6 +16,7 @@ import {
   ReplayEngine,
   ZoneRenderer,
 } from '@pubg-replay/replay-engine';
+import type { KillEvent } from '@pubg-replay/shared-types';
 import { ReplayService } from '../../services/replay.service';
 
 @Component({
@@ -33,13 +34,15 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
   private playerRenderer!: PlayerRenderer;
   private zoneRenderer!: ZoneRenderer;
   private eventRenderer!: EventRenderer;
+  private orderedKills: KillEvent[] = [];
   private lastKillIndex = 0;
+  private lastRenderTime = 0;
 
   private readonly CANVAS_SIZE = 800;
   private readonly MIN_AUTO_ZOOM = 1;
-  private readonly MAX_AUTO_ZOOM = 4;
-  private readonly ZONE_SCREEN_DIAMETER = 0.95;
-  private readonly CAMERA_SMOOTHING = 0.12;
+  private readonly MAX_AUTO_ZOOM = 8;
+  private readonly ZONE_SCREEN_DIAMETER = 0.6;
+  private readonly CAMERA_SMOOTHING = 0.16;
 
   async ngOnInit(): Promise<void> {
     this.engine = new ReplayEngine();
@@ -58,6 +61,22 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
         if (!replayData) return;
 
         void this.mapRenderer.load(replayData.mapName, this.CANVAS_SIZE, this.CANVAS_SIZE);
+
+        const teamByAccountId = new Map<string, number>();
+        for (const p of replayData.players) {
+          teamByAccountId.set(p.accountId, p.teamId);
+        }
+        for (const tick of replayData.ticks) {
+          for (const p of tick.players) {
+            if (!teamByAccountId.has(p.accountId)) teamByAccountId.set(p.accountId, p.teamId);
+          }
+        }
+        this.eventRenderer.setPlayerTeams(teamByAccountId);
+        this.eventRenderer.setMaxActiveTracers(30);
+        this.orderedKills = [...replayData.kills].sort((a, b) => a.timestamp - b.timestamp);
+        this.lastKillIndex = 0;
+        this.lastRenderTime = 0;
+        this.eventRenderer.clear();
       });
     });
 
@@ -72,10 +91,13 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
       effect(() => {
         const selected = this.replay.selectedPlayer();
         this.playerRenderer.setHighlightedPlayer(selected);
+        this.eventRenderer.setTracerEnabled(this.replay.tracerEnabled());
+        this.eventRenderer.setTracerMode(this.replay.tracerMode());
 
         const replayData = this.replay.replayData();
         if (!selected || !replayData) {
           this.playerRenderer.setFriendlyTeam(null);
+          this.eventRenderer.setSelectedContext(null, null);
           return;
         }
 
@@ -87,6 +109,7 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
             ?.teamId ?? null;
         const friendlyTeamId = teamFromRoster ?? teamFromTicks ?? null;
         this.playerRenderer.setFriendlyTeam(friendlyTeamId ?? null);
+        this.eventRenderer.setSelectedContext(selected, friendlyTeamId ?? null);
       });
     });
   }
@@ -107,15 +130,34 @@ export class MapCanvasComponent implements OnInit, OnDestroy {
     const data = this.replay.replayData();
     const time = this.replay.currentTime();
     if (data) {
+      if (time < this.lastRenderTime) {
+        this.lastKillIndex = this.findLastKillIndexAtOrBefore(time);
+        this.eventRenderer.clear();
+      }
       while (
-        this.lastKillIndex < data.kills.length &&
-        data.kills[this.lastKillIndex].timestamp <= time
+        this.lastKillIndex < this.orderedKills.length &&
+        this.orderedKills[this.lastKillIndex].timestamp <= time
       ) {
-        this.eventRenderer.addKillTracer(data.kills[this.lastKillIndex], time, w, h);
+        this.eventRenderer.addKillTracer(this.orderedKills[this.lastKillIndex], time, w, h);
         this.lastKillIndex++;
       }
     }
-    this.eventRenderer.update(time);
+    this.lastRenderTime = time;
+    this.eventRenderer.update(time, zoom);
+  }
+
+  private findLastKillIndexAtOrBefore(time: number): number {
+    let low = 0;
+    let high = this.orderedKills.length;
+    while (low < high) {
+      const mid = low + ((high - low) >> 1);
+      if (this.orderedKills[mid].timestamp <= time) {
+        low = mid + 1;
+      } else {
+        high = mid;
+      }
+    }
+    return low;
   }
 
   private updateAutoCamera(

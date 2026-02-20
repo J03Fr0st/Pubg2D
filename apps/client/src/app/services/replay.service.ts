@@ -3,6 +3,8 @@ import { interpolatePlayerPositionsAt, interpolateTick, interpolateZoneAt } from
 import type { ReplayData } from '@pubg-replay/shared-types';
 import { formatElapsedTime } from '@pubg-replay/shared-utils';
 
+export type TracerMode = 'all' | 'team' | 'selected';
+
 @Injectable({ providedIn: 'root' })
 export class ReplayService {
   // Core state signals
@@ -11,6 +13,8 @@ export class ReplayService {
   readonly isPlaying = signal(false);
   readonly playbackSpeed = signal(20);
   readonly selectedPlayer = signal<string | null>(null);
+  readonly tracerEnabled = signal(true);
+  readonly tracerMode = signal<TracerMode>('all');
 
   // Derived signals
   readonly duration = computed(() => this.replayData()?.duration ?? 0);
@@ -77,6 +81,14 @@ export class ReplayService {
 
   setSpeed(speed: number): void {
     this.playbackSpeed.set(speed);
+  }
+
+  setTracerEnabled(enabled: boolean): void {
+    this.tracerEnabled.set(enabled);
+  }
+
+  setTracerMode(mode: TracerMode): void {
+    this.tracerMode.set(mode);
   }
 
   selectPlayer(accountId: string | null): void {

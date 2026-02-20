@@ -66,6 +66,23 @@ import { ReplayService } from '../../services/replay.service';
         />
         <span class="font-mono text-sm text-text-primary w-9 text-right">{{ replay.playbackSpeed() }}x</span>
       </div>
+
+      <!-- Tracer controls -->
+      <button
+        class="text-text-primary font-mono text-xs hover:text-accent min-w-[90px]"
+        (click)="replay.setTracerEnabled(!replay.tracerEnabled())"
+      >
+        {{ replay.tracerEnabled() ? '[ TRACERS ON ]' : '[ TRACERS OFF ]' }}
+      </button>
+      <select
+        class="bg-bg text-text-primary font-mono text-xs border border-border px-2 py-0.5"
+        [value]="replay.tracerMode()"
+        (change)="onTracerModeChange($event)"
+      >
+        <option value="all">All</option>
+        <option value="team">Team</option>
+        <option value="selected">Selected</option>
+      </select>
     </div>
   `,
 })
@@ -119,5 +136,10 @@ export class TimelineComponent {
 
   onKillMarkerClick(time: number): void {
     this.replay.seek(time);
+  }
+
+  onTracerModeChange(event: Event): void {
+    const value = (event.target as HTMLSelectElement).value as 'all' | 'team' | 'selected';
+    this.replay.setTracerMode(value);
   }
 }
